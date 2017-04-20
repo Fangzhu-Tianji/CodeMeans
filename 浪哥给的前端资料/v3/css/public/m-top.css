@@ -1,0 +1,31 @@
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-04-17 10:01:45
+ * @version $Id$
+ */
+
+.m-top {
+    background: #c71622;
+    height: 60px;
+}
+
+.m-top .container {
+    position: relative;
+    height: 60px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.m-top .container .close {
+    position: absolute;
+    top: 50%;
+    margin-top: -12.5px;
+    right: 20px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url(../../img/public/top-banner-close.png) no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+}

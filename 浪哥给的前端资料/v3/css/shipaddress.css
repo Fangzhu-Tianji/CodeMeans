@@ -1,0 +1,136 @@
+@import url(public/base.css);		/*基础样式*/
+@import url(public/m-header.css);	/*头部*/
+@import url(public/m-nav.css);		/*导航*/
+@import url(public/m-home-slider.css);	/*个人中心左侧导航*/
+@import url(plugins/p-select.css);	/*自定义下拉列表*/
+@import url(public/m-footer.css);	/*页面底部*/
+	/*右侧工具栏*/
+@import url(public/u-forms.css);	/*右侧工具栏*/
+@import url(public/m-shipaddress.css);
+@import url(plugins/p-pop.css);
+@import url(public/m-pagebar.css);		/*分页条*/
+html,body{
+	background: #f5f5f5;
+	font-family: "microsoft Yahei";
+}
+
+/* 公共样式 */
+.red{
+	color:#c71622;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+
+
+/* 页面主要内容 */
+
+.main{
+	margin: 30px 0 40px 0;
+}
+.main .container{
+	width: 1000px;
+}
+.main .contents{
+	width: 858px;
+	margin-left: 10px;
+}
+
+.main .contents .subcontent{
+	background: #fff;
+	min-height: 738px;
+	border: 1px solid #ddd;
+	padding: 0 25px;
+}
+
+.main .contents .subcontent .cur-site{
+	position: relative;
+	height: 46px;
+	line-height: 46px;
+	border-bottom: 1px solid #e5e5e5;
+	font-size: 12px;
+	color: #999;
+}
+.main .contents .subcontent .cur-site .title{
+	font-size: 14px;
+	color: #000;
+	padding: 0 20px;
+	border-right: 1px solid #e5e5e5;
+	font-weight: bold;
+}
+.main .contents .subcontent .cur-site .total{
+	padding: 0 10px;
+}
+.main .contents .subcontent .cur-site .add{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 20px;
+	color: #00b4fe;
+	width: 120px;
+	text-align: center;
+}
+.main .contents .subcontent .address-list{
+	margin-top: 20px;
+	width: 100%;
+	table-layout:fixed;
+    margin-bottom:20px;
+}
+.main .contents .subcontent .address-list thead{
+	background: #efefef;
+}
+.main .contents .subcontent .address-list thead th{
+	color: #222;
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	background: #efefef;
+}
+.main .contents .subcontent .address-list tbody td{
+	color: #999;
+	font-size: 12px;
+	text-align: center;
+	padding-top: 15px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.main .contents .subcontent .address-list tbody td span{
+	width: 100%;
+}
+.main .contents .subcontent .address-list tbody td.action a{
+	padding: 0 5px;
+}
+
+.main .contents .subcontent .address-list tbody td.action a.using{
+	color:#c71622;
+}
+	
+/* 弹层内容样式 */
+
+.main .contents .nothing{
+	margin-top: 50px;
+	padding: 10px 0;
+	height: 40px;
+}
+.main .contents .nothing .cnt{
+	width: 300px;
+	margin-left: 300px;
+	padding-left: 70px;
+	background: url('../img/public/i-1041.jpg') no-repeat center left ;
+}
+.main .contents .nothing .cnt .title{
+	color: #333;
+	font-size: 16px;
+}
+.main .contents .nothing .cnt .subtitle{
+	font-size: 12px;
+	color: #999;
+}
+.main .contents .nothing .cnt .subtitle a{
+	color: #40c0ff;
+}
+.main .contents .nothing .cnt .subtitle a:hover{
+	text-decoration: underline;
+}

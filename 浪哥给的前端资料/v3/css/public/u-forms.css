@@ -1,0 +1,58 @@
+.ui-input {
+    width: 180px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    color: #999;
+    font-family: "microsoft Yahei";
+    font-size: 12px;
+    background: #fff;
+}
+
+.ui-input:focus {
+    color: #000;
+    border-color: #03a9f4;
+    box-shadow: 0 0 6px #03a9f4;
+    -webkit-box-shadow: 0 0 6px #03a9f4;
+    -moz-box-shadow: 0 0 6px #03a9f4;
+    -o-box-shadow: 0 0 6px #03a9f4;
+}
+
+.ui-textarea {
+    resize: none;
+    width: 280px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 14px;
+    color: #666;
+    padding: 10px;
+    line-height: 24px;
+    outline: none;
+    font-family: "microsoft Yahei";
+    font-size: 12px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
+.ui-textarea:focus {
+    color: #000;
+    border-color: #03a9f4;
+    box-shadow: 0px 0px 5px 0px #03a9f4;
+    -webkit-box-shadow: 0px 0px 5px 0px #03a9f4;
+    -moz-box-shadow: 0px 0px 5px 0px #03a9f4;
+    -o-box-shadow: 0px 0px 5px 0px #03a9f4;
+}
+
+.ui-select{
+    margin-right: 15px;
+}

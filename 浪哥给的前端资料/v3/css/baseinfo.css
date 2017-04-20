@@ -1,0 +1,194 @@
+@import url(public/base.css);		/*基础样式*/
+@import url(public/m-header.css);	/*头部*/
+@import url(public/m-nav.css);		/*导航*/
+@import url(public/m-home-slider.css);	/*个人中心左侧导航*/
+@import url(plugins/p-select.css);	/*自定义下拉列表*/
+@import url(plugins/p-bootstrap-datetimepicker.min.css);	/*右侧工具栏*/
+
+@import url(public/m-footer.css);	/*页面底部*/
+	/*右侧工具栏*/
+@import url(public/u-forms.css);	/*表单*/
+
+html,body{
+	background: #f4f4f4;
+	font-family: "microsoft Yahei";
+}
+.red{
+	color: #f00;
+	font-size: 12px;
+	font-weight: bold;
+	padding-right: 5px;
+}
+.date{
+	cursor: text;
+	background: #efefef;
+}
+label{cursor: pointer;}
+.main{
+	margin: 30px 0 40px 0;
+}
+.main .container{
+	width: 1000px;
+}
+.main .contents{
+	width: 858px;
+}
+
+.main .contents .subcontent{
+	background: #fff;
+	min-height: 738px;
+	border: 1px solid #ddd;
+	overflow: hidden;
+	padding: 0 25px;
+	margin-left: 10px;
+}
+
+.main .contents .subcontent .cur-site{
+	height: 46px;
+	line-height: 46px;
+	border-bottom: 1px solid #e5e5e5;
+	font-size: 12px;
+	color: #999;
+}
+.main .contents .subcontent .cur-site .title{
+	font-size: 14px;
+	color: #000;
+	padding: 0 20px;
+	font-weight: bold;
+}
+.main .contents .subcontent .cur-site .total{
+	padding: 0 10px;
+}
+.main .contents .subcontent .formbox{
+	margin-top: 50px;
+	margin-left: 50px;
+	color: #666;
+	font-size: 12px;
+}
+.main .contents .subcontent .formbox li{clear: both;}
+.main .contents .subcontent .formbox li.pb20 .td-cnt{
+	padding-bottom: 20px;
+}
+.main .contents .subcontent .formbox li .td-nm{
+	float: left;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	text-align: right;
+}
+.main .contents .subcontent .formbox li .td-cnt{
+	position: relative;
+	text-align: left;
+	float: left;
+	padding-bottom: 30px;
+}
+.main .contents .subcontent .formbox li .td-tip{
+	float: left;
+	color: #b1b1b1;
+	margin-left: 10px;
+	line-height: 38px;
+}
+.main .contents .subcontent .formbox li .ui-input{
+	display: block;
+	width: 300px;
+	padding: 10px; 
+	text-align: left;
+	*margin-left: -120px;
+}
+.main .contents .subcontent .formbox li .save{
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: inline-block;
+	width: 120px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	border-radius: 4px;
+	font-size: 14px;
+	color: #fff;
+	border: none;
+	font-family: "microsoft Yahei";
+	cursor: pointer;
+	background: #dd1d2a;
+	*margin-bottom: 20px;
+}
+.main .contents .subcontent .formbox li .save:hover{background: #cc0c19;}
+
+.main .contents .subcontent .formbox li .account{
+	display: inline-block;
+	width: 220px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	background: #f7f7f7;
+}
+.main .contents .subcontent .formbox li .preview{
+	width: 80px;
+	height: 80px;
+	float: left;
+	background: url(../img/public/i-1035.png) no-repeat;
+	border: none;
+}
+.main .contents .subcontent .formbox li .preview img{
+	width: 100%;
+	height: 100%;
+}
+.main .contents .subcontent .formbox li .upload {
+	position: relative;
+	border: 1px solid #ddd;
+	background: #f7f7f7;
+	border-radius: 3px;
+	zoom:1;
+	margin: 10px;
+	width: 60px;
+	height: 20px;
+	float: left;
+	text-align: center;
+	overflow: hidden;
+} 
+.main .contents .subcontent .formbox li .upload .ui-file{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 60px;
+	height: 20px;
+	line-height: 20px;
+}
+.main .contents .subcontent .formbox li .upload .fileupload{
+	font-size: 60px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	filter:alpha(opacity=0);
+	cursor: pointer;
+}
+.main .contents .subcontent .formbox li .subtips{
+	display: block;
+	color: #c6c6c6;
+}
+.main .contents .subcontent .formbox li .ui-radio{
+	height: 40px;
+	line-height: 40px;
+	margin-right: 20px;
+}
+.main .contents .subcontent .formbox li .ui-radio input{
+	margin-right: 5px;
+}
+.main .contents .subcontent .formbox li .ui-input.error{
+	border-color: #f00;
+}
+.main .contents .subcontent .formbox li .td-tip label.error { 
+	display: none;
+	color: #c71622; 
+	height: 20px;
+	line-height: 20px;
+	display: inline-block;
+	margin-top: 8px;
+	background: url("../img/public/i-1011.png") no-repeat 0px 3px; 
+	padding-left: 15px; 
+	zoom:1;
+}

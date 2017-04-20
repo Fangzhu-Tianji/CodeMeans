@@ -1,0 +1,62 @@
+/**
+ * 
+ * @authors Your Name (jiangzhiqiang@example.org)
+ * @date    2015-04-17 15:43:18
+ * @version $Id$
+ */
+
+.m-help-nav{
+	width: 100%;
+	height: 100px;
+	margin-top: 50px;
+	display: none;
+}
+.m-help-nav ul{
+	overflow: hidden;
+	box-shadow: 0 0 4px #ddd;
+}
+.m-help-nav li{
+	padding: 21px 0;
+	height: 58px;
+	float: left;
+	width: 25%;
+	border-left: 1px solid #f3f3f3;
+	margin-left: -1px;
+	background: #fff;
+	cursor: pointer;
+}
+.m-help-nav li:hover{
+	background: #f2f2f2;
+}
+.m-help-nav li .f1 i{
+	display: inline-block;
+	width: 58px;
+	height: 58px;
+}
+
+.m-help-nav li .icon{
+	margin-left: 60px;
+}
+.m-help-nav li .title{
+	margin-left: 10px;
+	font-size: 14px;
+	color: #999;
+}
+.m-help-nav li .title summary{
+	font-size: 18px;
+	color: #333;
+	line-height: 32px;
+}
+
+.m-help-nav li.item1 i{
+	background: url(../../img/public/nav-helps.png) no-repeat 0 0;
+}
+.m-help-nav li.item2 i{
+	background: url(../../img/public/nav-helps.png) no-repeat -58px 0;
+}
+.m-help-nav li.item3 i{
+	background: url(../../img/public/nav-helps.png) no-repeat -116px 0;
+}
+.m-help-nav li.item4 i{
+	background: url(../../img/public/nav-helps.png) no-repeat -174px 0;
+}

@@ -1,0 +1,13 @@
+
+/**
+ * 页面位置 面包屑
+ * @authors Your Name (you@example.org)
+ * @date    2015-04-20 10:15:44
+ * @version $Id$
+ */
+
+.m-crumbs { width: 100%; padding:20px 0px 10px 0px; overflow: hidden;}
+.m-crumbs a , .m-crumbs b , .m-crumbs em { color: #666; line-height: 24px;}
+.m-crumbs em { cursor: default;}
+.m-crumbs a:hover { color: #c71622;}
+.m-crumbs .light { padding: 0px 5px; margin: 0px 5px; line-height: 22px; border: 1px solid #ddd; display: inline-block; zoom:1;}

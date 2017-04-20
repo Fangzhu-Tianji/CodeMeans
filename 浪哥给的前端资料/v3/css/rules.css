@@ -1,0 +1,48 @@
+@import url(public/base.css);		/*基础样式*/
+@import url(public/m-header.css);	/*头部*/
+@import url(public/m-nav.css);		/*导航*/
+
+@import url(public/m-footer.css);	/*页面底部*/
+
+
+html,body{
+	background: #f8f8f8;
+	font-family: "microsoft Yahei";
+}
+.main .container table{
+	background: #fff;
+	margin: 30px 0 50px 0;
+}
+.main .container table span{
+	padding-left: 10px;
+}
+.main .container table th{
+	border:1px solid #ccc;
+	font-weight: bold;
+	color: #333;
+	font-size: 18px;
+	padding: 5px 0 ;
+	line-height: 30px;
+	text-align: left;
+}
+
+.main .container table th em{
+	font-size: 12px;
+	color: #666;
+}
+.main .container table td{
+	padding-left: 10px;
+	border: 1px solid #ddd;
+	line-height: 30px;
+	color: #333;
+	font-size: 14px;
+}
+.main .container table td.dotted{
+	border-style: dashed;
+	font-size: 12px;
+	color: #666;
+}
+.main .container table tbody tr:hover{
+	background: #eff;
+}
+

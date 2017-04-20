@@ -1,0 +1,431 @@
+@import url(public/base.css);		/*基础样式*/
+@import url(public/m-header.css);	/*头部公共样式*/
+@import url(public/m-footer.css);	/*底部*/
+@import url(plugins/p-pop.css);
+html,body{
+	background: #fff;
+	min-height: 700px;
+}
+label{
+	cursor: pointer;
+}
+.ui-input{
+	width: 244px;
+	padding: 12px 5px ;
+	border: 1px solid #ddd;
+	color: #666;
+	transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    outline: none;
+    border-radius: 4px;
+}
+.ui-input:focus{
+	border-color: #03a9f4 ;
+	box-shadow: 0 0 5px #03a9f4;
+    -webkit-box-shadow: 0 0 5px #03a9f4;
+    -moz-box-shadow: 0 0 5px #03a9f4;
+    -o-box-shadow: 0 0 5px #03a9f4;
+}
+.ui-input.placeholder{color:#ccc;}
+.ui-checkbox input{
+    margin-top: 4px;
+    *margin-top: 0px;
+}
+.ui-checkbox input.error{ border: 1px solid #FF0000;}
+.ui-checkbox span{
+	vertical-align: top;
+	*vertical-align: 2px;
+	color: #999;
+	font-size: 12px;
+	margin-left: 5px;
+
+}
+.ui-checkbox span a{
+	*vertical-align: 0px;
+}
+.ui-checkbox a{
+	vertical-align: top;
+	color: #00b4fe;
+}
+.m-header .topmain .container{
+	border-bottom: 1px solid #eee;
+}
+
+
+.main{
+	width: 100%;
+}
+.main .regbox{
+	width: 1030px;
+	margin: 50px auto 0 auto;
+	box-shadow:  0 0 10px #ccc;
+	padding:25px 25px 50px 25px;
+	border: 1px solid #ccc;
+}
+.main .regbox .regForm{
+	width: 600px;	
+	margin-left: 100px;
+}
+.main .regbox .regForm  h2{
+	position: relative;
+	color: #333;
+	font-size: 24px;
+	margin: 20px 0 40px 0; 
+	*zoom:0;
+}
+.main .regbox .regForm  h2 .reg{
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #00b4fe;
+	font-size: 14px;
+}
+.main .regbox .regForm  li{
+	margin-bottom: 25px;
+	height: 42px;
+	width: 100%;
+	*float: left;
+	float: left\9;
+}
+.main .regbox .regForm li .code{
+	display: inline-block;
+	background: #00b4fe;
+	color: #fff;
+	width: 110px;
+	height: 21px;
+	*height: 22px;
+	height: 22px\9;
+	overflow: hidden;
+	text-align: center;
+	padding: 6px 0px;
+	margin-left: 10px;
+	float: left;
+	margin-top: 4px;
+	font-size: 12px;
+}
+.main .regbox .regForm li .reg{
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+	background: #15b884;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	width: 255px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 4px;
+}
+.main .regbox .regForm li .reg:hover{
+	background: #04a773;
+}
+.main .regbox .regForm li .disabled , .main .regbox .regForm li .disabled:hover {
+	background: #ccc;
+}
+.main .regbox .regForm li a.disabled{
+  background: #f4f4f4;
+  border: 1px solid #dddddd;
+  color: #999;
+  cursor: not-allowed;
+}
+.main .regbox .regForm li .td-nm{
+	display: inline-block;
+	width: 90px;
+	height: 20px;
+	text-align: right;
+	font-size: 14px;
+	line-height: 42px;
+	color: #666;
+	float: left;
+}
+.main .regbox .regForm li .td-cnt {
+	float: left;
+	width: 260px;
+}
+.main .regbox .regForm li .td-cnt .notice {
+	color: #999;
+	margin-bottom: 8px;
+	margin-top: -10px;
+	font-size: 12px;
+}
+.main .regbox .regForm li .td-cnt input , .main .regbox .regForm li .td-cnt .code {
+	float: left;
+}
+.main .regbox .regForm li .td-tips{
+	/* margin-left: 10px; */
+	color:#999;
+	font-size: 12px;
+}
+/*验证错误*/
+.main .regbox .regForm li .td-tips label.error { 
+	display: none;
+	color: #c71622; 
+	height: 20px;
+	line-height: 20px;
+	display: inline-block;
+	margin-top: 10px;
+	background: url("../img/public/i-1011.png") no-repeat 0px 3px; 
+	padding-left: 15px; 
+	zoom:1;
+}
+.main .regbox .regForm li .td-tips label#agree-error{margin-top:0;}
+.main .regbox .other{
+	width: 230px;
+	border-left: 1px solid #eee;
+	height: 450px;
+	padding: 20px 0 0 50px; 
+	font-size: 12px;
+	color: #666;
+}
+.main .regbox .other .reg{
+	color: #333;
+	margin-bottom: 30px;
+}
+.main .regbox .other .fastlogin{
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+	width: 80px;
+	text-align: center;
+	background: #51c80e;
+	color: #fff;
+	border-radius: 4px;
+	margin-left: 5px;
+}
+.main .regbox .other .fastlogin:hover{
+	background: #40b700;
+}
+.main .regbox .other ul{
+	margin-top: 20px;
+	margin-left: 15px;
+}
+.main .regbox .other ul li{
+	margin-bottom: 10px;
+}
+.main .regbox .other ul li a{
+	display: inline-block;
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+.main .regbox .other ul li a em{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: #000;
+	margin:5px 0 0 10px;
+	float: left;
+}
+.main .regbox .other ul li.weibo a em{
+	background: url(../img/public/i-1014.png) no-repeat 0 0;
+}
+.main .regbox .other ul li.qq a em{
+	background: url(../img/public/i-1014.png) no-repeat 0 -20px;
+}
+.main .regbox .other ul li.weixin a em{
+	background: url(../img/public/i-1014.png) no-repeat 0 -40px;
+}
+.main .regbox .other ul li.taobao a em{
+	background: url(../img/public/i-1014.png) no-repeat 0 -60px;
+}
+.main .regbox .other ul li.zhifubao a em{
+	background: url(../img/public/i-1014.png) no-repeat 0 -80px;
+}
+.main .regbox .other ul li a span{
+	display: inline-block;
+	color: #999;
+	width: 90px;
+	text-align: center;
+	line-height: 30px;
+	height: 30px;
+	float: left;
+}
+.m-footer{
+	margin-top: 10px;
+	width: 100%;
+	height: 120px;
+	border-top: none;
+}
+
+#datalist{
+	display: none;
+	clear: both;
+	position: absolute;
+	top: 42px;
+	left: 90px;
+	background: #fcfcfc;
+	border: 1px solid #ccc;
+	max-height: 150px;
+	overflow-x: hidden;
+	overflow-y: auto; 
+}
+#datalist li{
+	clear: both;
+	overflow: hidden;
+	width: 244px;
+	padding: 0 5px;
+	height: 30px;
+	color: #666;
+	font-size: 12px;
+	line-height: 30px;
+	margin-bottom: 0px;
+	cursor: pointer;
+}
+#datalist li:hover{
+	background: #ccc;
+	color: #222;
+}
+
+.Jpopup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+.Jpopup .pop-overlay{
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+	z-index: 9999;
+}
+.Jpopup .pop-container{
+	position: absolute;
+	top:0;
+	left: 0;
+    width: 480px;
+    height: 220px;
+    top: 50%;
+    left: 50%;
+    margin-left: -240px;
+    margin-top: -110px;
+    z-index: 10000;
+    background: #fff;
+}
+.Jpopup .pop-container .pop-header{
+    text-align: left;
+    width: 100%;
+    height: 40px;
+    background: #e7e7e7;
+    position: relative;
+}
+.Jpopup .pop-container .pop-header .title{
+    line-height: 40px;
+    font-size: 16px;
+    color: #4d3636;
+    margin-left: 40px;
+}
+.Jpopup .pop-container .pop-header .close{
+	width: 40px;
+	height: 40px;
+	background: url(../img/public/i-1067.png) no-repeat center center;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.Jpopup .pop-container .cnt .maininfo{
+	text-align: center;
+	padding-top: 48px;
+	clear: both;
+	overflow: hidden;
+}
+.Jpopup .pop-container .cnt .maininfo input{
+	width: 100px;
+	float: left;
+	margin-left: 126px;
+}
+
+.Jpopup .pop-container .cnt .maininfo .exchange{
+	float: left;
+	display: inline-block;
+	margin-left: 5px;
+	font-size: 12px;
+	color: #0093dd;
+}
+
+.Jpopup .pop-container .cnt .maininfo .exchange img{
+	width: 112px;
+	height: 41px;
+	float: left;
+	border: none;
+	margin-left: 5px;
+}
+.Jpopup .pop-container .cnt .maininfo .exchange span{
+	margin-left: 8px;
+	display: inline-block;
+	margin-top: 20px;
+}
+.Jpopup .pop-container .cnt .ui-btns{
+	text-align: center;
+	height: 50px;
+	margin-top: 30px;
+}
+.Jpopup .pop-container .cnt .ui-btns .ui-btn{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 10px;
+	font-size: 14px;
+	border: 1px solid #c71622;
+}
+.Jpopup .pop-container .cnt .ui-btns .send{
+	background: #c71622;
+	color: #fff;
+}
+.Jpopup .pop-container .cnt .ui-btns .send:hover{
+	background: #c40000;
+}
+.Jpopup .pop-container .cnt .ui-btns .pop-close{
+	border: 1px solid #ccc;
+	color: #999;
+}
+.Jpopup .pop-container .cnt .ui-btns .pop-close:hover{
+	color: #c71622;
+}
+.main .regbox .regForm li #btn_msg {
+    border: 1px solid #ddd;
+    height: 32px;
+    line-height: 32px;
+    padding: 0;
+    color:#333;
+    font-size: 12px;
+    background: #eee;
+}
+.association {
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  overflow: hidden;
+}
+.association ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.association ul li {
+  margin: 0;
+  padding: 0 6px;
+  font-size: 12px;
+  line-height: 24px;
+}
+.association ul li:hover, .association ul li.selected {
+  background: #75b3bb;
+  cursor: pointer;
+}

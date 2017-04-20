@@ -1,0 +1,90 @@
+.steps{
+	margin: 30px auto 40px auto;
+	width: 632px;
+	height: 62px;
+	
+}
+.steps li{
+	float: left;
+	line-height: 48px;
+	font-size: 16px;
+	color: #fff;
+	width: 300px;
+	position: relative;
+}
+.steps li .progress{
+	height: 14px;
+	border-bottom: 3px solid #a7a7a7;
+	position: relative;
+}
+
+.steps li .progress .percent{
+	position: absolute;
+	width: 80%;
+	height: 3px;
+	left: 0;
+	bottom: -3px;
+}
+
+.steps li.now .progress .percent{
+	background: #c71622;
+}
+.steps li.done .progress .percent{
+	width: 100%;
+	background: #c71622;
+}
+.steps li.end{
+	width: 32px;
+}
+.steps li .item {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.steps li .item em{
+	display: block;
+	width: 32px;
+	height: 32px;
+	background: url(../../img/public/i-1009.png) no-repeat -32px 0;
+}
+.steps li .item em b{
+	display: inline-block;
+	font-size: 24px;
+	color: #a7a7a7;
+	height: 32px;
+	width: 32px;
+	line-height: 32px;
+	text-align: center;
+	vertical-align: top;
+}
+.steps li .item em i{
+	display: none;
+	width: 32px;
+	height: 32px;
+	background: url(../../img/public/i-1010.png) no-repeat center 50%;
+}
+.steps li.now .item em,.steps li.done .item em{
+	background: url(../../img/public/i-1009.png) no-repeat 0 0;
+	color: #fff;
+}
+.steps li.now .item em b{
+	color: #fff;
+}
+.steps li.done .item em b{
+	display: none;
+}
+.steps li.done .item em i{
+	display: inline-block;
+}
+.steps li .item span{
+	width: 160px;
+	margin-left: -64px;
+	text-align: center;
+	display: block;
+	font-size: 14px;
+	line-height: 30px;
+	color: #a7a7a7;
+}
+.steps li.now .item span,.steps li.done .item span{
+	color: #c71622;
+}

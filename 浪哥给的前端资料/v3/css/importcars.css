@@ -1,0 +1,102 @@
+@import url(public/base.css);		/*基础样式*/
+
+html, body { width: 100%; height: 100%; overflow: hidden; color: #fff; font: 12px/16px, "宋体"; min-width: 0px; }
+
+/*页面*/
+.pages { width: 100%; height: 100%; position: relative; background: #1a1a1c; }
+.pages .page.active { visibility: visible; z-index: 1; }
+.pages .page { position: absolute; top: 0; left: 0; width: 100%; height: 100%; visibility: hidden; overflow: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+
+/*头部*/
+header { width: 100%; position: fixed; height: 100px; border-bottom: 1px solid #333; z-index: 100; }
+header i { float: left; display: inline-block; width: 110px; height: 100px; margin-left: 60px; }
+header span { float: right; margin-right: 60px; line-height: 100px; font-size: 24px; color: #fff; font-weight: bold; font-style: italic; font-family: "宋体"; }
+header span b { color: #c32632; font-style: italic; }
+
+/*右侧按钮*/
+aside { position: fixed; top: 50%; margin-top: -115px; right: 60px; width: 280px; height: 230px; z-index: 100; }
+aside .pz { margin-top: 20px; margin-left: 58px; width: 186px; height: 46px; display: block; background: url(../img/importcars/i002.png) no-repeat center center; }
+aside .sp { width: 280px; height: 160px; display: block; background: url(../img/importcars/sp-1.png) no-repeat center center; }
+
+/*车名导航*/
+nav { position: fixed; top: 50%; left: 60px; margin-top: -140px; width: 154px; height: 280px; font-family: "宋体"; font-size: 14px; cursor: pointer; z-index: 100; }
+nav li { width: 151px; height: 30px; line-height: 30px; margin-bottom: 20px; text-align: center; background: url(../img/importcars/i001.png) no-repeat 0 0; }
+nav li.active { background: url(../img/importcars/i001.png) no-repeat 0 -30px; }
+
+/*底部*/
+footer { position: fixed; width: 100%; bottom: 0; left: 0; height: 50px; z-index: 100; }
+footer .mask { position: absolute; top: 0; left: 0; width: 100%; height: 50px; opacity: 0.95; background: #090a0e; filter: alpha(opacity=95); }
+footer p { position: absolute; width: 100%; height: 50px; line-height: 50px; margin-left: 50px; font-size: 12px; opacity: 0.5; filter: alpha(opacity=50); }
+footer p a { font-family: "宋体"; margin-left: 15px; color: #fff; padding-right: 15px; background: url(../img/importcars/i003.png) no-repeat right center; }
+footer p a:hover { color: #fff; }
+
+/*弹出层*/
+.popup { position: absolute; width: 100%; height: 100%; z-index: 10000; top: 0; left: 0; }
+.popup .olay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #1a1a1c; opacity: 0.5; z-index: 50; filter: alpha(opacity=80); }
+.popup .pop-container { width: 1000px; height: 570px; z-index: 101; position: absolute; top: 50%; left: 50%; margin-left: -500px; margin-top: -285px; background: url(../img/importcars/popbg.png) no-repeat center center; }
+.popup .tipShow { -webkit-animation: animationTipShow .6s ease both; -moz-animation: animationTipShow .6s ease both; animation: animationTipShow .6s ease both; }
+@-webkit-keyframes animationTipShow { from { opacity: 0; -webkit-transform: scale(.8); } }
+@-moz-keyframes animationTipShow {  from { opacity: 0; -moz-transform: scale(.8); } }
+@keyframes animationTipShow {  from { opacity: 0; transform: scale(.8); } }
+.popup .tipHide { -webkit-animation: animationTipHide .6s ease both; -moz-animation: animationTipHide .6s ease both; animation: animationTipHide .6s ease both; }
+@-webkit-keyframes animationTipHide { to { opacity: 0; -webkit-transform: scale(.8); } }
+@-moz-keyframes animationTipHide {  to { opacity: 0; -moz-transform: scale(.8); } }
+@keyframes animationTipHide {  to { opacity: 0; transform: scale(.8); } }
+
+.popup .pop-header { position: relative; }
+.popup .pop-header .pop-close { position: absolute; display: block; top: -10px; right: 0; width: 0; height: 0; border-top: 124px solid #fff; border-left: 176px solid transparent; cursor: pointer; opacity: 0; filter: alpha(opacity=0); }
+
+/*平行进口车介绍*/
+#explanpop .pop-header { margin-top: 20px; height: 110px; }
+#explanpop .pop-header img { margin-left: 200px; margin-top: 50px; }
+#explanpop .cnt { width: 650px; height: 320px; margin-left: 190px; margin-top: 50px; font-size: 12px; color: #87888b; font-family: "宋体"; }
+#explanpop .cnt h3 { font-size: 14px; color: #c32632; margin-bottom: 20px; }
+#explanpop .cnt p { text-indent: 24px; line-height: 20px; margin-bottom: 20px; }
+#explanpop .cntwrap { padding-right: 40px; }
+
+/*参数配置*/
+#carOpts .pop-header { margin-top: 20px; height: 110px; }
+#carOpts .pop-header img { margin-left: 200px; margin-top: 50px; }
+#carOpts .nav { width: 240px; overflow: hidden; float: left; padding-top: 1px;}
+#carOpts .nav li { width: 94px; height: 40px; background:url(../img/importcars/opts.png) no-repeat 0px 0px; color: #87888b; line-height: 40px; text-align: center; margin-top: 2px; cursor: pointer; }
+#carOpts .nav li.current { background:url(../img/importcars/opts.png) no-repeat 0px -50px; color: #fff; }
+#carOpts .cnt { width: 600px; height: 320px; overflow: hidden; float: left; margin-top: 50px; font-size: 12px; color: #87888b; font-family: "宋体"; }
+#carOpts .cnt h3 { font-size: 14px; color: #c32632; margin-bottom: 20px; }
+#carOpts .cnt p { text-indent: 24px; line-height: 20px; margin-bottom: 20px; }
+#carOpts .cntwrap table th { background: #1a1a1c; height: 40px; line-height: 40px; text-align: center; color: #c32632; font-size: 12px; }
+#carOpts .cntwrap table td { height: 40px; line-height: 40px; padding-left: 15px;}
+#carOpts .cntwrap table .odd td { background: #1c1c1e;}
+#carOpts .cntwrap table .even td { background: #1f1f21;}
+#carOpts .cntwrap table td.tt { color: #89393f; }
+#carOpts .cntwrap table td.ct { color: #616163; }
+
+.pages .page1 { background: #1a1a1c url(../img/importcars/bg-1.jpg) no-repeat bottom center; }
+.pages .page2 { background: #0c0c0c url(../img/importcars/bg-2.jpg) no-repeat bottom center; }
+.pages .page3 { background: #1a1a1c url(../img/importcars/bg-3.jpg) no-repeat bottom center; }
+.pages .page4 { background: #010101 url(../img/importcars/bg-4.jpg) no-repeat bottom center; }
+.pages .page5 { background: #1a1a1c url(../img/importcars/bg-5.jpg) no-repeat bottom center; }
+.pages .page6 { background: #1a1a1c url(../img/importcars/bg-6.jpg) no-repeat bottom center; }
+
+.pt-page-ontop { z-index: 99; }
+.pt-page-moveToBottom { -webkit-animation: moveToBottom .6s ease both; -moz-animation: moveToBottom .6s ease both; animation: moveToBottom .6s ease both; }
+@-webkit-keyframes moveToBottom {  to { opacity: 0; filter:alpha(opacity=0); } }
+@-moz-keyframes moveToBottom {  to { opacity: 0; filter:alpha(opacity=0); } }
+@keyframes moveToBottom {  to { opacity: 0; filter:alpha(opacity=0); } }
+.pt-page-scaleUp { -webkit-animation: scaleUp .7s ease both; -moz-animation: scaleUp .7s ease both; animation: scaleUp .7s ease both; }
+/* 移动 from / to  */
+@-webkit-keyframes scaleUp { from { opacity: 0; filter:alpha(opacity=0); } }
+@-moz-keyframes scaleUp {  from { opacity: 0; filter:alpha(opacity=0); } }
+@keyframes scaleUp {  from { opacity: 0; filter:alpha(opacity=0); } }
+/*
+.pt-page-moveToBottom { -webkit-animation: moveToBottom .6s ease both; -moz-animation: moveToBottom .6s ease both; animation: moveToBottom .6s ease both; }
+@-webkit-keyframes moveToBottom {  to { -webkit-transform: translateY(100%); } }
+@-moz-keyframes moveToBottom {  to { -moz-transform: translateY(100%); } }
+@keyframes moveToBottom {  to { transform: translateY(100%); } }
+.pt-page-scaleUp { -webkit-animation: scaleUp .7s ease both; -moz-animation: scaleUp .7s ease both; animation: scaleUp .7s ease both; }
+/* 移动 from / to  */
+/*
+@-webkit-keyframes scaleUp { from { opacity: 0; -webkit-transform: scale(.8); } }
+@-moz-keyframes scaleUp {  from { opacity: 0; -moz-transform: scale(.8); } }
+@keyframes scaleUp {  from { opacity: 0; transform: scale(.8); } }
+*/
+

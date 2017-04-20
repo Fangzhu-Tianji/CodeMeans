@@ -1,0 +1,312 @@
+/**
+ * reset base css
+ * @authors 	ccdfs.com
+ * @date    	2014-05-19 10:42:28
+ * @version 	1.0.0
+ */
+
+/* reset.css */
+body,div,p,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,blockquote,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { margin:0px; padding:0px; }
+body,div,p,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,blockquote,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block;  }
+audio,canvas,video { display:inline-block; *display:inline; *zoom:1; }
+html { color:#333; background:#f4f4f4; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { font:14px/150% 'Microsoft Yahei',"familiar_probold",'SimHei',\5b8b\4f53; }
+h1,h2,h3,h4,h5,h6 { font-weight: 500; }
+address,caption,cite,code,dfn,em,th,var,b,i,u { font-weight:500; font-style:normal; }
+img { border: none; }
+ol,ul { list-style:none; }
+pre, code, tt { font-family: "Lucida Console", "Monaco", monospace; }
+input { outline: none;}
+
+/* remember to highlight inserts somehow! */
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+
+
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: collapse; border-spacing: 0; }
+table, caption, tbody, tfoot, thead, tr, th, td { border: 0; outline: 0; vertical-align: baseline; background: transparent; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+body { min-width: 1400px;}
+
+/* remember to define focus styles! */
+:focus { outline: 0;}
+
+
+/* box model == overflow:hidden */
+.box { display:block; zoom:1; margin: 0px auto;}
+.box:after { content:"."; height:0px; line-height:0px; font-size:0px; display:block; clear:both; overflow: hidden; visibility:hidden; }
+
+
+/* 透明度 */
+.opacity { filter:alpha(opacity=50); -moz-opacity:0.5; -khtml-opacity:0.5; opacity: 0.5; }
+
+
+/* 栅格系统宽度设定 （可重置）*/
+.container {width: 1200px; margin: 0px auto; zoom:1; clear: both;}
+.container:after { content:"."; height:0; line-height:0; font-size:0; display:block; clear:both; visibility:hidden; }
+
+
+/* link */
+a { color: #6c6c6c; text-decoration: none; }
+a:hover { color: #6c6c6c; text-decoration: none; }
+
+
+/* color */
+
+/* font */
+.fs12 { font-size: 12px; }
+.fs14 { font-size: 14px; }
+
+.fm1 { font-family: \5b8b\4f53; }
+.fm2 { font-family: arial; }
+.fm3 { font-family:"Microsoft Yahei" , "Yahei"; }
+.fm4 { font-family: Verdana,Geneva,sans-serif; }
+
+.fw7 { font-weight:700; }
+.fw0 { font-weight: normal; }
+
+/* 文字缩进 */
+.ti99 {text-indent: -9999px; }
+
+/* 文本对齐 */
+.ta1 { text-align: left; }
+.ta2 { text-align: center; }
+.ta3 { text-align: right; }
+.va1 { vertical-align: top; }
+.va2 { vertical-align: middle; }
+.va3 { vertical-align: bottom; }
+
+/* 浮动和位置等 */
+.f1 { float:left; }
+.f2 { float:right; }
+.f3 { float:none; }
+.cl { clear:both; }
+
+/*鼠标样式*/
+.cur1 { cursor:pointer; }
+
+/*容器居中*/
+.m0 { margin: 0px auto;}
+
+/*显示方式*/
+.dp0 { display: none; }
+.dp1 { display: block; }
+.dp2 { display: inline-block; }
+.dp3 { display: inline; }
+
+/*按钮样式*/
+
+@font-face {
+    font-family: 'familiar_probold';
+    src: url('familiar_pro-bold-webfont.eot');
+    src: url('familiar_pro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('familiar_pro-bold-webfont.woff2') format('woff2'),
+         url('familiar_pro-bold-webfont.woff') format('woff'),
+         url('familiar_pro-bold-webfont.ttf') format('truetype'),
+         url('familiar_pro-bold-webfont.svg#familiar_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* 公用样式 */
+.text-right{text-align:right;}
+/* 去掉chrome表单自动填充后的黄色背景 */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset
+}
+.ui-input.error,.ui-checkbox input.error{
+  border: 1px solid #FF0000;
+}
+.clearfix {
+	zoom: 1;
+}
+.clearfix:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	visibility: hidden;
+}
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px
+}
+
+.pagination>li {
+    display: inline
+}
+.pagination>li>a{cursor:pointer;}
+.pagination>li>a,.pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #333;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd
+}
+
+.pagination>li:first-child>a,.pagination>li:first-child>span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px
+}
+
+.pagination>li:last-child>a,.pagination>li:last-child>span {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px
+}
+
+.pagination>li>a:focus,.pagination>li>a:hover,.pagination>li>span:focus,.pagination>li>span:hover {
+    color: #23527c;
+    background-color: #eee;
+    border-color: #ddd
+}
+
+.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #c71622;
+    border-color: #c71622
+}
+
+.pagination>.disabled>a,.pagination>.disabled>a:focus,.pagination>.disabled>a:hover,.pagination>.disabled>span,.pagination>.disabled>span:focus,.pagination>.disabled>span:hover {
+    color: #777;
+    cursor: not-allowed;
+    background-color: #fff;
+    border-color: #ddd
+}
+/* layer login css */
+
+.layer-login-form {
+  position: relative;
+  z-index: 4;
+  width: 306px;
+  background: #fff;
+  overflow: visible;
+}
+.layer-login-form {
+  height: 280px;
+  padding: 25px 20px 15px;
+  margin: 0 auto;
+}
+.layer-login-form .form .item {
+  position: relative;
+margin-bottom: 28px;
+  z-index: 1;
+}
+.layer-login-form .form .item label.error{
+	color: #f00;
+}
+.layer-login-form .form .item-fore1, .form .item-fore2 {
+  border: 1px solid #bdbdbd;
+  height: 38px;
+  width: 304px;
+}
+.layer-login-form .form .item-fore1 {
+  z-index: 6;
+}
+.layer-login-form .form .item .login-label {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  border-right: 1px solid #bdbdbd;
+  background: url(../../img/public/pwd-icons-new.png) no-repeat;
+}
+.layer-login-form .form .item .name-label {
+  background-position: 0 0;
+}
+.layer-login-form .form .itxt {
+  line-height: 18px;
+  height: 18px;
+  border: 0;
+  padding: 10px 0 10px 50px;
+  width: 254px;
+  float: none;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: '\5b8b\4f53';
+}
+.layer-login-form .form .item-fore1 .clear-btn, .form .item-fore2 .clear-btn {
+  position: absolute;
+  z-index: 20;
+  right: 6px;
+  top: 12px;
+  width: 14px;
+  height: 14px;
+  background: url(../../img/public/pwd-icons-new.png) -25px -143px no-repeat;
+  cursor: pointer;
+  display: none;
+}
+.layer-login-form .form .item-fore2 {
+  height: 38px;
+}
+.layer-login-form .form .item .pwd-label {
+  background-position: -48px 0;
+}
+.layer-login-form .form .item-fore3 {
+  z-index: 5;
+  margin-bottom: 15px;
+}
+
+.layer-login-form .form .item-error {
+  border: 1px solid #e4393c;
+}
+.layer-login-form .form .item-error .name-label {
+  background-position: 0 -96px;
+  border-color: #e4393c;
+}
+.layer-login-form .form .item-error .pwd-label {
+  background-position: -48px -96px;
+  border-color: #e4393c;
+}
+.layer-login-form .login-box .safe {
+  position: relative;
+  color: #666;
+}
+.layer-login-form .login-box .safe span {
+  margin-right: 15px;
+}
+.layer-login-form .login-box .safe .forget-pw-safe {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+}
+.layer-login-form .login-box .login-btn {
+  margin: 0 auto;
+  position: relative;
+}
+.layer-login-form .login-box .login-btn .btn-img {
+  border: 1px solid #15b884;
+  display: block;
+  width: 100%;
+ background: #15b884;
+  height: 34px;
+  line-height: 34px;
+  color: #fff;
+  font-size: 20px;
+  font-family: '\5fae\8f6f\96c5\9ed1';
+  text-align:center;
+  cursor: pointer;
+}
+.layer-login-form .login-box .coagent li {
+  float: left;
+}
+.layer-login-form .login-box .coagent li .line {
+  color: #ccc;
+  padding: 0 10px;
+}

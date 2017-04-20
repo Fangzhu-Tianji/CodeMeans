@@ -1,0 +1,136 @@
+@import url(public/base.css);			/*基础样式*/
+@import url(public/m-header.css);		/*头部*/
+@import url(public/m-nav.css);			/*导航*/
+@import url(public/m-steps.css);		/* 步骤 */
+@import url(public/m-home-slider.css);	/*个人中心左侧导航*/
+@import url(public/m-pagebar.css);		/*分页条*/
+@import url(public/m-footer.css);		/*页面底部*/
+		/*右侧工具栏*/
+@import url(plugins/p-pop.css);		/*右侧工具栏*/
+
+html,body{
+	background: #f4f4f4;
+	font-family: "microsoft Yahei";
+}
+.red{
+	color: #c40000;
+}
+.pt10{
+	padding-top: 10px;
+}
+.mt5{
+	margin-top: 5px;
+}
+.mt7{
+	margin-top: 7px;
+}
+.main{
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+.main .container{
+	width: 1000px;
+}
+.main .contents{
+	width: 808px;
+	margin-bottom: 60px;
+	background: #fff;
+	padding: 20px 25px 50px 25px;
+	border: 1px solid #ddd;
+}
+
+.main .contents .block h3{
+	height: 42px;
+	line-height: 42px;
+	font-size: 18px;
+	color: #333;
+	border-bottom: 1px solid #efefef;
+}
+.main .contents .block h3 .title{
+	text-align: left;
+	display: inline-block;
+	width: 100px;
+	height: 42px;
+	border-bottom: 1px solid #3a0;
+}
+
+
+
+/*咨询留言*/
+.main .contents .proConsultation {
+	padding-top: 15px;
+}
+.main .contents .proConsultation dl {
+    border: 1px solid #f4f4f4;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+.main .contents .proConsultation dl dt {
+    width: 100%;
+    overflow: hidden;
+    height: 36px;
+    line-height: 36px;
+    background: #f9f9f9;
+}
+
+.main .contents .proConsultation dl dt em {
+    float: left;
+    margin-left: 15px;
+    color: #666;
+}
+
+.main .contents .proConsultation dl dt span {
+    float: right;
+    margin-right: 15px;
+    color: #cccccc;
+}
+
+.main .contents .proConsultation dl dd {
+    padding: 15px;
+}
+
+.main .contents .proConsultation dl dd h2 {
+    background: url(../img/public/i-0010.png) no-repeat 0px 0px;
+    padding-left: 30px;
+    color: #15b884;
+    font-size: 12px;
+    margin-bottom: 5px;
+    word-break:break-all; /*支持IE，chrome，FF不支持*/
+　　word-wrap:break-word;/*支持IE，chrome，FF*/
+}
+
+.main .contents .proConsultation dl dd p {
+    background: url(../img/public/i-0011.png) no-repeat 0px 0px;
+    padding-left: 30px;
+    color: #666;
+    font-size: 12px;
+    word-break:break-all; /*支持IE，chrome，FF不支持*/
+　　word-wrap:break-word;/*支持IE，chrome，FF*/
+}
+
+.main .contents .nothing{
+	margin-top: 50px;
+	padding: 10px 0;
+	height: 40px;
+}
+.main .contents .nothing .cnt{
+	width: 300px;
+	margin-left: 300px;
+	padding-left: 70px;
+	background: url('../img/public/i-1041.jpg') no-repeat center left ;
+}
+.main .contents .nothing .cnt .title{
+	color: #333;
+	font-size: 16px;
+}
+.main .contents .nothing .cnt .subtitle{
+	font-size: 12px;
+	color: #999;
+}
+.main .contents .nothing .cnt .subtitle a{
+	color: #40c0ff;
+}
+.main .contents .nothing .cnt .subtitle a:hover{
+	text-decoration: underline;
+}

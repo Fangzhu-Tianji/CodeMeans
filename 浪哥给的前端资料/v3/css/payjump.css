@@ -1,0 +1,133 @@
+@import url(public/base.css);		/*基础样式*/
+@import url(public/m-header.css);	/*头部*/
+@import url(public/m-nav.css);		/*导航*/
+@import url(public/m-steps.css);	/* 步骤 */
+@import url(public/m-footer.css);	/*页面底部*/
+	/*右侧工具栏*/
+
+html,body{
+	background: #fff;
+	font-family: "microsoft Yahei";
+}
+.red{
+	color: #c71622;
+}
+.main  .steps{
+	width: 930px;
+	margin: 30px auto;
+}
+.main .steps li{width: 298px;}
+.main .steps li.end{width: 32px;}
+
+.main .contents{
+	margin: 20px 0 30px 0;
+	height: 400px;
+	border: 1px solid #e5e5e5;
+	color: #999;
+	font-size: 18px;
+	position: relative;
+}
+
+.main .contents .refresh{
+    height: 360px;
+    margin-top: 40px;
+    width: 1198px;
+    overflow: hidden;
+}
+.main .contents .refresh img{
+	width: 541px;
+	height: 341px;
+	margin-top: 19px;
+	margin-left: 45px;
+}
+.main .contents p{
+    font-size: 18px;
+}
+
+
+
+@-webkit-keyframes fly{
+	0%{
+		-webkit-transform: perspective(0px) rotate(-50deg); opacity: 0;
+	}
+	20%{
+		-webkit-transform: perspective(300px) rotate(-30deg); opacity: 1;
+	}
+	80%{
+		-webkit-transform: perspective(300px) rotate(30deg); opacity: 1;
+	}
+	100%{
+		-webkit-transform: perspective(0px) rotate(50deg); opacity: 0;
+	}
+}
+@-moz-keyframes fly{
+	0%{
+		-moz-transform: perspective(0px) rotate(-50deg); opacity: 0;
+	}
+	20%{
+		-moz-transform: perspective(300px) rotate(-30deg); opacity: 1;
+	}
+	80%{
+		-moz-transform: perspective(300px) rotate(30deg); opacity: 1;
+	}
+	100%{
+		-moz-transform: perspective(0px) rotate(50deg); opacity: 0;
+	}
+}
+@-o-keyframes fly{
+	0%{
+		-o-transform: perspective(0px) rotate(-50deg); opacity: 0;
+	}
+	20%{
+		-o-transform: perspective(300px) rotate(-30deg); opacity: 1;
+	}
+	80%{
+		-o-transform: perspective(300px) rotate(30deg); opacity: 1;
+	}
+	100%{
+		-o-transform: perspective(0px) rotate(50deg); opacity: 0;
+	}
+}
+@keyframes fly{
+	0%{
+		transform: perspective(0px) rotate(-50deg); opacity: 0;
+	}
+	20%{
+		transform: perspective(300px) rotate(-30deg); opacity: 1;
+	}
+	80%{
+		transform: perspective(300px) rotate(30deg); opacity: 1;
+	}
+	100%{
+		transform: perspective(0px) rotate(50deg); opacity: 0;
+	}
+}
+.main .contents .plane{
+	width: 268px;
+	height: 268px;
+	position: absolute;
+	top: 100px;
+	left: 600px;
+	background: url(../img/public/i-1066.png) no-repeat center center;
+	z-index: 2;
+	-webkit-animation: fly 4s linear infinite;
+	-moz-animation: fly 4s linear infinite;
+	-o-animation: fly 4s linear infinite;
+	animation: fly 4s linear infinite;
+}
+
+.main .contents .maininfo{
+	width: 460px;
+	height: 180px;
+	position: absolute;
+	top: 140px;
+	right: 40px;
+	z-index: 1;
+}
+.main .contents .m-cnt{
+	font-size: 24px;
+	color: #666;
+	line-height: 40px;
+	margin-bottom: 30px;
+	text-align: center;
+}

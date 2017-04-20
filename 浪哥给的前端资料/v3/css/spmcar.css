@@ -1,0 +1,974 @@
+@import url(public/base.css);		/*基础样式*/
+@import url(public/m-header.css);	/*头部*/
+@import url(public/m-nav.css);		/*导航*/
+@import url(public/m-steps.css);	/* 步骤 */
+@import url(public/m-footer.css);	/*页面底部*/
+	/*右侧工具栏*/
+
+html,body{
+	background: #fff;
+	font-family: "microsoft Yahei";
+}
+.main{
+
+}
+
+.topic{
+	width: 100%;
+	height: 70px;
+	min-width: 1200px;
+	background: url(../img/public/i-1031.png) no-repeat top center;
+}
+.topic li{
+	position: relative;
+	float: left;
+	width: 16.66%;
+	height: 70px;
+	font-size: 18px;
+	color: #616161;
+	cursor: pointer;
+}
+.topic li.select{
+	color: #a40400;
+	border-bottom: 2px solid #a40400;
+}
+.topic li i{
+	position: absolute;
+	display: block;
+	top: 20px;
+	right: 0;
+	width: 1px;
+	height: 30px;
+	background: #222;
+}
+.topic li span{
+	margin-top: 15px;
+	display: block;
+	text-align: center;
+}
+.topic li .en{
+	margin-top: 0px;
+}
+
+
+
+/*第一辆车*/
+.main .car01-1 {
+	width: 100%;
+	height: 565px;
+	min-width: 1200px;
+	background: url(../img/public/i-0022.jpg) no-repeat top center;
+}
+.main .car01-1 .callphone {
+	width: 310px;
+	height: 40px;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	padding-left: 860px;
+	padding-top: 359px;
+}
+.main .car01-2 {
+	width: 100%;
+	height: 445px;
+	min-width: 1200px;
+	background: url(../img/public/i-0023.jpg) no-repeat top center;
+}
+.main .car01-2 .note1{
+	float: left;
+	padding-left: 65px;
+	padding-top: 20px;
+	width: 340px;
+	height: 150px;
+	margin-top: 150px;
+	margin-left: 250px;
+}
+.main .car01-2 .note1 h3{
+	font-size: 18px;
+	color: #868da1;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.main .car01-2 .note1 p{
+	font-size: 14px;
+	line-height: 25px;
+	color: #656b7a;
+	font-weight: 500;
+
+}
+.main .car01-2 .note2{
+	float: right;
+	width: 260px;
+	height: 232px;
+	line-height: 28px;
+	font-size: 14px;
+	color: #fff;
+	font-weight: 500;
+	margin-top: 100px;
+	margin-right: 140px;
+}
+.main .car01-2 .note2 p {
+	margin-bottom: 20px;
+}
+.main .car01-3 {
+	width: 100%;
+	height: 567px;
+	min-width: 1200px;
+	background: url(../img/public/i-0024.jpg) no-repeat top center;
+}
+.main .car01-4 {
+	width: 100%;
+	height: 816px;
+	min-width: 1200px;
+	background: url(../img/public/i-0025.jpg) no-repeat top center;
+}
+.main .car01-4 .note3{
+	float: right;
+	width: 260px;
+	height: 353px;
+	color: #808697;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 36px;
+	margin-right: 135px;
+	margin-top: 390px;
+}
+.main .car01-5 {
+	width: 100%;
+	height: 235px;
+	min-width: 1200px;
+	background: url(../img/public/i-0026.jpg) no-repeat top center;
+}
+
+
+
+
+
+
+
+/*第二辆车*/
+.main .car02-1{
+	width: 100%;
+	height: 575px;
+	min-width: 1200px;
+	background: url(../img/public/i-1027.jpg) no-repeat top center;
+}
+.main .car02-1 .container{
+	height: 575px;
+	overflow: hidden;
+}
+.main .car02-1 .callphone{
+	margin-top: 350px; 
+	margin-left: 925px;
+	width: 247px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+}
+.main .car02-2{
+	width: 100%;
+	height: 1000px;
+	min-width: 1200px;
+	background: url(../img/public/i-1028.jpg) no-repeat top center;
+}
+.main .car02-2 .container{
+	height: 1000px;
+	overflow: hidden;
+}
+.main .car02-2 .note1{
+	float: left;
+	padding-left: 60px;
+	padding-top: 25px;
+	width: 300px;
+	height: 140px;
+	margin-top: 140px;
+	margin-left: 265px;
+}
+.main .car02-2 .note1 h3{
+	font-size: 20px;
+	color: #868da1;
+	font-weight: bold;
+}
+.main .car02-2 .note1 p{
+	margin-top: 15px;
+	font-size: 14px;
+	line-height: 25px;
+	color: #656b7a;
+	font-weight: bold;
+
+}
+.main .car02-2 .note2{
+	float: right;
+	width: 250px;
+	height: 232px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #fff;
+	font-weight: 500;
+	margin-top: 100px;
+	margin-right: 140px;
+}
+.main .car02-3{
+	width: 100%;
+	height: 817px;
+	min-width: 1200px;
+	background: url(../img/public/i-1029.jpg) no-repeat top center;
+}
+.main .car02-3 .container{
+	height: 817px;
+	overflow: hidden;
+}
+.main .car02-3 .note3{
+	float: right;
+	width: 270px;
+	height: 353px;
+	color: #808697;
+	font-size: 14px;
+	line-height: 32px;
+	margin-right: 130px;
+	margin-top: 390px;
+}
+.main .car02-4{
+	width: 100%;
+	height: 473px;
+	min-width: 1200px;
+	background: url(../img/public/i-1030.jpg) no-repeat top center;
+}
+.main .car02-4 ul { width: 120%;}
+.main .car02-4 li {
+	width: 286px;
+	height: 52px;
+	padding-top: 10px;
+	background: url(../img/public/i-0027.png) no-repeat 0px 0px;
+	text-align: center;
+	color: #868da1;
+	float: left;
+	margin-right: 24px;
+	margin-top: 260px;
+}
+
+
+
+
+/*第三辆车*/
+.main .car03-1 {
+	width: 100%;
+	height: 565px;
+	min-width: 1200px;
+	background: url(../img/public/i-0028.jpg) no-repeat top center;
+}
+.main .car03-1 .callphone {
+	width: 310px;
+	height: 40px;
+	text-align: center;
+	color: #c71621;
+	font-size: 18px;
+	padding-left: 890px;
+	padding-top: 357px;
+}
+.main .car03-2 {
+	width: 100%;
+	height: 445px;
+	min-width: 1200px;
+	background: url(../img/public/i-0029.jpg) no-repeat top center;
+}
+.main .car03-2 .note1{
+	float: left;
+	padding-left: 100px;
+	padding-top: 40px;
+	width: 300px;
+	height: 150px;
+	margin-top: 135px;
+	margin-left: 240px;
+}
+.main .car03-2 .note1 h3{
+	font-size: 20px;
+	color: #868da1;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.main .car03-2 .note1 p{
+	font-size: 14px;
+	line-height: 25px;
+	color: #656b7a;
+	font-weight: 500;
+
+}
+.main .car03-2 .note2{
+	float: right;
+	width: 260px;
+	height: 232px;
+	line-height: 28px;
+	font-size: 14px;
+	color: #fff;
+	font-weight: 500;
+	margin-top: 100px;
+	margin-right: 140px;
+}
+.main .car03-2 .note2 p {
+	margin-bottom: 20px;
+}
+.main .car03-3 {
+	width: 100%;
+	height: 567px;
+	min-width: 1200px;
+	background: url(../img/public/i-0030.jpg) no-repeat top center;
+}
+.main .car03-4 {
+	width: 100%;
+	height: 816px;
+	min-width: 1200px;
+	background: url(../img/public/i-0031.jpg) no-repeat top center;
+}
+.main .car03-4 .note3{
+	float: right;
+	width: 240px;
+	height: 353px;
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 36px;
+	margin-right: 140px;
+	margin-top: 390px;
+}
+.main .car03-5 {
+	width: 100%;
+	height: 300px;
+	min-width: 1200px;
+	background: url(../img/public/i-0032.jpg) no-repeat top center;
+}
+
+
+
+
+
+/*第四辆车*/
+.main .car04-1 {
+	width: 100%;
+	height: 560px;
+	min-width: 1200px;
+	background: url(../img/public/i-0036.jpg) no-repeat top center;
+}
+.main .car04-1 .container {
+	position: relative;
+}
+.main .car04-1 .maserati_A {
+	position: absolute;
+	text-indent: -9999px;
+	left: 0px;
+	top: 38px;
+	width: 986px;
+	height: 520px;
+	background: url(../img/public/i-0033.png) no-repeat 0px 0px;
+	-webkit-transform: translate(-350px,0px) scale(0,0); transform: translate(-350px,0px) scale(0,0);
+}
+.main .done .maserati_A {
+	-webkit-transform: translate(0px,0px) scale(1,1); transform: translate(0px,0px) scale(1,1);
+	animation:flymaserati_A 0.5s;
+	-webkit-animation:flymaserati_A 0.5s;
+}
+@keyframes flymaserati_A{
+    0% { transform: translate(-350px,0px) scale(0,0);}
+    100% { transform: translate(0px,0px) scale(1,1);}
+}
+@-webkit-keyframes flymaserati_A{
+    0% {-webkit-transform: translate(-350px,0px) scale(0,0); }
+    100% {-webkit-transform: translate(0px,0px) scale(1,1); }
+}
+
+.main .car04-1 .maserati_A_ad {
+	position: absolute;
+	text-indent: -9999px;
+	right: 100px;
+	top: 60px;
+	width: 402px;
+	height: 174px;
+	background: url(../img/public/i-0034.png) no-repeat 0px 0px;
+}
+.main .done .maserati_A_ad {
+	animation:flymaserati_A_ad 0.5s;
+	-webkit-animation:flymaserati_A_ad 0.5s;
+}
+@keyframes flymaserati_A_ad{
+    0% { transform: translate(350px,0px);}
+    100% { transform: translate(0px,0px);}
+}
+@-webkit-keyframes flymaserati_A_ad{
+    0% {-webkit-transform: translate(350px,0px); }
+    100% {-webkit-transform: translate(0px,0px); }
+}
+.main .car04-1 .maserati_phone {
+	position: absolute;
+	right: 100px;
+	top: 400px;
+	width: 258px;
+	height: 53px;
+	line-height: 45px;
+	background: url(../img/public/i-0035.png) no-repeat 0px 0px;
+	text-align: center;
+	color: #fb191e;
+	font-size: 18px;
+}
+.main .done .maserati_phone {
+	animation:flymaserati_phone 0.5s ease;
+	-webkit-animation:flymaserati_phone 0.5s ease;
+}
+@keyframes flymaserati_phone{
+    0% { transform: translate(0px,-400px); }
+    100% { transform: translate(0px,0px); }
+}
+@-webkit-keyframes flymaserati_phone{
+    0% { -webkit-transform: translate(0px,-400px); }
+    100% { -webkit-transform: translate(0px,0px); }
+}
+.main .car04-2 {
+	width: 100%;
+	height: 1016px;
+	min-width: 1200px;
+	background: url(../img/public/i-0038.jpg) no-repeat top center;
+}
+.main .car04-2 .container {
+	position: relative;
+}
+.main .car04-2 .maserati_B_title {
+	width: 542px;
+	height: 52px;
+	display: block;
+	background: url(../img/public/i-0041.png) no-repeat 0px 0px;
+	position: absolute;
+	top: 50px;
+	left: 150px;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+.main .done .maserati_B_title {
+	opacity: 1;
+	filter:alpha(opacity=100);
+	-webkit-transition: opacity 1s ease; transition: opacity 1s ease;
+}
+.main .car04-2 .maserati_B {
+	position: absolute;
+	z-index: 3;
+	text-indent: -9999px;
+	left: 50px;
+	top: 230px;
+	width: 1077px;
+	height: 768px;
+	background: url(../img/public/i-0037.png) no-repeat 0px 0px;
+	-webkit-transform: translate(-2400px,-600px) scale(0,0); transform: translate(-2400px,-600px) scale(0,0);
+}
+.main .done .maserati_B {
+	-webkit-transform: translate(0px,0px) scale(1,1); transform: translate(0px,0px) scale(1,1);
+	animation:flymaserati_B 1s; -webkit-animation:flymaserati_B 1s;
+}
+@keyframes flymaserati_B{
+    0% { transform: translate(-2400px,-600px) scale(0,0); }
+    100% { transform: translate(0px,0px) scale(1,1); }
+}
+@-webkit-keyframes flymaserati_B{
+    0% {-webkit-transform: translate(-2400px,-600px) scale(0,0); }
+    100% {-webkit-transform: translate(0px,0px) scale(1,1); }
+}
+.main .car04-2 .maserati_B_noticeA {
+	width: 420px;
+	height: 160px;
+	position: absolute;
+	z-index: 1;
+	left: 240px;
+	top: 150px;
+	background: #000;
+	opacity: 0.6;
+	filter:alpha(opacity=60);
+	-webkit-transform: scale(0,0); 
+	transform: scale(0,0);
+}
+.main .done .maserati_B_noticeA {
+	-webkit-transform: scale(1,1); 
+	transform: scale(1,1);
+	animation:flymaserati_B_noticeA 1.5s;
+	-webkit-animation:flymaserati_B_noticeA 1.5s;
+}
+@keyframes flymaserati_B_noticeA{
+    0%,65% { transform: scale(0,0);}
+    100% { transform: scale(1,1);}
+}
+@-webkit-keyframes flymaserati_B_noticeA{
+    0%,65% { -webkit-transform: scale(0,0); }
+    100% { -webkit-transform: scale(1,1); }
+}
+.main .car04-2 .maserati_B_noticeB {
+	padding: 30px 30px 30px 60px;
+	width: 340px;
+	height: 100px;
+	font-size: 14px;
+	line-height: 25px;
+	position: absolute;
+	z-index: 2;
+	left: 240px;
+	top: 150px;
+	color: #656b7a;
+	-webkit-transform: scale(0,0); 
+	transform: scale(0,0);
+}
+.main .car04-2 .maserati_B_noticeB span {
+	font-size: 20px;
+	color: #fff;
+}
+.main .done .maserati_B_noticeB {
+	-webkit-transform: scale(1,1); 
+	transform: scale(1,1);
+	animation:flymaserati_B_noticeB 2s;
+	-webkit-animation:flymaserati_B_noticeB 2s;
+}
+@keyframes flymaserati_B_noticeB{
+    0%,50% { transform: scale(0,0);}
+    100% { transform: scale(1,1);}
+}
+@-webkit-keyframes flymaserati_B_noticeB{
+    0%,50% { -webkit-transform: scale(0,0); }
+    100% { -webkit-transform: scale(1,1); }
+}
+.main .car04-2 .maserati_B_noticeC {
+	width: 220px;
+	color: #fff;
+	line-height: 30px;
+	font-size: 14px;
+	position: absolute;
+	right: 150px;
+	top: 120px;
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+	-webkit-transform: translate(1200px,0px) scale(0,0); transform: translate(1200px,0px) scale(0,0);
+}
+.main .done .maserati_B_noticeC {
+	-webkit-transform: translate(0px,0px) scale(1,1); transform: translate(0px,0px) scale(1,1);
+	animation:flymaserati_B_noticeC 0.5s; -webkit-animation:flymaserati_B_noticeC 0.5s;
+}
+@keyframes flymaserati_B_noticeC{
+    0% { transform: translate(1200px,0px) scale(0,0); }
+    100% { transform: translate(0px,0px) scale(1,1); }
+}
+@-webkit-keyframes flymaserati_B_noticeC{
+    0% {-webkit-transform: translate(1200px,0px) scale(0,0); }
+    100% {-webkit-transform: translate(0px,0px) scale(1,1); }
+}
+.main .car04-3 {
+	width: 100%;
+	height: 817px;
+	min-width: 1200px;
+	background: url(../img/public/i-0040.jpg) no-repeat top center;
+}
+.main .car04-3 .container {
+	position: relative;
+}
+.main .car04-3 .maserati_C {
+	text-indent: -9999px;
+	width: 907px;
+	height: 418px;
+	background: url(../img/public/i-0039.png) no-repeat top center;
+	position: absolute;
+	left: -50px;
+	top: 300px;
+	-webkit-transform: translate(-2400px,0px) scale(1,1); transform: translate(-2400px,0px) scale(1,1);
+}
+.main .done .maserati_C {
+	-webkit-transform: translate(0px,0px) scale(1,1); transform: translate(0px,0px) scale(1,1);
+	animation:flymaserati_C 1s; -webkit-animation:flymaserati_C 1s;
+}
+@keyframes flymaserati_C{
+    0% { transform: translate(-2400px,0px) scale(0,0); }
+    100% { transform: translate(0px,0px) scale(1,1); }
+}
+@-webkit-keyframes flymaserati_C{
+    0% {-webkit-transform: translate(-2400px,0px) scale(0,0); }
+    100% {-webkit-transform: translate(0px,0px) scale(1,1); }
+}
+.main .car04-3 .maserati_C_title {
+	width: 493px;
+	height: 51px;
+	display: block;
+	background: url(../img/public/i-0042.png) no-repeat 0px 0px;
+	position: absolute;
+	top: 100px;
+	left: 150px;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+.main .done .maserati_C_title {
+	opacity: 1;
+	filter:alpha(opacity=100);
+	-webkit-transition: opacity 1s ease; transition: opacity 1s ease;
+}
+.main .car04-3 .maserati_C_noticeA {
+	width: 220px;
+	color: #fff;
+	line-height: 30px;
+	font-size: 14px;
+	position: absolute;
+	right: 160px;
+	top: 380px;
+	opacity: 0.8;
+	fliter:alpha(opacity=80);
+	transform: translate(0px,800px) scale(0,0); -webkit-transform: translate(0px,800px) scale(0,0);
+}
+.main .done .maserati_C_noticeA {
+	transform: translate(0px,0px) scale(1,1); -webkit-transform: translate(0px,0px) scale(1,1); 
+	animation: flymaserati_C_noticeA 0.5s; -webkit-animation: flymaserati_C_noticeA 0.5s;
+}
+@keyframes flymaserati_C_noticeA {
+    0% { transform: translate(0px,800px) scale(0,0); }
+    100% { transform: translate(0px,0px) scale(1,1); }
+}
+@-webkit-keyframes flymaserati_C_noticeA {
+    0% {-webkit-transform: translate(0px,800px) scale(0,0); }
+    100% {-webkit-transform: translate(0px,0px) scale(1,1); }
+}
+
+.main .car04-4 {
+	width: 100%;
+	height: 1206px;
+	min-width: 1200px;
+	background: url(../img/public/i-0045.jpg) no-repeat top center;
+}
+.main .car04-4 .container {
+	position: relative;
+}
+.main .car04-4 .maserati_D {
+	text-indent: -9999px;
+	width: 902px;
+	height: 393px;
+	background: url(../img/public/i-0044.png) no-repeat top center;
+	position: absolute;
+	left: 50px;
+	top: 300px;
+	-webkit-transform: translate(-2400px,0px) scale(1,1); transform: translate(-2400px,0px) scale(1,1);
+}
+.main .done .maserati_D {
+	-webkit-transform: translate(0px,0px) scale(1,1); transform: translate(0px,0px) scale(1,1);
+	animation:flymaserati_D 1s; -webkit-animation:flymaserati_D 1s;
+}
+@keyframes flymaserati_D{
+    0% { transform: translate(-2400px,0px) scale(0,0); }
+    100% { transform: translate(0px,0px) scale(1,1); }
+}
+@-webkit-keyframes flymaserati_D{
+    0% {-webkit-transform: translate(-2400px,0px) scale(0,0); }
+    100% {-webkit-transform: translate(0px,0px) scale(1,1); }
+}
+.main .car04-4 .maserati_D_title {
+	width: 493px;
+	height: 51px;
+	display: block;
+	background: url(../img/public/i-0042.png) no-repeat 0px 0px;
+	position: absolute;
+	top: 200px;
+	left: 100px;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+.main .done .maserati_D_title {
+	opacity: 1;
+	filter:alpha(opacity=100);
+	-webkit-transition: opacity 1s ease; transition: opacity 1s ease;
+}
+.main .car04-4 .maserati_D_noticeA {
+	width: 620px;
+	padding: 30px;
+	background: #111;
+	color: #c1b491;
+	line-height: 30px;
+	font-size: 16px;
+	position: absolute;
+	right: 0px;
+	top: 750px;
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+	-webkit-transform: translate(2000px,0px) scale(0,0); transform: translate(2000px,0px) scale(0,0);
+}
+.main .car04-4 .maserati_D_noticeA span {
+	font-size: 24px;
+	color: #fff;
+	margin-right: 5px;
+}
+.main .done .maserati_D_noticeA {
+	-webkit-transform: translate(0px,0px) scale(1,1); transform: translate(0px,0px) scale(1,1);
+	animation:flymaserati_D_noticeA 0.5s; -webkit-animation:flymaserati_D_noticeA 0.5s;
+}
+@keyframes flymaserati_D_noticeA {
+    0% { transform: translate(2000px,0px) scale(0,0); }
+    100% { transform: translate(0px,0px) scale(1,1); }
+}
+@-webkit-keyframes flymaserati_D_noticeA {
+    0% {-webkit-transform: translate(2000px,0px) scale(0,0); }
+    100% {-webkit-transform: translate(0px,0px) scale(1,1); }
+}
+
+.main .car04-5 {
+	width: 100%;
+	height: 1147px;
+	min-width: 1200px;
+	background: url(../img/public/i-0048.jpg) no-repeat top center;
+}
+.main .car04-5 .container {
+	position: relative;
+}
+.main .car04-5 .maserati_E {
+	text-indent: -9999px;
+	width: 1027px;
+	height: 654px;
+	background: url(../img/public/i-0047.png) no-repeat top center;
+	position: absolute;
+	left: -4px;
+	top: 200px;
+	-webkit-transform: translate(-2400px,0px) scale(1,1); transform: translate(-2400px,0px) scale(1,1);
+}
+.main .done .maserati_E {
+	-webkit-transform: translate(0px,0px) scale(1,1); transform: translate(0px,0px) scale(1,1);
+	animation:flymaserati_E 1s; -webkit-animation:flymaserati_E 1s;
+}
+@keyframes flymaserati_E{
+    0% { transform: translate(-2400px,0px) scale(0,0); }
+    100% { transform: translate(0px,0px) scale(1,1); }
+}
+@-webkit-keyframes flymaserati_E{
+    0% {-webkit-transform: translate(-2400px,0px) scale(0,0); }
+    100% {-webkit-transform: translate(0px,0px) scale(1,1); }
+}
+.main .car04-5 .maserati_E_title {
+	width: 748px;
+	height: 52px;
+	display: block;
+	background: url(../img/public/i-0046.png) no-repeat 0px 0px;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+.main .done .maserati_E_title {
+	opacity: 1;
+	filter:alpha(opacity=100);
+	-webkit-transition: opacity 1s ease; transition: opacity 1s ease;
+}
+.main .car04-5 .maserati_E_noticeA {
+	width: 900px;
+	padding: 30px;
+	color: #c1b491;
+	line-height: 36px;
+	font-size: 18px;
+	position: absolute;
+	left: 100px;
+	top: 750px;
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+	-webkit-transform: translate(2000px,0px) scale(0,0); transform: translate(2000px,0px) scale(0,0);
+}
+.main .car04-5 .maserati_E_noticeA span {
+	font-size: 24px; margin-right: 10px;
+}
+.main .done .maserati_E_noticeA {
+	-webkit-transform: translate(0px,0px) scale(1,1); transform: translate(0px,0px) scale(1,1);
+	animation:flymaserati_E_noticeA 0.5s; -webkit-animation:flymaserati_E_noticeA 0.5s;
+}
+@keyframes flymaserati_E_noticeA {
+    0% { transform: translate(2000px,0px) scale(0,0); }
+    100% { transform: translate(0px,0px) scale(1,1); }
+}
+@-webkit-keyframes flymaserati_E_noticeA {
+    0% {-webkit-transform: translate(2000px,0px) scale(0,0); }
+    100% {-webkit-transform: translate(0px,0px) scale(1,1); }
+}
+
+
+
+
+/*第五个车*/
+.main .car05-1 {
+	width: 100%;
+	height: 565px;
+	min-width: 1200px;
+	background: url(../img/public/i-0049.jpg) no-repeat top center;
+}
+.main .car05-1 .container {
+	position: relative;
+}
+.main .car05-1 .mcl_phone {
+	position: absolute;
+	right: 90px;
+	top: 450px;
+	width: 258px;
+	height: 53px;
+	line-height: 45px;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+}
+.main .car05-2 {
+	width: 100%;
+	height: 1011px;
+	min-width: 1200px;
+	background: url(../img/public/i-0050.jpg) no-repeat top center;
+}
+.main .car05-2 .container {
+	position: relative;
+}
+.main .car05-2 .mcl_B_noticeA {
+	width: 300px;
+	padding: 30px;
+	color: #fff;
+	line-height: 28px;
+	font-size: 14px;
+	position: absolute;
+	left: 310px;
+	top: 140px;
+}
+.main .car05-2 .mcl_B_noticeA h2 {
+	font-size: 28px;
+	margin-bottom: 8px;
+}
+.main .car05-2 .mcl_B_noticeB {
+	width: 220px;
+	padding: 30px;
+	color: #fff;
+	line-height: 36px;
+	font-size: 14px;
+	position: absolute;
+	right: 130px;
+	top: 100px;
+	opacity: 0.9;
+	filter:alpha(opacity=90);
+}
+.main .car05-3 {
+	width: 100%;
+	height: 817px;
+	min-width: 1200px;
+	background: url(../img/public/i-0051.jpg) no-repeat top center;
+}
+.main .car05-3 .container {
+	position: relative;
+}
+.main .car05-3 .mcl_C_noticeA {
+	width: 240px;
+	padding: 30px;
+	color: #fff;
+	line-height: 36px;
+	font-size: 14px;
+	position: absolute;
+	right: 120px;
+	top: 360px;
+	opacity: 0.9;
+	filter:alpha(opacity=90);
+}
+
+
+
+/*第六个车*/
+.main .car06-1 {
+	width: 100%;
+	height: 566px;
+	min-width: 1200px;
+	background: url(../img/public/i-0052.jpg) no-repeat top center;
+}
+.main .car06-1 .container {
+	position: relative;
+}
+.main .car06-1 .rolls_phone {
+	position: absolute;
+	right: 110px;
+	top: 416px;
+	width: 258px;
+	height: 53px;
+	line-height: 45px;
+	text-align: center;
+	color: #fb191e;
+	font-size: 18px;
+}
+.main .car06-2 {
+	width: 100%;
+	height: 1012px;
+	min-width: 1200px;
+	background: url(../img/public/i-0053.jpg) no-repeat top center;
+}
+.main .car06-2 .container {
+	position: relative;
+}
+.main .car06-2 .rolls_A_noticeA {
+	width: 320px;
+	padding: 30px;
+	color: #fff;
+	line-height: 28px;
+	font-size: 14px;
+	position: absolute;
+	left: 280px;
+	top: 145px;
+}
+.main .car06-2 .rolls_A_noticeA h2 {
+	font-size: 18px;
+	margin-bottom: 8px;
+}
+.main .car06-2 .rolls_A_noticeB {
+	width: 240px;
+	padding: 30px;
+	color: #fff;
+	line-height: 30px;
+	font-size: 14px;
+	position: absolute;
+	right: 120px;
+	top: 90px;
+	opacity: 0.9;
+	filter:alpha(opacity=90);
+}
+.main .car06-2 .rolls_A_noticeB h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+.main .car06-3 {
+	width: 100%;
+	height: 918px;
+	min-width: 1200px;
+	background: url(../img/public/i-0054.jpg) no-repeat top center;
+}
+.main .car06-3 .container {
+	position: relative;
+}
+.main .car06-3 .rolls_B_noticeA {
+	width: 260px;
+	padding: 30px;
+	color: #808697;
+	line-height: 30px;
+	font-size: 14px;
+	position: absolute;
+	right: 110px;
+	top: 290px;
+	opacity: 0.9;
+	filter:alpha(opacity=90);
+}
+.main .car06-3 .rolls_B_noticeA h2 {
+	font-size: 20px;
+	color: #fff;
+	margin-bottom: 40px;
+}
+.main .car06-4 {
+	width: 100%;
+	height: 1037px;
+	min-width: 1200px;
+	background: url(../img/public/i-0055.jpg) no-repeat top center;
+}
+.main .car06-4 .container {
+	position: relative;
+}
+.main .car06-4 .rolls_C_noticeA {
+	width: 280px;
+	padding: 30px;
+	color: #fff;
+	line-height: 40px;
+	font-size: 20px;
+	position: absolute;
+	right: 30px;
+	top: 200px;
+	opacity: 0.9;
+	filter:alpha(opacity=90);
+}

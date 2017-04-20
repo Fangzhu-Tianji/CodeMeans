@@ -1,0 +1,80 @@
+@import url(public/base.css);		/*基础样式*/
+@import url(public/m-header.css);	/*头部*/
+@import url(public/m-nav.css);		/*导航*/
+@import url(public/m-home-slider.css);	/*个人中心左侧导航*/
+@import url(public/m-footer.css);	/*页面底部*/
+	/*右侧工具栏*/
+
+html,body{
+	background: #f5f5f5;
+}
+
+.main{
+	margin: 30px 0 40px 0;
+}
+.main .container{
+	width: 1000px;
+}
+.main .contents{
+	width: 808px;
+	background: #fff;
+	border: 1px solid #ddd;
+	margin-left: 10px;
+	padding: 0 25px;
+	min-height: 650px;
+}
+.subcontent h3{
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 2px solid #e8e8e8;
+	margin-top: 40px;
+	padding-bottom: 10px;
+}
+.subcontent h3 bdi{
+	color: #c71622;
+}
+#tb{
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+#tb td,#tb th{
+	border-bottom: 1px solid #f2f2f2;
+	padding: 5px;
+}
+#tb th{
+	text-align: center;
+	background-color: #fafafa;
+	color: #666;
+} 
+#tb .alt td{
+	font-size: 12px;
+	color: #a9a9a9;
+	text-align: center;
+	padding: 10px 0px;
+}
+#tb .alt td bdi{
+	color: #c71622;
+}
+.subcontent .sum h2{
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+	margin-top: 70px;
+}
+.subcontent .sum ul li{
+	margin-top: 10px;
+	font-size: 12px;
+	color: #333;
+	list-style: disc;
+	margin-left: 15px;
+}
+.subcontent .sum p{
+	font-size: 12px;
+	color: #999;
+	padding:10px 0px;
+}
+
+
+
+

@@ -1,0 +1,57 @@
+/*select*/
+
+.ui-selectSpan {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    padding: 5px 20px 5px 10px;
+    *padding: 6px 20px 4px 10px;
+    border: 1px solid #c1c1c1;
+    background: #FFF url(../../img/plugins/ui-select.png) no-repeat right 12px;
+    color: #333;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.ui-selectSpan.over,
+.ui-selectSpan:hover {
+    _display: block;
+    background: #FFF url(../../img/plugins/ui-select.png) no-repeat right 12px;
+    border: 1px solid #999;
+    box-shadow: 0px 0px 3px 0px #ccc;
+}
+
+.ui-selectOpts {
+    background: #fff;
+    overflow: hidden;
+    border: 1px solid #afafaf;
+    box-shadow: 0px 8px 6px -6px #ddd;
+    position: absolute;
+    z-index: 100000001;
+}
+
+.ui-selectOpts ul {
+    width: 100%;
+    max-height: 200px;
+    overflow: auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+.ui-selectOpts li {
+    overflow: hidden;
+    padding: 5px 10px;
+    background: #fff;
+    color: #333;
+    cursor: default;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.ui-selectOpts li.hover,
+.ui-selectOpts li.selected {
+    overflow: hidden;
+    background: #efefef;
+    color: #333;
+}

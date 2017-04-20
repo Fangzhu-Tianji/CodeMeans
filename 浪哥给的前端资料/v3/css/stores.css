@@ -1,0 +1,185 @@
+@import url(public/base.css);		/*基础样式*/
+@import url(public/m-header.css);	/*头部*/
+@import url(public/m-nav.css);		/*导航*/
+@import url(public/m-home-slider.css);	/*个人中心左侧导航*/
+@import url(plugins/p-select.css);	/*自定义下拉列表*/
+@import url(public/m-footer.css);	/*页面底部*/
+@import url(public/m-pagebar.css);		/*分页条*/
+	/*右侧工具栏*/
+@import url(plugins/p-pop.css);
+
+html,body{
+	background: #f4f4f4;
+	font-family: "microsoft Yahei","familiar_probold";
+}
+
+.main{
+	margin: 30px 0 40px 0;
+}
+.main .container{
+	width: 1000px;
+}
+.main .contents{
+	width: 859px;
+	margin-left: 10px;
+}
+
+.main .contents .subcontent{
+	background: #fff;
+	min-height: 738px;
+	border: 1px solid #ddd;
+	padding: 0 25px;
+}
+
+.main .contents .subcontent .cur-site{
+	height: 46px;
+	line-height: 46px;
+	border-bottom: 1px solid #e5e5e5;
+	font-size: 12px;
+	color: #999;
+}
+.main .contents .subcontent .cur-site .title{
+	font-size: 14px;
+	color: #000;
+	padding: 0 20px;
+	border-right: 1px solid #e5e5e5;
+	font-weight: bold;
+}
+.main .contents .subcontent .cur-site .total{
+	padding: 0 10px;
+}
+.main .contents .subcontent .store-list{
+	margin-top: -1px;
+	overflow: hidden;
+	clear: both;
+	padding-bottom: 10px;
+}
+.main .contents .subcontent .store-list li{
+	width: 25%;
+	*width: 24.88%;
+	float: left;
+	text-align: center;
+	padding: 30px 0;
+}
+.main .contents .subcontent .store-list li .img{
+	position: relative;
+	margin: 0 auto;
+	width: 186px;
+	height: 186px;
+	background: #f1f1f1;
+	border: 1px solid #efefef;
+	border-radius: 4px;
+}
+.main .contents .subcontent .store-list li .img img{
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	width: 186px;
+	height: 186px;
+	border-radius: 4px;
+}
+.main .contents .subcontent .store-list li .goodsnm{
+	margin-top: 10px;
+	color: #666;
+	font-size: 12px;
+}
+.main .contents .subcontent .store-list li .units{
+	margin-top: 10px;
+	color: #c71622;
+}
+.main .contents .subcontent .store-list li .goodsnm a{
+	display: inline-block;
+	line-height: 20px;
+	cursor: pointer;
+}
+.main .contents .subcontent .store-list li .goodsnm span{
+	display: inline-block;
+	width: 180px;
+	height: 44px;
+	overflow: hidden;
+	text-align: center;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.main .contents .subcontent .store-list li .hover{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 187px;
+	height: 36px;
+}
+.main .contents .subcontent .store-list li .hover .overlay{
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.main .contents .subcontent .store-list li .hover .bar{
+	clear: both;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 186px;
+	height: 34px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	background: #000;
+	border-radius: 4px 4px 0 0;
+}
+
+.main .contents .subcontent .store-list li .hover a{
+	position: absolute;
+	top: 5px;
+	width: 24px;
+	height: 24px;
+	background: #fff;
+}
+.main .contents .subcontent .store-list li .hover a.addtocar{
+	right: 35px;
+	background: url(../img/public/i-1032.png) no-repeat 0 0;
+}
+.main .contents .subcontent .store-list li .hover a.addtocar:hover{
+	background: url(../img/public/i-1032.png) no-repeat -24px 0;
+}
+.main .contents .subcontent .store-list li .hover a.del{
+	right: 5px;
+	background: url(../img/public/i-1032.png) no-repeat 0 -24px;
+}
+.main .contents .subcontent .store-list li .hover a.del:hover{
+	background: url(../img/public/i-1032.png) no-repeat -24px -24px;
+}
+
+.main .contents .subcontent .store-list li .img:hover .hover{
+	display: block;
+}
+
+.main .contents .subcontent .nothing{
+	margin-top: 50px;
+	padding: 10px 0;
+	height: 40px;
+}
+.main .contents .subcontent .nothing .cnt{
+	width: 300px;
+	margin-left: 270px;
+	padding-left: 70px;
+	background: url('../img/public/i-1041.jpg') no-repeat center left ;
+}
+.main .contents .subcontent .nothing .cnt .title{
+	color: #333;
+	font-size: 16px;
+}
+.main .contents .subcontent .nothing .cnt .subtitle{
+	font-size: 12px;
+	color: #999;
+}
+.main .contents .subcontent .nothing .cnt .subtitle a{
+	color: #40c0ff;
+}
+.main .contents .subcontent .nothing .cnt .subtitle a:hover{
+	text-decoration: underline;
+}
+

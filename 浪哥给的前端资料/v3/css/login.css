@@ -1,0 +1,238 @@
+@import url(public/base.css);		
+@import url(public/m-header.css);	
+@import url(public/m-footer.css);	
+
+html,body{
+	background: #fff;
+	min-height: 700px;
+}
+body{min-width: inherit;}
+label{
+	cursor: pointer;
+}
+.ui-input{
+	width: 214px;
+	padding: 12px 5px 12px 34px;
+	border: 1px solid #ddd;
+	color: #666;
+	transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    outline: none;
+    border-radius: 4px;
+}
+.ui-input:focus{
+	border-color: #03a9f4 ;
+	box-shadow: 0 0 5px #03a9f4;
+    -webkit-box-shadow: 0 0 5px #03a9f4;
+    -moz-box-shadow: 0 0 5px #03a9f4;
+    -o-box-shadow: 0 0 5px #03a9f4;
+}
+.ui-input.error{
+  border: 1px solid #FF0000;
+}
+.ui-checkbox input{
+	vertical-align: -1px;
+}
+.ui-checkbox span{
+	vertical-align: top;
+	*vertical-align: 2px;
+	color: #999;
+	font-size: 12px;
+	margin-left: 5px;
+}
+.m-header .topmain .container{
+	border-bottom: 1px solid #eee;
+}
+.main{
+	width: 100%;
+}
+.main .loginbox{
+	width:100%;
+	max-width: 1030px;
+	height: 360px;
+	margin: 50px auto 0 auto;
+	box-shadow:  0 0 10px #ccc;
+	padding: 25px;
+	border: 1px solid #ccc;
+}
+.main .loginbox #loginForm{
+	width:100%;
+	max-width: 600px;
+	height: 340px;	
+	margin-left: 100px;
+}
+.main .loginbox #loginForm  h2{
+	color: #333;
+	font-size: 24px;
+	margin: 20px 0 40px 0; 
+	zoom:0;
+}
+
+.main .loginbox #loginForm li{
+	margin-bottom: 25px;
+	width: 100%;
+	line-height: 40px;
+}
+.main .loginbox #loginForm li .td-cnt{
+	position: relative;
+	float: left;
+}
+.main .loginbox #loginForm li .username em{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url('../img/public/i-1013.png');
+}
+.main .loginbox #loginForm li .password em{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	display: inline-block;
+	width: 20px;
+	height: 26px;
+	background: url('../img/public/i-1012.png');
+}
+.main .loginbox #loginForm li .forgetPass{
+	color: #00b4fe;
+	margin-left: 20px;
+	font-size: 12px;
+	vertical-align: 2px;
+}
+
+.main .loginbox #loginForm li .login{
+	display: inline-block;
+	background: #15b884;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	width: 255px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+}
+.main .loginbox #loginForm li .login:hover{
+	background: #04a773;
+}
+.main .loginbox #loginForm li .disabled,.main .loginbox #loginForm li .disabled:hover{color: #ddd;  border: 1px solid #ddd;background: #fff;}
+.main .loginbox #loginForm li .td-nm{
+	display: inline-block;
+	float: left;
+	width: 90px;
+	text-align: right;
+	line-height: 20px;
+	padding-top: 10px;
+	*padding-top: 13px;
+	padding-top: 13px\9;
+	font-size: 14px;
+	color: #666;
+}
+.main .loginbox #loginForm li .td-tips{
+	*padding-top: 2px;
+	padding-top: 2px\9;
+	float: left;
+	margin-left: 10px;
+	color:#999;
+	font-size: 12px;
+}
+/*验证错误*/
+.main .loginbox #loginForm li .td-tips label.error { 
+	display: none;
+	color: #c71622; 
+	height: 20px;
+	line-height: 20px;
+	display: inline-block;
+	margin-top: 10px;
+	background: url("../img/public/i-1011.png") no-repeat 0px 3px; 
+	padding-left: 15px; 
+	zoom:1;
+}
+.main .loginbox .other{
+	width: 230px;
+	border-left: 1px solid #eee;
+	height: 340px;
+	padding: 20px 0 0 50px; 
+	font-size: 12px;
+	color: #666;
+}
+.main .loginbox .other .reg{
+	color: #333;
+	margin-bottom: 30px;
+}
+.main .loginbox .other .fastreg{
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+	width: 80px;
+	text-align: center;
+	background: #51c80e;
+	color: #fff;
+	border-radius: 4px;
+	margin-left: 5px;
+}
+.main .loginbox .other .fastreg:hover{
+	background: #40b700;
+}
+.main .loginbox .other ul{
+	margin-top: 20px;
+	margin-left: 15px;
+}
+.main .loginbox .other ul li{
+	margin-bottom: 10px;
+}
+.main .loginbox .other ul li a{
+	display: inline-block;
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+.main .loginbox .other ul li a em{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: #000;
+	margin:5px 0 0 10px;
+	float: left;
+}
+.main .loginbox .other ul li.weibo a em{
+	background: url(../img/public/i-1014.png) no-repeat 0 0;
+}
+.main .loginbox .other ul li.qq a em{
+	background: url(../img/public/i-1014.png) no-repeat 0 -20px;
+}
+.main .loginbox .other ul li.weixin a em{
+	background: url(../img/public/i-1014.png) no-repeat 0 -40px;
+}
+.main .loginbox .other ul li.taobao a em{
+	background: url(../img/public/i-1014.png) no-repeat 0 -60px;
+}
+.main .loginbox .other ul li.zhifubao a em{
+	background: url(../img/public/i-1014.png) no-repeat 0 -80px;
+}
+.main .loginbox .other ul li a span{
+	display: inline-block;
+	color: #999;
+	width: 90px;
+	text-align: center;
+	line-height: 30px;
+	height: 30px;
+	float: left;
+}
+.m-footer{
+	margin-top: 10px;
+	width: 100%;
+	height: 120px;
+	border-top: none;
+}
+
+
+

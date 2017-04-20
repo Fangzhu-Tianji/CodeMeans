@@ -1,0 +1,49 @@
+@import url(public/base.css);		/*基础样式*/
+@import url(public/m-header.css);	/*头部*/
+@import url(public/m-footer.css);	/*页面底部*/
+
+html,body{
+	background: #FFF;
+}
+
+.errorTips{
+    clear: both;
+    overflow: hidden;
+    margin: 90px 0 60px 0;
+    color: #9d9d9d;
+    font-size: 14px;
+    line-height: 24px;
+}
+.errorTips .icon{
+	float: left;
+}
+.errorTips .text{
+	float: left;
+	margin-left: 50px;
+	margin-top: 120px;
+}
+.errorTips .text h2{
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+.errorTips .text h3{
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+/*其它商品*/
+
+.eavlProducts { width: 100%; overflow: hidden; margin-bottom: 100px;}
+.eavlProducts h2 { border-bottom: 1px solid #ddd; font-size: 12px; line-height: 30px;}
+.eavlProducts li { width: 20%; padding: 30px 0px; overflow: hidden; float: left;}
+.eavlProducts li p { width: 200px; overflow: hidden; margin: 0px auto; text-align: center;}
+.eavlProducts li img { width: 198px; height: 198px; border: 1px solid #f4f4f4; margin-bottom: 10px;}
+.eavlProducts li .eval a { width: 100px; height: 30px; line-height: 30px; border-radius: 3px; margin: 15px auto; text-align: center; color: #fff; background: #c71622; display: block;}
+.eavlProducts li .eval a:hover { background:#b70612; }
+
+
+/*样式重定义*/
+.m-header .container{
+    border-bottom: 1px solid #ddd;
+}
+
+.m-footer { border: none;}

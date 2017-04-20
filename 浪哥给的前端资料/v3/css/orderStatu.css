@@ -1,0 +1,394 @@
+@import url(public/base.css);		/*基础样式*/
+@import url(public/u-forms.css);	/*form input css*/
+@import url(public/m-header.css);	/*头部*/
+@import url(public/m-nav.css);		/*导航*/
+@import url(public/m-home-slider.css);	/*个人中心左侧导航*/
+@import url(plugins/p-pop.css);	/*弹窗样式*/
+@import url(public/m-steps.css);	/* 步骤 */
+@import url(public/m-cartlist.css);	/*购物车列表*/
+@import url(public/m-footer.css);	/*页面底部*/
+	
+
+html,body{
+	background: #f5f5f5;
+}
+
+/*页面框架*/
+.main{
+	margin: 30px 0 40px 0;
+}
+.main .container{
+	width: 1000px;
+}
+.main .contents{
+	width: 858px;
+	background: #fff;
+	border: 1px solid #ddd;
+	margin-left: 10px;
+}
+.main .contents .subcontent{
+    margin: 0px 25px;
+}
+
+/*定单状态*/
+.oderStatu , .oderInfo { border: 1px solid #e5e5e5; padding: 30px 15px; margin-bottom: 10px; }
+
+.oderStatu h2 { font-size: 15px; margin-bottom: 15px; color: #15b884;}
+.oderStatu li { margin-top: 5px; font-size: 12px; line-height: 24px}
+.oderStatu li a { color:#15b884; }
+.oderStatu li a:hover { color: #079467;}
+.oderStatu li a.pay { background: #ffe9eb; color: #666; border: 1px solid #ffd2d6; margin:0px 5px; border-radius: 3px; line-height: 22px; display: inline-block; padding: 0px 10px;}
+.oderStatu li a.pay:hover { background: #fdf0f1; color: #333;}
+
+.oderInfo h2 { font-size: 18px; margin-bottom: 15px; color: #333;}
+
+/*订单信息*/
+.oderInfoList { margin-bottom: 30px;}
+.oderInfoList dl { width: 100%; font-size: 12px; line-height: 20px; margin-bottom: 10px;}
+.oderInfoList dt { width: 80px; float: left;}
+.oderInfoList dd { width: 800px; float: left;}
+
+.oderInfoList .sbtn { background: #efefef; cursor: pointer; color: #666; border: 1px solid #c4c4c4; margin: 5px auto; border-radius: 3px; line-height: 24px; height: 24px; display: inline-block; padding: 0px 15px;}
+.oderInfoList .sbtn:hover { background: #f7f7f7; color: #000;}
+
+.oderInfoNumber h2 { font-size: 16px; margin-bottom: 10px; color: #000;}
+.oderInfoNumber p { width: 100%; overflow: hidden;}
+.oderInfoNumber p em { width: 33%; float: left; color: #666;}
+.oderInfoNumber p em.colspan_2 { width: 66%;}
+
+/*订单底部统计*/
+.oderFootInfo { border: 1px solid #e5e5e5; padding: 30px; margin: 10px auto; font-size: 12px; line-height: 24px; }
+.oderFootInfo p { text-align: right;}
+.oderFootInfo em { margin: 0px 5px;}
+.oderFootInfo .oderFootInfo-01 { overflow: hidden; border-bottom: 1px solid #e5e5e5; padding-bottom: 10px;}
+.oderFootInfo .oderFootInfo-02 { overflow: hidden; padding-top: 14px; text-align: right;}
+.oderFootInfo .oderFootInfo-02 em { font-size: 30px; line-height: 40px; color: #c71622;}
+
+.oderPays h2 { font-size: 18px; line-height: 30px; margin:20px auto; color: #000;}
+.oderPays h2 em { font-size: 12px; color: #999; margin-left: 20px;}
+.oderPays .pays-mode {
+	position: relative;
+	border: 1px solid #e5e5e5;
+	padding: 20px;
+	min-height: 318px;
+	clear: both;
+	overflow: hidden;
+}
+.oderPays .pays-mode .tips{
+	font-size: 12px;
+	color: #222;
+	font-weight: bold;
+}
+.oderPays .pays-mode .tips em{
+	font-size: 30px;
+	margin: 0px 5px;
+	color: #c71622;
+}
+.oderPays .pays-mode ul{clear: both;}
+.oderPays .pays-mode .tab-pays{
+	border-left: 1px solid #999;
+	margin-top: 20px;
+	width: 471px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+.oderPays .pays-mode .tab-pays li{
+	position: relative;
+	width: 157px;
+	float: left;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	cursor: pointer;
+}
+.oderPays .pays-mode .tab-pays li i{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: -1px;
+	width: 5px;
+	height: 40px;
+	background: #c71622;
+}
+.oderPays .pays-mode .tab-pays li b{
+	display: block;
+	position: absolute;
+	width: 1px;
+	height: 40px;
+	top: 0;
+	right: 0;
+	background: #999;
+}
+.oderPays .pays-mode .tab-pays li.select {border-color:#c71622; }
+.oderPays .pays-mode .tab-pays li.select i{display: block;}
+.oderPays .pays-mode .tab-pays li.select b{background: #c71622;}
+
+
+.oderPays .pays-mode .cnt-pays{
+	margin-top: 20px;
+	height: 70px;
+}
+.oderPays .pays-mode .cnt-pays li label{
+	display: inline-block;
+	height: 70px;
+}
+.oderPays .pays-mode .cnt-pays li{
+	cursor: pointer;
+	margin-right: 80px;
+	float: left;
+}
+.oderPays .pays-mode .cnt-pays li input{
+	vertical-align: -25px;
+	*vertical-align: 25px;
+}
+.oderPays .pays-mode .cnt-pays li i{
+	display: inline-block;
+	width: 130px;
+	height: 70px;
+	text-indent: -999px;
+}
+.oderPays .pays-mode .cnt-pays li.zfb i{
+	background: url(../img/public/i-1023.png) no-repeat 0 0;
+}
+.oderPays .pays-mode .cnt-pays li.cft i{
+	background: url(../img/public/i-1023.png) no-repeat 0 -70px;
+}
+.oderPays .pays-mode footer{
+	background: #fff url(../img/public/i-1024.jpg) no-repeat bottom center;
+	height: 130px;
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	right: 0;
+	border: 3px solid #c71622;
+	font-size: 12px;
+}
+.oderPays .pays-mode footer .ms{
+	height: 60px;
+	text-align: right;
+	padding-right: 20px;
+	clear: both;
+}
+.oderPays .pays-mode footer .ms span{
+	display: block;
+	margin-top: 10px;
+	margin-right: 20px;
+	height: 40px;
+	line-height: 40px;
+}
+.oderPays .pays-mode footer .ms span b{
+	color: #c40000;
+}
+.oderPays .pays-mode footer .ms span b em{
+	font-size: 30px;
+}
+.oderPays .pays-mode footer .address{
+	clear: both;
+	height: 70px;
+	text-align: right;
+	padding-right: 40px;
+}
+.oderPays .pays-mode footer .address span{
+	display: block;
+	padding-top: 10px;
+	color: #222;
+	font-weight: bold;
+}
+
+.oderPays .account{
+	float: right;
+	margin: 20px 0px 40px 0;
+	display: inline-block;
+	width: 160px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	background: #c71622;
+	border-radius: 4px;
+}
+
+.oderPays .account:hover{
+	background: #b60511;
+}
+
+/*确认付款标题*/
+.conformPayTitle { font-size: 15px; line-height: 30px; color: #15b884; margin-bottom: 10px;}
+.conformPayFoot h2 { color: #C71622; font-size: 18px; line-height: 30px; margin: 20px auto 0px auto;}
+.conformPayFoot p a.account {
+	margin: 20px auto 40px auto;
+	display: inline-block;
+	width: 160px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	background: #c71622;
+	border-radius: 4px;
+}
+.conformPayFoot p a.account:hover { background: #b60511; }
+
+/*样式重定义*/
+.m-cartList { margin: 0px auto;}
+.m-cartList .cartTitle { background: #f7f7f7;}
+.m-cartList .cartItem .proName { width: 235px;}
+.steps{ margin: 30px auto; width: 782px; height: 62px; }
+.steps li { width: 250px; }
+.ui-textarea { width: 600px; padding: 5px 10px;}
+.ui-textarea:focus , .ui-textarea:hover {
+    color: #000;
+    border-color: #999;
+    box-shadow: 0px 0px 5px 0px #ddd;
+    -webkit-box-shadow: 0px 0px 5px 0px #ddd;
+    -moz-box-shadow: 0px 0px 5px 0px #ddd;
+    -o-box-shadow: 0px 0px 5px 0px #ddd;
+}
+m, .mb, .mc, .mt, .sm, .smb, .smc, .smt {
+    overflow: hidden;
+    zoom: 1;
+}
+.m, .sm {
+    margin-bottom: 10px;
+}
+.clear, .clr {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+}
+#orderstate {
+    padding: 0 5px;
+    background-color: #f5f5f5;
+    border-color: #ddd;    margin-top: 10px;
+}
+#orderstate .mt {
+    padding: 4px 8px;
+    height: 25px;
+    line-height: 25px;
+    border-bottom: 1px dotted #ddd;
+}
+#orderstate .mt strong {
+    float: left;
+    font-size: 14px;
+}
+#orderstate .mc {
+    padding: 10px 8px;
+}
+#orderinfo, #ordermess {
+    padding: 0 5px 10px;
+    overflow: visible;
+        color: #333;
+}
+#orderinfo .mt, #ordermess .mt {
+    padding: 0 8px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+#orderinfo .mc, #ordermess .mc {
+    padding: 5px 8px;
+    background: #fff;
+    overflow: visible;
+    background: #fcfcfc;
+    border: 1px solid #dedede;
+}
+#orderinfo .mc dl {
+    padding: 10px 5px;
+    border-top: 1px solid #EDEDED;
+}
+#orderinfo .mc dl.fore {
+    border-top: 0;
+}
+#orderinfo .mc dt {
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+#orderinfo dl li {
+    font-family: simsun;
+}
+#orderinfo .p-list {
+    overflow: hidden;
+    margin-right: -1px;
+    border-left: 1px solid #DEDEDE;
+}
+#orderinfo .p-list table {
+    border-collapse: collapse;
+    margin-left: -1px;
+    border: solid #DEDEDE;
+    border-width: 0 1px;
+}
+#orderinfo .p-list th {
+    padding: 5px;
+    background: #F0F0F0;
+    border-top: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+    border-left: 1px solid #F0F0F0;
+    font-weight: 400;
+}
+#orderinfo .p-list td {
+    padding: 5px;
+    background: #fff;
+    border-top: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+    border-left: 1px solid #F0F0F0;
+    text-align: center;
+        vertical-align: middle;
+}
+#orderinfo .p-list td .img {
+    margin-top: 20px;
+    width: 86px;
+    height: 86px;
+}
+#orderinfo .p-list td .names {
+    margin: 30px 0 0 10px;
+    color: #666;
+}
+#orderinfo .p-list td .nm {
+    font-size: 14px;
+    height: 44px;
+    line-height: 22px;
+}
+#orderinfo .p-list td .subnm {
+    font-size: 12px;
+    color: #999;
+}
+#orderinfo .total {
+    height: 1%\9;
+    display: block;
+    overflow: visible;
+    padding: 15px 10px 0;
+    zoom: 1;
+    font-family: arial;
+}
+#orderinfo .total ul {
+    float: right;
+    padding: 0 20px 10px 0;
+    overflow: hidden;
+    font-size: 14px;
+}
+#orderinfo .total li {
+    overflow: hidden;
+    line-height: 20px;
+}
+#orderinfo .total li span {
+    float: left;
+    width: 150px;
+    text-align: right;
+}
+#orderinfo .total .extra {
+    float: right;
+    padding: 10px 20px 0 0;
+    border-top: 1px solid #ccc;
+    font-size: 16px;
+    font-weight: 700;
+}
+.ftx04, a.flk04:link, a.flk04:visited {
+    color: #c00;
+}
+#orderinfo .total .extra b {
+    font-size: 24px;
+}

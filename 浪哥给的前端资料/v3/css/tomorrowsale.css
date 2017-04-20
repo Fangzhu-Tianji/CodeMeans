@@ -1,0 +1,254 @@
+@import url(public/base.css);
+@import url(plugins/p-slider.css);
+@import url(public/m-top.css);
+@import url(public/m-nav.css);
+@import url(public/m-header.css);
+@import url(public/m-footer.css);
+html,
+body {
+    min-width: 1200px;
+    background: #fff;
+    font-family: "microsoft Yahei";
+}
+
+.main {
+    background:#f4f4f4;
+    overflow: hidden;
+    
+}
+.main .container{
+    margin: 20px auto;
+}
+.main  .m-goods-list-wrap {
+  background: #fff;
+  overflow: hidden;
+  border: 1px solid #eee;
+  box-shadow: 1px 1px 6px #eee;
+  padding-bottom: 35px;
+}
+.main .m-goods-list-wrap .blines{
+    position: absolute;
+    left: 50%;
+    margin-left: -428px;
+    width: 3px;
+    height: 100%;
+    padding-bottom: 35px;
+    background: url(../img/sale/i013.png) repeat-y center center;
+}
+.main .m-goods-list-wrap .m-times-left{
+    position: absolute;
+    top: 210px;
+    left: 50%;
+    margin-left: -600px;
+    width: 200px;
+    height: 100%;
+}
+.main .m-goods-list-wrap .m-times-left .m-times-left-box{
+    position: relative;
+    overflow: hidden;
+    margin-top: 3px;
+}
+
+.m-times-left .m-goods-timeaxis{
+    float: left;
+    width: 200px;
+    margin-top: 37px;
+    position: relative;
+    padding-bottom: 280px;
+    visibility: visible;
+}
+
+
+.m-goods-timeaxis .times{
+    width: 94px;
+    height: 34px;
+    line-height: 17px;
+    padding: 8px;
+    margin-left: 26px;
+    background: #ff5b66;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+.m-goods-timeaxis .times em{
+    position: absolute;
+    top: 15px;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #ff5b66;
+}
+.m-goods-timeaxis .times b{
+    font-weight: bold;
+}
+.m-goods-timeaxis.disable .times{
+    background: #aaa;
+}
+.m-goods-timeaxis.disable .times em{
+    border-left-color: #aaa;
+}
+.m-goods-timeaxis .times i{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 17px;
+    right: -45px;
+    display: block;
+    background: url(../img/sale/i012.png) no-repeat center center;
+}
+
+
+.main .m-goods-item {
+    padding: 35px 0 0 0;
+    overflow: hidden;
+}
+.main  .m-goods-list {
+    width: 958px;
+    height: 330px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    float: right;
+    margin-right: 35px;
+}
+
+.main  .m-goods-list .good-item {
+    width: 209px;
+    height: 290px;
+    border-left: 1px solid #ddd;
+    float: left;
+    margin-left: -1px;
+    padding: 20px 15px
+}
+
+.main  .m-goods-list .good-item .imgwrap {
+    width: 200px;
+    height: 200px;
+    margin-left: 5px
+}
+
+.main  .m-goods-list .good-item .imgwrap img {
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    -webkit-transition: all 1s
+}
+
+.main  .m-goods-list .good-item .imgwrap img:hover {
+    transform: translateX(5px);
+    -webkit-transform: translateX(5px)
+}
+
+.main  .m-goods-list .good-item .title {
+    color: #666;
+    font-size: 14px
+}
+
+.main  .m-goods-list .good-item .title a {
+    height: 40px;
+    overflow: hidden;
+    line-height: 20px;
+    display: block
+}
+
+.main  .m-goods-list .good-item .title a:hover {
+    color: #c71622;
+    text-decoration: underline
+}
+
+.main  .m-goods-list .good-item .goodstatus {
+    margin-top: 15px;
+    height: 32px
+}
+
+.main  .m-goods-list .good-item .goodstatus .staus-gird {
+    float: left
+}
+
+.main  .m-goods-list .good-item .goodstatus .zhe {
+    display: inline-block;
+    width: 53px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    color: #00b889;
+    background: url(../img/indexv3/i008.png) no-repeat center center;
+    text-align: center
+}
+
+.main  .m-goods-list .good-item .goodstatus .zhe b {
+    font-size: 14px;
+    font-weight: bold
+}
+
+.main  .m-goods-list .good-item .goodstatus .jia {
+    width: 80px;
+    padding-left: 8px;
+    height: 30px;
+    line-height: 15px;
+    margin-left: 10px;
+    border-left: 1px dotted #ddd
+}
+
+.main  .m-goods-list .good-item .goodstatus .jia strong {
+    color: #c71622;
+    font-size: 12px;
+    display: block;
+}
+
+.main  .m-goods-list .good-item .goodstatus .jia strong b {
+    font-size: 16px;
+    font-weight: bold
+}
+
+.main  .m-goods-list .good-item .goodstatus .jia ins {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 12px;
+    display: block;
+}
+
+.main  .m-goods-list .good-item .goodstatus .guo {
+    font-size: 12px;
+    float: right;
+    width: 50px;
+    height: 36px;
+    text-align: center
+}
+
+.main  .m-goods-list .good-item .goodstatus .guo img {
+    display: inline-block;
+    height: 20px;
+}
+
+.main  .m-goods-list .good-item .goodstatus .guo p {
+    display: block;
+    line-height: 16px;
+    font-size: 12px;
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.part-row-grid .part-info .title:hover {
+    color: #c71622;
+    text-decoration: underline
+}
+
+#page-step-nav{
+    position: fixed;
+    top: -36px;
+    left: 50%;
+    margin-left: -600px;
+    z-index: 20;
+    display: none;
+}
+#page-step-nav .m-goods-timeaxis{
+    margin-top: 36px;
+    display: none;
+}
+

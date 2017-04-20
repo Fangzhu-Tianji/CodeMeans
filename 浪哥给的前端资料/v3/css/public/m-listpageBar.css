@@ -1,0 +1,42 @@
+/*分页条*/
+
+.m-listpageBar {
+    text-align: center;
+}
+
+.m-listpageBar a {
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    border: 1px solid #ddd;
+    color: #333;
+    background: #FFF;
+    zoom:1;
+    padding: 0px 10px;
+    font-size: 14px;
+    font-family: \5b8b\4f53;
+    margin: 0px 2px;
+}
+
+.m-listpageBar a:hover {
+	border: 1px solid #c71622;
+}
+.m-listpageBar a.selected {
+    background: #c71622;
+    border: 1px solid #c71622;
+    color: #fff;
+    text-decoration: none;
+}
+
+.m-listpageBar a.disabled , .m-listpageBar a.disabled:hover {
+    background: #fff;
+    color: #CCC;
+    cursor: default;
+    text-decoration: none;
+    border: 1px solid #ddd;
+}
+
+.m-listpageBar .goto { margin-left: 30px;}
+.m-listpageBar .goto .number { width: 40px; height: 18px; margin: 0px 5px; padding: 0px 5px; border: 1px solid #bbb;}
+.m-listpageBar .goto .btn { margin-left: 5px; border: 1px solid #bbb; background: #f3f3f3; height: 21px; padding: 0px 10px; line-height:18px; cursor: pointer;}
+.m-listpageBar .goto .btn:hover { border: 1px solid #c71521; background: #c71521; color: #FFF;}

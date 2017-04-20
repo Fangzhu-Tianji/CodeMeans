@@ -1,0 +1,802 @@
+@import url(public/base.css);			/*基础样式*/
+@import url(public/m-header.css);		/*头部*/
+@import url(public/m-nav.css);			/*导航*/
+@import url(public/m-steps.css);		/*步骤*/
+@import url(public/m-home-slider.css);	/*个人中心左侧导航*/
+@import url(public/m-header.css);		/*头部*/
+@import url(public/m-nav.css);			/*导航*/
+@import url(public/m-steps.css);		/*步骤*/
+@import url(public/m-home-slider.css);	/*个人中心左侧导航*/
+@import url(plugins/p-select.css);		/*自定义下拉列表*/
+@import url(plugins/p-pop.css);			/*弹窗样式*/
+@import url(public/u-forms.css);		/*form input css*/
+@import url(public/m-footer.css);		/*页面底部*/
+
+
+/*右侧工具栏*/
+
+html,body{
+	background: #f4f4f4;
+	font-family: "microsoft Yahei";
+}
+.main .container {
+    width: 1000px;
+}
+.red{
+	color: #c40000;
+}
+.pt10{
+	padding-top: 10px;
+}
+.mt5{
+	margin-top: 5px;
+}
+.mt7{
+	margin-top: 7px;
+}
+.main{
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+.main .container{
+	width: 1000px;
+}
+.main .contents{
+	width: 928px;
+	margin-bottom: 60px;
+	background: #fff;
+	padding: 20px 30px 50px 30px;
+}
+
+.main .contents .block h3{
+	height: 42px;
+	line-height: 42px;
+	font-size: 18px;
+	color: #333;
+	border-bottom: 1px solid #efefef;
+}
+.main .contents .block h3 .title{
+	text-align: left;
+	display: inline-block;
+	width: 100px;
+	height: 42px;
+	border-bottom: 1px solid #3a0;
+}
+
+.main .contents .block .form{
+	border: 1px solid #ccc;
+	overflow: hidden;
+	clear: both;
+}
+.main .contents .block .form .noteTips {
+	color: #c71622;
+	font-size: 14px;
+	padding: 30px 30px 0px 30px;
+}
+
+/* 步骤1 */
+.main .contents .block .form form{
+	margin: 30px auto;
+	width: 570px;
+	float: left;
+}
+.main .contents .block .form form td{
+	padding:15px 0;
+}
+.main .contents .block .form form .td-nm {
+	width: 140px;
+	font-size: 14px;
+	color: #333;
+	text-align: right;
+	vertical-align: top;
+}
+.main .contents .block .form form .td-nm span{
+	display: inline-block;
+}
+.main .contents .block .form form .td-nm em{
+	font-size: 12px;
+	color: #f00;
+	padding-left: 3px; 
+}
+.main .contents .block .form form .td-cnt{
+	padding-left: 15px;
+}
+
+.main .contents .block .form form .preview{
+	margin-top: 10px;
+	width: 100px;
+	height: 100px;
+	background: url(../img/public/i-1007.png);
+	overflow: hidden;
+}
+.main .contents .block .form form .preview img{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+.main .contents .block .form form .ui-textarea{
+	padding: 5px 10px;
+	resize:none;
+	width: 420px;
+	height: 50px;
+	border: 1px solid #ccc;
+	font-family: "microsoft Yahei";
+	color: #666;
+	border-radius: 4px;
+}
+.main .contents .block .form form .ui-textarea:hover{
+	border-color: #999
+}
+.main .contents .block .form form .ui-checkbox{
+	padding-right: 15px;
+	vertical-align: top;
+	cursor: pointer;
+}
+.main .contents .block .form form .ui-checkbox input{
+	vertical-align: -2px;
+	margin-right: 3px;
+}
+.main .contents .block .form form .ui-btn{
+	display: inline-block;
+	border-radius: 2px;
+	text-align: center;
+	line-height: 30px;
+}
+.main .contents .block .form form .file-wrap{
+	width: 100px;
+	height: 30px;
+	overflow: hidden;
+	position: relative;
+}
+.main .contents .block .form form .file-wrap input[type='file']{
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 100px;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+.main .contents .block .form form .ui-file{
+	display: inline-block;
+	width: 98px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	border: 1px solid #ddd;
+	color: #666;
+	font-size: 14px;
+	background: #f2f2f2;
+	border-radius: 2px;
+}
+.main .contents .block .form form .ui-btn.submit{
+	color: #fff;
+	background: #c71622;
+	width: 140px;
+	border: 1px solid #c71622;
+}
+.main .contents .block .form form .ui-btn.submit:hover{
+	background: #b40000;
+}
+.main .contents .block .form form .ui-btn.cancel{
+	width: 100px;
+	height: 30px;
+	border: 1px solid #ddd;
+	background: #f2f2f2;
+	color: #666;
+	margin-left: 20px;
+}
+.main .contents .block .form form .ui-btn.cancel:hover{
+	background: #e1e1e1;
+}
+
+
+/* 步骤2 */
+.main .contents .block .form .node{
+	width: 626px;
+	float: left;
+	min-height: 630px;
+	border-right: 1px solid #ccc;
+}
+.main .contents .block .form .node1{
+	padding: 0 30px;
+	height: 180px;
+	border-bottom: 1px solid #efefef;
+	color: #999;
+}
+.main .contents .block .form .node1 h4{
+	font-size: 16px;
+	color: #333;
+	margin-top: 20px;
+}
+.main .contents .block .form .node1 p{
+	color:#333;
+}
+.main .contents .block .form .node1 a{
+	padding-left: 20px;
+}
+.main .contents .block .form .node1 p .edit{
+	color: #c71622;
+}
+.main .contents .block .form .node1 p .cancel{
+	color: #15b884;
+}
+
+.main .contents .block .form .node2 li{
+	padding: 0 30px;
+	font-size: 12px;
+	color: #333;
+	margin-top: 20px;
+}
+.main .contents .block .form .node2 li .time{
+	color: #999;
+}
+.main .contents .block .form .node2 li .goodsIMG{
+	margin-top: 10px;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+}
+.main .contents .block .form .node2 li .goodsIMG img{
+	width: 100%;
+	height: 100%;
+}
+/* 步骤3 */
+.main .contents .block .form .node1 h4.green{
+	font-size: 18px;
+	color: #15b884;
+	margin-top: 20px;	
+}
+.main .contents .block .form .node1 .details{
+	float: none;
+	width: auto;
+	margin-top: 30px;
+	margin-left: 20px;
+	color: #333;
+	font-size: 14px;
+}
+.main .contents .block .form .node1 .details .foward{
+	padding: 0;
+	background: #c71622;
+	display: inline-block;
+	width: 118px;
+	height: 32px;
+	line-height: 32px;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	border-radius: 2px;
+	margin-top: 15px;
+}
+.main .contents .block .form .node1 .details .foward:hover{
+	background: #b20000;
+}
+
+
+
+.main .contents .block .form .details{
+	width: 260px;
+	float: right;
+}
+.main .contents .block .form .details .orders{
+	margin-top: -1px;
+	overflow: hidden;
+	clear: both;
+}
+.main .contents .block .form .details .orders li{
+	border-top: 1px solid #ccc;
+	clear: both;
+	overflow: hidden;
+}
+.main .contents .block .form .details .orders li .item{
+	margin: 18px 0;
+	font-size: 12px;
+	color: #333;
+}
+.main .contents .block .form .details .orders li .item1{
+	width: 56px;
+	height: 56px;
+	border: 2px solid #ccc;
+	margin-left: 20px;
+	text-align: center;
+}
+.main .contents .block .form .details .orders li .item1 img{
+	display: inline-block;
+	width: 51px;
+	height: 51px;
+	margin: 2px auto;
+}
+.main .contents .block .form .details .orders li .item2{
+	width: 160px;
+	margin-left: 10px;
+	line-height: 18px;
+}
+.main .contents .block .form .details .orders li .item2 .desc{
+	margin-top: 5px;
+	color: #999;
+}
+.main .contents .block .form .details .counts{
+	border-top: 1px solid #ccc;
+	padding: 20px;
+	font-size: 12px;
+	color: #999;
+}
+.main .contents .block .form .details .extraTips{
+	border-top: 1px solid #ccc;
+	padding: 20px;
+	font-size: 12px;
+	color: #999;
+}
+.main .contents .block .remark h4{
+	font-size: 16px;
+	color: #333;
+	margin: 20px 0;
+}
+.main .contents .block .remark{
+	color: #999;
+	font-size: 12px;
+}
+
+form .errorMsg .error { 
+	display: none;
+	color: #c71622; 
+	margin-left: 20px;
+	height: 20px;
+	background: url("../img/public/i-1011.png") no-repeat 0px 3px; 
+	padding-left: 15px; 
+	zoom:1;
+}
+
+/*重定义进度条样式*/
+.steps li {
+	width: 200px;
+}
+
+/*选择 退款 还是退款退货*/
+.main .contents .block .checkRefund {
+	width: 100%;
+	text-align: center;
+	padding: 100px 0px;
+}
+
+.main .contents .block .checkRefund h2 {
+	font-size: 16px;
+	line-height: 50px;
+}
+
+.main .contents .block .checkRefund a.link01 {
+	background: #ff7575;
+	display: inline-block;
+	zoom:1;
+	width: 150px;
+	height: 80px;
+	line-height: 80px;
+	font-size: 16px;
+	color: #fff;
+	margin: 40px 40px;
+}
+
+.main .contents .block .checkRefund a.link02 {
+	background: #00d893;
+	display: inline-block;
+	zoom:1;
+	width: 150px;
+	height: 80px;
+	line-height: 80px;
+	font-size: 16px;
+	color: #fff;
+	margin: 40px 40px;
+}
+
+/*第二步*/
+.main .contents .block .noteTitle {
+	padding: 50px 30px 0px 30px;
+	font-size: 16px;
+	color: #333;
+}
+
+.main .contents .block .noteInfo {
+	padding:10px 30px 0px 30px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #666;
+}
+
+.main .contents .block .noteInfo em {
+	color: #c71622;
+}
+.css);		/*自定义下拉列表*/
+@import url(plugins/p-pop.css);			/*弹窗样式*/
+@import url(public/u-forms.css);		/*form input css*/
+@import url(public/m-footer.css);		/*页面底部*/
+		/*右侧工具栏*/
+
+
+html,body{
+	background: #f4f4f4;
+	font-family: "microsoft Yahei";
+}
+.red{
+	color: #c40000;
+}
+.pt10{
+	padding-top: 10px;
+}
+.mt5{
+	margin-top: 5px;
+}
+.mt7{
+	margin-top: 7px;
+}
+.main{
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+.main .contents{
+	width: 808px;
+	margin-bottom: 60px;
+	background: #fff;
+	padding: 20px 25px 50px 25px;
+	border: 1px solid #ddd;
+}
+
+.main .contents .block h3{
+	height: 42px;
+	line-height: 42px;
+	font-size: 18px;
+	color: #333;
+	border-bottom: 1px solid #efefef;
+}
+.main .contents .block h3 .title{
+	text-align: left;
+	display: inline-block;
+	width: 100px;
+	height: 42px;
+	border-bottom: 1px solid #3a0;
+}
+
+.main .contents .block .form{
+	border: 1px solid #ccc;
+	overflow: hidden;
+	clear: both;
+}
+.main .contents .block .form .noteTips {
+	color: #c71622;
+	font-size: 14px;
+	padding: 30px 30px 0px 30px;
+}
+
+/* 步骤1 */
+.main .contents .block .form form{
+	margin: 30px auto;
+	width: 500px;
+	float: left;
+}
+.main .contents .block .form form td{
+	padding:15px 0;
+}
+.main .contents .block .form form .td-nm {
+	width: 140px;
+	font-size: 14px;
+	color: #333;
+	text-align: right;
+	vertical-align: top;
+}
+.main .contents .block .form form .td-nm span{
+	display: inline-block;
+}
+.main .contents .block .form form .td-nm em{
+	font-size: 12px;
+	color: #f00;
+	padding-left: 3px; 
+}
+.main .contents .block .form form .td-cnt{
+	padding-left: 15px;
+}
+
+.main .contents .block .form form .preview{
+	margin-top: 10px;
+	width: 100px;
+	height: 100px;
+	background: url(../img/public/i-1007.png);
+	overflow: hidden;
+}
+.main .contents .block .form form .preview img{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+.main .contents .block .form form .ui-textarea{
+	padding: 5px 10px;
+	resize:none;
+	width: 377px;
+	height: 50px;
+	border: 1px solid #ccc;
+	font-family: "microsoft Yahei";
+	color: #666;
+	border-radius: 4px;
+}
+.main .contents .block .form form .ui-textarea:hover{
+	border-color: #999
+}
+.main .contents .block .form form .ui-checkbox{
+	padding-right: 15px;
+	vertical-align: top;
+	cursor: pointer;
+}
+.main .contents .block .form form .ui-checkbox input{
+	vertical-align: -2px;
+	margin-right: 3px;
+}
+.main .contents .block .form form .ui-btn{
+	display: inline-block;
+	border-radius: 2px;
+	text-align: center;
+	line-height: 30px;
+}
+.main .contents .block .form form .file-wrap{
+	width: 100px;
+	height: 30px;
+	overflow: hidden;
+	position: relative;
+}
+.main .contents .block .form form .file-wrap input[type='file']{
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 100px;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+.main .contents .block .form form .ui-file{
+	display: inline-block;
+	width: 98px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	border: 1px solid #ddd;
+	color: #666;
+	font-size: 14px;
+	background: #f2f2f2;
+	border-radius: 2px;
+}
+.main .contents .block .form form .ui-btn.submit{
+	color: #fff;
+	background: #c71622;
+	width: 140px;
+	border: 1px solid #c71622;
+}
+.main .contents .block .form form .ui-btn.submit:hover{
+	background: #b40000;
+}
+.main .contents .block .form form .ui-btn.cancel{
+	width: 100px;
+	height: 30px;
+	border: 1px solid #ddd;
+	background: #f2f2f2;
+	color: #666;
+	margin-left: 20px;
+}
+.main .contents .block .form form .ui-btn.cancel:hover{
+	background: #e1e1e1;
+}
+
+
+/* 步骤2 */
+.main .contents .block .form .node{
+	width: 545px;
+	float: left;
+	min-height: 630px;
+	border-right: 1px solid #ccc;
+}
+.main .contents .block .form .node1{
+	padding: 0 30px;
+	height: 180px;
+	border-bottom: 1px solid #efefef;
+	color: #999;
+}
+.main .contents .block .form .node1 h4{
+	font-size: 16px;
+	color: #333;
+	margin-top: 20px;
+}
+.main .contents .block .form .node1 p{
+	color:#333;
+}
+.main .contents .block .form .node1 a{
+	padding-left: 20px;
+}
+.main .contents .block .form .node1 p .edit{
+	color: #c71622;
+}
+.main .contents .block .form .node1 p .cancel{
+	color: #15b884;
+}
+
+.main .contents .block .form .node2 li{
+	padding: 0 30px;
+	font-size: 12px;
+	color: #333;
+	margin-top: 20px;
+}
+.main .contents .block .form .node2 li .time{
+	color: #999;
+}
+.main .contents .block .form .node2 li .goodsIMG{
+	margin-top: 10px;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+}
+.main .contents .block .form .node2 li .goodsIMG img{
+	width: 100%;
+	height: 100%;
+}
+/* 步骤3 */
+.main .contents .block .form .node1 h4.green{
+	font-size: 18px;
+	color: #15b884;
+	margin-top: 20px;	
+}
+.main .contents .block .form .node1 .details{
+	float: none;
+	width: auto;
+	margin-top: 30px;
+	margin-left: 20px;
+	color: #333;
+	font-size: 14px;
+}
+.main .contents .block .form .node1 .details .foward{
+	padding: 0;
+	background: #c71622;
+	display: inline-block;
+	width: 118px;
+	height: 32px;
+	line-height: 32px;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	border-radius: 2px;
+	margin-top: 15px;
+}
+.main .contents .block .form .node1 .details .foward:hover{
+	background: #b20000;
+}
+
+
+
+.main .contents .block .form .details{
+	width: 260px;
+	float: right;
+}
+.main .contents .block .form .details .orders{
+	margin-top: -1px;
+	overflow: hidden;
+	clear: both;
+}
+.main .contents .block .form .details .orders li{
+	border-top: 1px solid #ccc;
+	clear: both;
+	overflow: hidden;
+}
+.main .contents .block .form .details .orders li .item{
+	margin: 18px 0;
+	font-size: 12px;
+	color: #333;
+}
+.main .contents .block .form .details .orders li .item1{
+	width: 56px;
+	height: 56px;
+	border: 2px solid #ccc;
+	margin-left: 20px;
+	text-align: center;
+}
+.main .contents .block .form .details .orders li .item1 img{
+	display: inline-block;
+	width: 51px;
+	height: 51px;
+	margin: 2px auto;
+}
+.main .contents .block .form .details .orders li .item2{
+	width: 160px;
+	margin-left: 10px;
+	line-height: 18px;
+}
+.main .contents .block .form .details .orders li .item2 .desc{
+	margin-top: 5px;
+	color: #999;
+}
+.main .contents .block .form .details .counts{
+	border-top: 1px solid #ccc;
+	padding: 20px;
+	font-size: 12px;
+	color: #999;
+}
+.main .contents .block .form .details .extraTips{
+	border-top: 1px solid #ccc;
+	padding: 20px;
+	font-size: 12px;
+	color: #999;
+}
+.main .contents .block .remark h4{
+	font-size: 16px;
+	color: #333;
+	margin: 20px 0;
+}
+.main .contents .block .remark{
+	color: #999;
+	font-size: 12px;
+}
+
+form .errorMsg .error { 
+	display: none;
+	color: #c71622; 
+	margin-left: 20px;
+	height: 20px;
+	background: url("../img/public/i-1011.png") no-repeat 0px 3px; 
+	padding-left: 15px; 
+	zoom:1;
+}
+
+/*重定义进度条样式*/
+.steps li {
+	width: 200px;
+}
+
+/*选择 退款 还是退款退货*/
+.main .contents .block .checkRefund {
+	width: 100%;
+	text-align: center;
+	padding: 100px 0px;
+}
+
+.main .contents .block .checkRefund h2 {
+	font-size: 16px;
+	line-height: 50px;
+}
+
+.main .contents .block .checkRefund a.link01 {
+	background: #ff7575;
+	display: inline-block;
+	zoom:1;
+	width: 150px;
+	height: 80px;
+	line-height: 80px;
+	font-size: 16px;
+	color: #fff;
+	margin: 40px 40px;
+}
+
+.main .contents .block .checkRefund a.link02 {
+	background: #00d893;
+	display: inline-block;
+	zoom:1;
+	width: 150px;
+	height: 80px;
+	line-height: 80px;
+	font-size: 16px;
+	color: #fff;
+	margin: 40px 40px;
+}
+
+/*第二步*/
+.main .contents .block .noteTitle {
+	padding: 50px 30px 0px 30px;
+	font-size: 16px;
+	color: #333;
+}
+
+.main .contents .block .noteInfo {
+	padding:10px 30px 0px 30px;
+	font-size: 12px;
+	line-height: 20px;
+	color: #666;
+}
+
+.main .contents .block .noteInfo em {
+	color: #c71622;
+}

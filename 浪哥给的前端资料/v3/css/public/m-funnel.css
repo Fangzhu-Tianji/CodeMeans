@@ -1,0 +1,60 @@
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-06-10 15:34:26
+ * @version $Id$
+ */
+
+.m-funnel { background: #fff; margin:10px auto 20px auto;}
+.m-funnel .c-layout { width: 100%; border: 1px solid #e4e4e4; border-collapse: collapse; }
+.m-funnel .c-name { border-bottom: 1px dashed #e3e3e3; width: 99px; font-size: 14px; font-weight: 700; border-right: 1px solid #e4e4e4; background:#fffbfc; text-align: center; vertical-align: middle; line-height: 24px; }
+.m-funnel .c-cont { border-bottom: 1px dashed #e3e3e3; vertical-align: middle; line-height: 24px; }
+
+/*不换行的分类*/
+.m-funnel .c-cont .cateList { margin: 0px; padding:10px 20px;}
+.m-funnel .c-cont .cateList a { margin-right: 20px; font-size: 12px; }
+.m-funnel .c-cont .cateList a:hover { color: #a40000;}
+
+/*很多分类*/
+.m-funnel .c-cont dl { width: 100%; overflow: hidden; }
+.m-funnel .c-cont dt { float: left; width: 60px; padding:10px 0px 10px 0px; }
+.m-funnel .c-cont dt a.more { width: 60px; height: 24px; line-height: 24px; overflow: hidden; display: block; cursor: pointer;}
+.m-funnel .c-cont dt a.more span , .m-funnel .c-cont dt a.more b { float: left; font-size: 12px; }
+.m-funnel .c-cont dt a.more b { display: block; margin: 10px 0px 0px 5px; width: 0; height: 0; border-left: 5px solid transparent; border-top: 7px solid #666; border-right: 5px solid transparent; position: relative;}
+.m-funnel .c-cont dt a.more b i { position: absolute; display: block; left:-5px; bottom: 1px; width: 0; height: 0; border-left: 5px solid transparent; border-top: 7px solid #fff; border-right: 5px solid transparent; text-indent: -9999px; overflow: hidden;}
+.m-funnel .c-cont dt a.more:hover { color:#32d3c3; }
+.m-funnel .c-cont dt a.more:hover b { border-top: 7px solid #32d3c3; }
+.m-funnel .c-cont dd { float: left; width: 100%; margin-right: -60px; padding:0px 0px; }
+.m-funnel .c-cont dd .cateList { margin-right: 60px; }
+.m-funnel .c-cont dd .cateList .box {overflow: hidden;}
+
+/*品牌分类展区*/
+.m-funnel .c-cont .brandList { width: 100%; overflow: hidden;}
+.m-funnel .c-cont .brandList .bt { padding:10px 0px 10px 20px; }
+.m-funnel .c-cont .brandList .bt ul { float: left; }
+.m-funnel .c-cont .brandList .bt li { float: left; cursor: pointer; padding: 0px 7px; margin-right: 10px; border-radius: 3px; }
+.m-funnel .c-cont .brandList .bt li i { display: none; }
+.m-funnel .c-cont .brandList .bt li.current { background:#c71521; color: #FFF; cursor: default; position: relative; }
+.m-funnel .c-cont .brandList .bt li.current i { display: block; width: 0; height: 0; border-left: 5px solid transparent; border-top: 7px solid #c71521; border-right: 5px solid transparent; position:absolute; bottom: -7px; left: 50%; margin-left: -5px;}
+/* 收起按钮 start */
+.m-funnel .c-cont .brandList .bt a.collect { width: 60px; height: 24px; line-height: 24px; overflow: hidden; display: block; cursor: pointer; float: right; color: #c71521; }
+.m-funnel .c-cont .brandList .bt a.collect span , .m-funnel .c-cont .brandList .bt a.collect b { float: left; font-size: 12px; }
+.m-funnel .c-cont .brandList .bt a.collect b { display: block; margin: 10px 0px 0px 5px; width: 0; height: 0; border-left: 5px solid transparent; border-bottom: 7px solid #c71521; border-right: 5px solid transparent; position: relative;}
+.m-funnel .c-cont .brandList .bt a.collect b i { position: absolute; display: block; left:-5px; top: 1px; width: 0; height: 0; border-left: 5px solid transparent; border-bottom: 7px solid #fff; border-right: 5px solid transparent; text-indent: -9999px; overflow: hidden;}
+/*
+.m-funnel .c-cont .brandList .bt a.collect:hover { color:#32d3c3; }
+.m-funnel .c-cont .brandList .bt a.collect:hover b { border-bottom: 7px solid #32d3c3; }
+*/
+
+/* 收起按钮 end */
+.m-funnel .c-cont .brandList .bd { border: 2px solid #ffe1e3; height: 70px; overflow: auto; padding:8px 15px; margin:0px 20px 15px 20px; }
+.m-funnel .c-cont .brandList .bd .box { display: none; }
+.m-funnel .c-cont .brandList .bd .box.current { display: block;}
+.m-funnel .c-cont .brandList .bd .box.current a { margin-right: 20px; line-height: 24px;}
+.m-funnel .c-cont .brandList .bd .box.current a:hover { color: #c71521; }
+
+
+/*选择的条件*/
+.m-funnel .c-cont .checked { border: 1px solid #cc0000; margin: 10px 0px 10px 20px; display: inline-block; zoom:1; }
+.m-funnel .c-cont .checked b { margin: 0px 7px; color:#cc0000; }
+.m-funnel .c-cont .checked del { text-decoration: none; cursor: pointer; color:#cc0000; padding-right: 7px; }

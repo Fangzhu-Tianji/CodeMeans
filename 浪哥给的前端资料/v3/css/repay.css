@@ -1,0 +1,246 @@
+@import url(public/base.css);		/*基础样式*/
+@import url(public/m-header.css);	/*头部*/
+@import url(public/m-nav.css);		/*导航*/
+@import url(public/m-steps.css);	/* 步骤 */
+@import url(plugins/p-select.css);	/*自定义下拉列表*/
+@import url(public/m-footer.css);	/*页面底部*/
+	/*右侧工具栏*/
+@import url(public/u-forms.css);	/*表单样式*/
+@import url(public/m-shipaddress.css);	/*弹层*/
+@import url(plugins/p-pop.css);	/*弹层*/
+html,body{
+	background: #fff;
+	font-family: "microsoft Yahei";
+}
+.red{color: #c40000;}
+label{cursor: pointer;}
+.mt20{margin-top: 20px;}
+.ui-checkbox input{vertical-align: -1px;}
+.ui-checkbox span{
+	vertical-align: top;
+	*vertical-align: 0px;
+	font-size: 14px;
+	margin-left: 5px;
+}
+
+.m-header{border-bottom: 1px solid #d3d3d3;}
+
+.main  .steps{
+	width: 930px;
+	margin: 30px auto;
+}
+.main .steps li{width: 298px;}
+.main .steps li.end{width: 32px;}
+.main .contents{
+	margin-bottom: 40px;
+	overflow: hidden;
+	clear: both;
+}
+.main .contents h2{
+	position: relative;
+	font-size: 18px;
+	color: #222;
+	padding: 20px 0;
+}
+.main .contents h2 em{
+	padding-left: 60px;
+	font-size: 12px;
+	color: #a7a7a7;
+}
+.main .contents h2 .showorders{
+	position: absolute;
+	top: 20px;
+	right: 0;
+	color: #3cb297;
+	font-size: 12px;
+}
+.main .contents .block .status{
+	font-size: 20px;
+	color: #3cb297;
+	margin-bottom: 20px;
+}
+.main .contents .block .statustips{
+	color: #666;
+	line-height: 24px;
+	font-size: 14px;
+}
+.main .contents .block  li{
+	float: left;
+	color: #333;
+}
+.main .contents .block .list-header{
+	margin-bottom: 20px;
+	overflow: hidden;
+	clear: both;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	font-weight: bold;
+	background: #efefef;
+	text-align: center;
+	padding: 0 20px;
+}
+.main .contents .block .list-header .col1{
+	position: relative;
+	text-align: left;
+}
+.main .contents .block .list-header .col1 i{
+	position: absolute;
+	top: 0;
+	left: -20px;
+	width: 5px;
+	height: 40px;
+	background: #c71622;
+}
+.main .contents .block .list-header .col1 span{
+	margin-left: 60px;
+}
+
+
+
+.main .contents .block .pays-mode{
+	position: relative;
+	border: 1px solid #e5e5e5;
+	padding: 20px;
+	min-height: 318px;
+	clear: both;
+	overflow: hidden;
+}
+.main .contents .block .pays-mode .tips{
+	font-size: 12px;
+	color: #222;
+	font-weight: bold;
+}
+.main .contents .block .pays-mode .tips em{
+	font-size: 30px;
+	padding: 0 3px;
+}
+.main .contents .block .pays-mode ul{clear: both;}
+.main .contents .block .pays-mode .tab-pays{
+	border-left: 1px solid #999;
+	margin-top: 20px;
+	width: 471px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+.main .contents .block .pays-mode .tab-pays li{
+	position: relative;
+	width: 157px;
+	float: left;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	cursor: pointer;
+}
+.main .contents .block .pays-mode .tab-pays li i{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: -1px;
+	width: 5px;
+	height: 40px;
+	background: #c71622;
+}
+.main .contents .block .pays-mode .tab-pays li b{
+	display: block;
+	position: absolute;
+	width: 1px;
+	height: 40px;
+	top: 0;
+	right: 0;
+	background: #999;
+}
+.main .contents .block .pays-mode .tab-pays li.select {border-color:#c71622; }
+.main .contents .block .pays-mode .tab-pays li.select i{display: block;}
+.main .contents .block .pays-mode .tab-pays li.select b{background: #c71622;}
+
+
+.main .contents .block .pays-mode .cnt-pays{
+	margin-top: 20px;
+	height: 70px;
+}
+.main .contents .block .pays-mode .cnt-pays li label{
+	display: inline-block;
+	height: 70px;
+}
+.main .contents .block .pays-mode .cnt-pays li{
+	cursor: pointer;
+	margin-right: 20px;
+}
+.main .contents .block .pays-mode .cnt-pays li input{
+	vertical-align: -25px;
+	*vertical-align: 25px;
+	margin-right: 20px;
+}
+.main .contents .block .pays-mode .cnt-pays li i{
+	display: inline-block;
+	width: 130px;
+	height: 70px;
+	text-indent: -999px;
+}
+.main .contents .block .pays-mode .cnt-pays li.zfb i{
+	background: url(../img/public/i-1023.png) no-repeat 0 0;
+}
+.main .contents .block .pays-mode .cnt-pays li.cft i{
+	background: url(../img/public/i-1023.png) no-repeat 0 -70px;
+}
+.main .contents .block .pays-mode footer{
+	height: 130px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	border: 3px solid #c71622;
+	font-size: 12px;
+}
+.main .contents .block .pays-mode footer .ms{
+	width: 100%;
+	height: 60px;
+	text-align: right;
+	float: right;
+	padding-right: 20px;
+}
+.main .contents .block .pays-mode footer .ms span{
+	display: block;
+	margin-top: 10px;
+	margin-right: 20px;
+	height: 40px;
+	line-height: 40px;
+}
+.main .contents .block .pays-mode footer .ms span b{
+	color: #c40000;
+}
+.main .contents .block .pays-mode footer .ms span b em{
+	font-size: 30px;
+}
+.main .contents .block .pays-mode footer .address{
+	float: right;
+	width: 1152px;
+	height: 70px;
+	background: #dcdcdc url(../img/public/i-1024.jpg) no-repeat top center;
+	text-align: right;
+	padding-right: 40px;
+}
+.main .contents .block .pays-mode footer .address span{
+	display: block;
+	padding-top: 10px;
+	color: #222;
+	font-weight: bold;
+}
+
+.main .contents .account{
+	float: right;
+	margin: 20px 40px 40px 0;
+	display: inline-block;
+	width: 160px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	background: #c71622;
+	border-radius: 4px;
+}
+
+.main .contents .account:hover{
+	background: #b60511;
+}

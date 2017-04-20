@@ -1,0 +1,451 @@
+@import url(public/base.css);		/*基础样式*/
+@import url(public/m-header.css);	/*头部*/
+@import url(public/m-nav.css);		/*导航*/
+@import url(public/m-steps.css);	/* 步骤 */
+@import url(plugins/p-select.css);	/*自定义下拉列表*/
+@import url(public/m-footer.css);	/*页面底部*/
+	/*右侧工具栏*/
+@import url(public/u-forms.css);	/*表单样式*/
+@import url(public/m-shipaddress.css);	/*弹层*/
+@import url(plugins/p-pop.css);	/*弹层*/
+html,body{
+	background: #fff;
+	font-family: "microsoft Yahei";
+}
+.red{color: #c40000;}
+.hide {
+display:none;
+}
+label{cursor: pointer;}
+.mt20{margin-top: 20px;}
+.ui-checkbox input{vertical-align: -1px;}
+.ui-checkbox span{
+	vertical-align: top;
+	*vertical-align: 0px;
+	font-size: 14px;
+	margin-left: 5px;
+}
+
+.m-header{border-bottom: 1px solid #d3d3d3;}
+
+.cart-header  .steps{
+float: right;
+margin: 30px 0;
+}
+.cart-header .steps li{width: 200px;}
+.cart-header .steps li.end{width: 32px;}
+.main {
+background-color: #f3f3f3;
+}
+.main .contents{
+	margin-bottom: 40px;
+	overflow: hidden;
+	clear: both;
+}
+.main .contents h2{
+	position: relative;
+	font-size: 18px;
+	color: #222;
+	padding: 20px 0;
+}
+.main .contents h2 em{
+	padding-left: 60px;
+	font-size: 12px;
+	color: #a7a7a7;
+}
+.main .contents h2 .showorders{
+	position: absolute;
+	top: 20px;
+	right: 0;
+	color: #3cb297;
+	font-size: 12px;
+}
+.main .contents .block .status{
+	font-size: 20px;
+	color: #3cb297;
+	margin-bottom: 20px;
+}
+.main .contents .block .statustips{
+	color: #666;
+	line-height: 24px;
+	font-size: 14px;
+}
+.main .contents .block  li{
+	float: left;
+	color: #333;
+}
+.main .contents .block .list-header{
+	margin-bottom: 20px;
+	overflow: hidden;
+	clear: both;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	font-weight: bold;
+	background: #efefef;
+	text-align: center;
+	padding: 0 20px;
+}
+.main .contents .block .list-header .col1{
+	position: relative;
+	text-align: left;
+}
+.main .contents .block .list-header .col1 i{
+	position: absolute;
+	top: 0;
+	left: -20px;
+	width: 5px;
+	height: 40px;
+	background: #c71622;
+}
+.main .contents .block .list-header .col1 span{
+	margin-left: 60px;
+}
+
+
+
+.main .contents .block .pays-mode{
+	position: relative;
+	border: 1px solid #e5e5e5;
+	padding: 20px;
+	min-height: 318px;
+	clear: both;
+	overflow: hidden;
+}
+.main .contents .block .pays-mode .tips{
+	font-size: 12px;
+	color: #222;
+	font-weight: bold;
+}
+.main .contents .block .pays-mode .tips em{
+	font-size: 30px;
+	padding: 0 3px;
+}
+.main .contents .block .pays-mode ul{clear: both;}
+.main .contents .block .pays-mode .tab-pays{
+	border-left: 1px solid #999;
+	margin-top: 20px;
+	width: 471px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+.main .contents .block .pays-mode .tab-pays li{
+	position: relative;
+	width: 157px;
+	float: left;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	cursor: pointer;
+}
+.main .contents .block .pays-mode .tab-pays li i{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: -1px;
+	width: 5px;
+	height: 40px;
+	background: #c71622;
+}
+.main .contents .block .pays-mode .tab-pays li b{
+	display: block;
+	position: absolute;
+	width: 1px;
+	height: 40px;
+	top: 0;
+	right: 0;
+	background: #999;
+}
+.main .contents .block .pays-mode .tab-pays li.select {border-color:#c71622; }
+.main .contents .block .pays-mode .tab-pays li.select i{display: block;}
+.main .contents .block .pays-mode .tab-pays li.select b{background: #c71622;}
+
+
+.main .contents .block .pays-mode .cnt-pays{
+	margin-top: 20px;
+	height: 70px;
+}
+.main .contents .block .pays-mode .cnt-pays li label{
+	display: inline-block;
+	height: 70px;
+}
+.main .contents .block .pays-mode .cnt-pays li{
+	cursor: pointer;
+	margin-right: 20px;
+}
+.main .contents .block .pays-mode .cnt-pays li input{
+	vertical-align: -25px;
+	*vertical-align: 25px;
+	margin-right: 20px;
+}
+.main .contents .block .pays-mode .cnt-pays li i{
+	display: inline-block;
+	width: 130px;
+	height: 70px;
+	text-indent: -999px;
+}
+.main .contents .block .pays-mode .cnt-pays li.zfb i{
+	background: url(../img/public/i-1023.png) no-repeat 0 0;
+}
+.main .contents .block .pays-mode .cnt-pays li.cft i{
+	background: url(../img/public/i-1023.png) no-repeat 0 -70px;
+}
+.main .contents .block .pays-mode footer{
+	height: 130px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	border: 3px solid #c71622;
+	font-size: 12px;
+}
+.main .contents .block .pays-mode footer .ms{
+	width: 100%;
+	height: 60px;
+	text-align: right;
+	float: right;
+	padding-right: 20px;
+}
+.main .contents .block .pays-mode footer .ms span{
+	display: block;
+	margin-top: 10px;
+	margin-right: 20px;
+	height: 40px;
+	line-height: 40px;
+}
+.main .contents .block .pays-mode footer .ms span b{
+	color: #c40000;
+}
+.main .contents .block .pays-mode footer .ms span b em{
+	font-size: 30px;
+}
+.main .contents .block .pays-mode footer .address{
+	float: right;
+	width: 1152px;
+	height: 70px;
+	background: #dcdcdc url(../img/public/i-1024.jpg) no-repeat top center;
+	text-align: right;
+	padding-right: 40px;
+}
+.main .contents .block .pays-mode footer .address span{
+	display: block;
+	padding-top: 10px;
+	color: #222;
+	font-weight: bold;
+}
+
+.main .contents .account{
+	float: right;
+	margin: 20px 40px 40px 0;
+	display: inline-block;
+	width: 160px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	background: #c71622;
+	border-radius: 4px;
+}
+
+.main .contents .account:hover{
+	background: #b60511;
+}
+    .main .contents .disabled, .main .contents .disabled:hover {
+           background: #ccc;
+          cursor: not-allowed;
+    }
+
+
+.paymentbox {
+    background-color: #F1F2F7;
+    padding-bottom: 50px;
+}
+.order {
+    position: relative;
+}
+.order .o-left {
+    float: left;
+    width: 640px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+.order .o-title {
+    line-height: 26px;
+    height: 26px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight:bold;
+}
+.order .o-tips {
+    line-height: 20px;
+    height: 20px;
+    padding-top:6px;
+}
+    .order .o-tips em {
+    color:#c00;
+    }
+.order .o-right {
+    float: right;
+    width: 190px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 32px;
+    overflow: hidden;
+}
+    .order .o-right .o-detail {
+    text-align:right;
+    }
+        .order .o-right .o-detail a {
+            color: #069;
+    text-decoration: underline;
+        }
+.order .o-price {
+    text-align: right;
+    line-height: 26px;
+    margin-bottom: 4px;
+}
+.order .o-price em {
+    vertical-align: bottom;
+}
+.order .o-price strong {
+    font-size: 18px;
+    vertical-align: bottom;
+    color: #ff5d5b;
+    margin: 0 3px;
+}
+.payment {
+    background-color: #fff;
+    padding: 12px 30px 0;
+}
+    .payment .op-info em {
+    color:#c00;
+    }
+.payment-list .pl-wrap {
+    overflow: hidden;
+    zoom: 1;
+    padding-bottom: 12px;
+}
+.payment-list .pl-item {
+position: relative;
+_zoom: 1;
+float: left;
+
+padding: 0;
+
+
+margin-right: 24px;
+margin-bottom: 10px;
+cursor: pointer;
+
+border-radius: 2px;
+-webkit-transition: border-color .2s;
+-moz-transition: border-color .2s;
+-ms-transition: border-color .2s;
+transition: border-color .2s;
+}
+.payment-list .pay-logo {
+    background-color: #fff;
+background-repeat: no-repeat;
+background-position: center center;
+display: block;
+width: 192px;
+height: 68px;
+overflow: hidden;
+text-indent: -9999px;
+border: 1px solid #ccc;
+}
+.payment-list .alipay .pay-logo{
+    background-image:url(../img/payment/alipay.jpg);
+}
+.payment-list .unionpay .pay-logo {
+    background-image:url(../img/payment/unionpay.jpg);
+}
+.payment-list .dxpay .pay-logo {
+    background-image:url(../img/payment/dxpay.jpg);
+}
+.payment-list .dxpay {
+  margin-right: 50px;
+}
+.payment-list .wxpay {
+    border-left: 1px solid #ccc;
+padding-left: 50px;
+}
+.payment-list .wxpay .pay-logo {
+    background-image:url(../img/payment/wxpay.jpg);
+    width: 148px;
+height: 148px;
+}
+.payment-list .pl-item:hover .pay-logo,.payment-list .item-select .pay-logo {
+    border: 1px solid #c00;
+}
+.payment-list .pl-item p {
+        color: #999;
+text-align:center;
+padding-top: 8px;
+}
+.pay-password {
+    padding: 10px 0;
+}
+    .pay-password input {
+width: 200px;
+height: 28px;
+line-height: 28px;
+font-size: 14px;
+font-family: Arial, Helvetica, sans-serif;
+color: rgb(153, 153, 153);
+border: 1px solid #999;
+padding: 4px;
+    }
+        .pay-password span {
+    color:#999;
+    }
+            .pay-password a {
+        color: #006699;
+    }
+.pv-button {
+    padding: 20px;
+border-top: 1px solid #ccc;
+    margin-top: 10px;
+}
+.pv-button a{
+font-family: "microsoft yahei";
+display: inline-block;
+height: 42px;
+line-height: 42px;
+background-color: #e74649;
+background-image: -moz-linear-gradient(top,#e74649,#df3134);
+background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#e74649),color-stop(1,#df3134));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e74649', endColorstr='#df3134', GradientType='0');
+-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e74649', endColorstr='#df3134');
+background-image: linear-gradient(to top,#e74649 0,#df3134 100%);
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+color: #fff;
+font-size: 20px;
+font-weight: 700;
+padding: 0 32px;
+cursor: pointer;
+border: 0;
+float: none;
+}
+#surplus-time div {
+    display: inline-block;
+    position: relative;
+    height: 28px;
+    padding: 0 10px 0 38px;
+    border: 1px solid #ddd;
+    font: 700 12px/31px arial,'\5fae\8f6f\96c5\9ed1';
+    color: #c00;
+    background-color:#fff;
+}
+#surplus-time div i {
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    width: 18px;
+    height: 19px;
+    background: url(../img/public/alarm-clock.png) no-repeat;
+}

@@ -1,0 +1,124 @@
+@import url(public/base.css);
+body{padding:20px;  min-width: inherit;}	
+.login-form {
+  position: relative;
+  z-index: 4;
+  width: 306px;
+  background: #fff;
+  overflow: visible;
+}
+.login-form {
+  height: 280px;
+  padding: 25px 20px 15px;
+  margin: 0 auto;
+}
+.form .item {
+  position: relative;
+margin-bottom: 28px;
+  z-index: 1;
+}
+.form .item label.error{
+	color: #f00;
+}
+.form .item-fore1, .form .item-fore2 {
+  border: 1px solid #bdbdbd;
+  height: 38px;
+  width: 304px;
+}
+.form .item-fore1 {
+  z-index: 6;
+}
+.form .item .login-label {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  border-right: 1px solid #bdbdbd;
+  background: url(../img/public/pwd-icons-new.png) no-repeat;
+}
+.form .item .name-label {
+  background-position: 0 0;
+}
+.form .itxt {
+  line-height: 18px;
+  height: 18px;
+  border: 0;
+  padding: 10px 0 10px 50px;
+  width: 254px;
+  float: none;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: '\5b8b\4f53';
+}
+.form .item-fore1 .clear-btn, .form .item-fore2 .clear-btn {
+  position: absolute;
+  z-index: 20;
+  right: 6px;
+  top: 12px;
+  width: 14px;
+  height: 14px;
+  background: url(../img/public/pwd-icons-new.png) -25px -143px no-repeat;
+  cursor: pointer;
+  display: none;
+}
+.form .item-fore2 {
+  height: 38px;
+}
+.form .item .pwd-label {
+  background-position: -48px 0;
+}
+.form .item-fore3 {
+  z-index: 5;
+  margin-bottom: 15px;
+}
+
+.form .item-error {
+  border: 1px solid #e4393c;
+}
+.form .item-error .name-label {
+  background-position: 0 -96px;
+  border-color: #e4393c;
+}
+.form .item-error .pwd-label {
+  background-position: -48px -96px;
+  border-color: #e4393c;
+}
+.login-form .login-box .safe {
+  position: relative;
+  color: #666;
+}
+.login-form .login-box .safe span {
+  margin-right: 15px;
+}
+.login-form .login-box .safe .forget-pw-safe {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+}
+.login-form .login-box .login-btn {
+  margin: 0 auto;
+  position: relative;
+}
+.login-form .login-box .login-btn .btn-img {
+  border: 1px solid #15b884;
+  display: block;
+  width: 100%;
+ background: #15b884;
+  height: 34px;
+  line-height: 34px;
+  color: #fff;
+  font-size: 20px;
+  font-family: '\5fae\8f6f\96c5\9ed1';
+  text-align:center;
+  cursor: pointer;
+}
+.login-form .login-box .coagent li {
+  float: left;
+}
+.login-form .login-box .coagent li .line {
+  color: #ccc;
+  padding: 0 10px;
+}

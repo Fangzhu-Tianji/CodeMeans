@@ -1,0 +1,417 @@
+
+
+.popup {
+    background: #fff;
+    display: none;
+    padding: 0px;
+    box-shadow: 0 5px 15px #555;
+    border-radius: 5px 5px 5px 5px;
+    z-index: 10000;
+}
+
+.bounceInDown{
+    animation: bounceInDown 0.8s ease;
+    -webkit-animation: bounceInDown 0.8s ease;
+    -moz-animation: bounceInDown 0.8s ease;
+    -o-animation: bounceInDown 0.8s ease; 
+}
+
+/*common popup css*/
+
+.popNormal .cnt {
+    padding: 30px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
+}
+
+.popNormal .closepop {
+    position: absolute;
+    text-indent: -9999px;
+    width: 22px;
+    height: 22px;
+    overflow: hidden;
+    background: url(../../img/plugins/popup-del.gif) no-repeat 0px 0px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.popNormal .closepop:hover {
+    background: url(../../img/plugins/popup-del.gif) no-repeat 0px -22px;
+}
+
+
+
+
+
+
+
+
+
+/*alert popup css*/
+
+.popAlert header {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #c71622;
+    color: #fff;
+    font-size: 14px;
+    text-indent: 15px;
+}
+
+.popAlert .cnt {
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #c71622;
+}
+
+.popAlert .closepop {
+    position: absolute;
+    text-indent: -9999px;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #ce323d;
+    overflow: hidden;
+    background: url(../../img/plugins/popup-alert-del.png) no-repeat 0px 0px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.popAlert .closepop:hover {
+    border: 1px solid #fa9ea4;
+}
+.popAlert footer {
+    text-align: center;
+}
+.popAlert footer .btnTrue {
+    background: #15b884;
+    color: #fff;
+    font-size: 14px;
+    padding: 0px 15px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    zoom:1;
+    cursor: pointer;
+}
+.popAlert footer .btnTrue:hover {
+    background: #049f6d;
+}
+
+.popAlert footer .btnFalse {
+    background: #999999;
+    color: #fff;
+    font-size: 14px;
+    padding: 0px 15px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    zoom:1;
+    cursor: pointer;
+}
+.popAlert footer .btnFalse:hover {
+    background: #888888;
+}
+
+/* 等待付款 */
+#waitPopup{
+    top:50%;
+    left:50%;
+    margin-left: -215px;
+    margin-top: -135px;
+}
+#waitPopup header{text-align: center;}
+#waitPopup .cnt .title{
+    font-size: 22px;
+    color: #333;
+}
+#waitPopup .cnt .subtitle{
+    font-size: 12px;
+    line-height: 24px;
+    color: #666;
+    margin-top: 10px;
+}
+#waitPopup .cnt .subtitle .countdown{
+    display: inline-block;
+    width: 30px;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 16px;
+    background: url(../../img/public/i-0015.png) no-repeat center left;
+}
+#waitPopup .cnt .tips{
+    margin-left: 98px;
+    text-align: left;
+    margin-top: 25px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999;
+}
+#waitPopup .cnt .ui-btns{
+    margin-top: 25px;
+}
+#waitPopup .cnt .ui-btns a{
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+    margin:0 10px;
+    font-size: 12px;
+    color: #666;
+    background: #eee;
+}
+#waitPopup .cnt .ui-btns a:hover{
+    background: #ddd;
+}
+#waitPopup .cnt .ui-btns .pay{
+    background: #c71622;
+    color: #fff;
+}
+#waitPopup .cnt .ui-btns .pay:hover{
+    background: #b60511;
+}
+#waitPopup .ft{
+    border-top: 1px solid #dbdbdb;
+    background: #fcfcfc;
+    color: #ccc;
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+}
+#waitPopup .ft a{
+    color: #3cb297;
+}
+
+#offPopup{
+    top:50%;
+    left:50%;
+    margin-left: -175px;
+    margin-top: -110px;
+}
+#offPopup header{text-align: center;}
+#offPopup .cnt {
+    padding: 15px 30px;
+}
+#offPopup .cnt .title{
+    font-size: 14px;
+    color: #999;
+}
+#offPopup .cnt .subtitle{
+    font-size: 12px;
+    line-height: 24px;
+    color: #666;
+    margin-top: 10px;
+}
+#offPopup .cnt .subtitle .countdown{
+    display: inline-block;
+    width: 60px;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 16px;
+    background: url(../../img/public/i-0015.png) no-repeat center left;
+}
+#offPopup .cnt .tips{
+    margin-left: 5px;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #222;
+}
+#offPopup .cnt .ui-btns{
+    margin-top: 15px;
+}
+#offPopup .cnt .ui-btns input{
+    font-family: "microsoft Yahei";
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+    margin:0 10px;
+    font-size: 12px;
+    color: #666;
+    background: #eee;
+}
+#offPopup .cnt .ui-selectSpan{
+    font-size: 12px;
+}
+.ui-selectOpts li{
+    font-size: 12px;
+}
+#offPopup .cnt .ui-btns input:hover{
+    background: #ddd;
+}
+#offPopup .cnt .ui-btns .pay{
+    background: #15b884;
+    color: #fff;
+}
+#offPopup .cnt .ui-btns .pay:hover{
+    background: #04a773;
+}
+
+@-webkit-keyframes bounceInDown {
+    0%, 100%, 60%, 75%, 90% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
+    }
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0)
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0)
+    }
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0)
+    }
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0)
+    }
+    100% {
+        -webkit-transform: none;
+        transform: none
+    }
+}
+@keyframes bounceInDown {
+    0%, 100%, 60%, 75%, 90% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
+    }
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        -ms-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0)
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        -ms-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0)
+    }
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        -ms-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0)
+    }
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        -ms-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0)
+    }
+    100% {
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none
+    }
+}
+.layui-layer-content .cnt {	
+    padding: 30px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
+}
+.layui-layer-content .cnt .title {
+  font-size: 22px;
+  color: #333;
+}
+.layui-layer-content .cnt .subtitle {
+  font-size: 12px;
+  line-height: 24px;
+  color: #666;
+  margin-top: 10px;
+}
+.layui-layer-content footer {
+    text-align: center;
+}
+.layui-layer-content  footer .btnTrue {
+    background: #15b884;
+    color: #fff;
+    font-size: 14px;
+    padding: 0px 15px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    zoom:1;
+    cursor: pointer;
+}
+.layui-layer-content footer .btnTrue:hover {
+    background: #049f6d;
+}
+
+.layui-layer-content footer .btnFalse {
+    background: #999999;
+    color: #fff;
+    font-size: 14px;
+    padding: 0px 15px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    zoom:1;
+    cursor: pointer;
+}
+.layui-layer-content  footer .btnFalse:hover {
+    background: #888888;
+}
+.layui-layer-content .cnt .tips{
+    margin-left: 98px;
+    text-align: left;
+    margin-top: 25px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999;
+}
+.layui-layer-content .cnt .ui-btns{
+    margin-top: 25px;
+}
+.layui-layer-content .cnt .ui-btns a{
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+    margin:0 10px;
+    font-size: 12px;
+    color: #666;
+    background: #eee;
+}
+.layui-layer-content .cnt .ui-btns a:hover{
+    background: #ddd;
+}
+.layui-layer-content .cnt .ui-btns .pay{
+    background: #c71622;
+    color: #fff;
+}
+.layui-layer-content .cnt .ui-btns .pay:hover{
+    background: #b60511;
+}
+.layui-layer-content .ft{
+    border-top: 1px solid #dbdbdb;
+    background: #fcfcfc;
+    color: #ccc;
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+}
+.layui-layer-content .ft a{
+    color: #3cb297;
+}

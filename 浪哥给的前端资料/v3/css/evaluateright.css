@@ -1,0 +1,50 @@
+@import url(public/base.css);		/*基础样式*/
+@import url(public/m-header.css);	/*头部*/
+@import url(public/m-nav.css);		/*导航*/
+@import url(plugins/p-pop.css);		/*弹窗样式*/
+@import url(public/m-cartlist.css);	/*右侧工具栏*/
+@import url(public/m-footer.css);	/*页面底部*/
+	/*右侧工具栏*/
+
+html,body{
+	background: #FFF;
+}
+
+.m-header {
+    border-bottom: 1px solid #ddd;
+}
+
+/*成功提示*/
+.rightTips {
+	width: 320px;
+	overflow: hidden;
+	margin: 100px auto;
+	clear: both;
+}
+
+.rightTips .icon {
+	width: 41px;
+	height: 41px;
+	margin-right: 10px;
+	float: left;
+}
+
+.rightTips .text {
+	float: left;
+}
+
+.rightTips .text h2 { color: #000; font-size: 18px; margin-bottom: 3px;}
+.rightTips .text p { color: #999; font-size: 12px;}
+.rightTips .text p a { color: #00b4fe; text-decoration: underline;}
+
+
+/*你还可以评价其它商品*/
+
+.eavlProducts { width: 100%; overflow: hidden; margin-bottom: 100px;}
+.eavlProducts h2 { border-bottom: 1px solid #ddd; font-size: 12px; line-height: 30px;}
+.eavlProducts li { width: 20%; padding: 30px 0px; overflow: hidden; float: left;}
+.eavlProducts li p { width: 200px; overflow: hidden; margin: 0px auto;}
+.eavlProducts li img { width: 198px; border: 1px solid #f4f4f4; margin-bottom: 10px;}
+.eavlProducts li .eval a { width: 100px; height: 30px; line-height: 30px; border-radius: 3px; margin: 15px auto; text-align: center; color: #fff; background: #c71622; display: block;}
+.eavlProducts li .eval a:hover { background:#b70612; }
+

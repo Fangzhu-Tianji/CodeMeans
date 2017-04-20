@@ -1,0 +1,53 @@
+/**
+ * 
+ * @authors Your Name (jiangzhiqiang@example.org)
+ * @date    2015-04-21 
+ * @version $Id$
+ */
+.m-home-slider{
+	width: 128px;
+	padding: 10 10px;
+	background: #fff;
+	border: 1px solid #ddd;
+	overflow: hidden;
+}
+.m-home-slider .block{
+    padding-top: 20px;
+    border-top: 1px dotted #ccc;
+    margin-top: -1px;
+}
+.m-home-slider .block h2{
+	width: 80px;
+	height: 16px;
+	line-height: 16px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+	text-align: center;
+	cursor: pointer;
+	margin: 0 auto;
+	border-left: 2px solid #ddd;
+}
+.m-home-slider .block.select h2{
+	border-left-color: #c71622;
+}
+.m-home-slider .block ul {
+    margin: 10px 0px 15px 0px;
+	
+}
+.m-home-slider .block ul li{
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+	text-align: center;
+}
+.m-home-slider .block ul li a{
+	cursor: pointer;
+	display: inline-block;
+	width: 100%;
+	color: #666;
+}
+.m-home-slider .block ul li:hover a,.m-home-slider .block ul li.select a{
+	color: #c71622;
+}

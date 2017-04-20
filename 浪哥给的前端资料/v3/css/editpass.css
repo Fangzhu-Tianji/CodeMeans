@@ -1,0 +1,109 @@
+@import url(public/base.css);		/*基础样式*/
+@import url(public/m-header.css);	/*头部*/
+@import url(public/m-nav.css);		/*导航*/
+@import url(public/m-home-slider.css);	/*个人中心左侧导航*/
+@import url(plugins/p-select.css);	/*自定义下拉列表*/
+@import url(public/m-footer.css);	/*页面底部*/
+	/*右侧工具栏*/
+@import url(public/u-forms.css);	/*右侧工具栏*/
+html,body{
+	background: #f4f4f4;
+	font-family: "microsoft Yahei";
+}
+.invalid{
+	border-color: #f00; 
+	color: #f00;
+}
+.main{
+	margin: 30px 0 40px 0;
+}
+.main .container{
+	width: 1000px;
+}
+.main .contents{
+	width: 858px;
+	margin-left: 10px;
+}
+.main .contents .subcontent{
+	background: #fff;
+	min-height: 738px;
+	border: 1px solid #ddd;
+	padding: 0 25px;
+}
+
+.main .contents .subcontent .cur-site{
+	height: 46px;
+	line-height: 46px;
+	border-bottom: 1px solid #e5e5e5;
+	font-size: 12px;
+	color: #999;
+}
+.main .contents .subcontent .cur-site .title{
+	font-size: 14px;
+	color: #000;
+	padding: 0 20px;
+	font-weight: bold;
+}
+.main .contents .subcontent .cur-site .total{
+	padding: 0 10px;
+}
+.main .contents .subcontent .formbox{
+	margin-top: 50px;
+	margin-left: 140px;
+	color: #666;
+	font-size: 12px;
+}
+.main .contents .subcontent .formbox li{
+	margin-bottom: 40px;
+}
+.main .contents .subcontent .formbox li em{
+	color: #f00;
+	padding-right: 3px; 
+}
+.main .contents .subcontent .formbox li .td-nm{
+	width: 120px;
+	display: inline-block;
+	text-align: right;
+	*vertical-align: 10px;
+}
+.main .contents .subcontent .formbox li .td-tip{
+	color: #b1b1b1;
+	margin-left: 10px;
+	*vertical-align: 10px;
+}
+.main .contents .subcontent .formbox li .ui-input{
+	width: 240px;
+	padding: 10px; 
+}
+
+.main .contents .subcontent .formbox li .save{
+	display: inline-block;
+	width: 120px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	border-radius: 4px;
+	font-size: 14px;
+	color: #fff;
+	background: #dd1d2a;
+	border: none;
+	font-family: "microsoft Yahei";
+	cursor:pointer;
+}
+.main .contents .subcontent .formbox li .save:hover{
+	background: #cc0c19;
+}
+.main .contents .subcontent .formbox li .ui-input.error{
+	border-color: #f00;
+}
+.main .contents .subcontent .formbox li .td-tip label.error { 
+	display: none;
+	color: #c71622; 
+	height: 20px;
+	line-height: 20px;
+	display: inline-block;
+	margin-top: 8px;
+	background: url("../img/public/i-1011.png") no-repeat 0px 3px; 
+	padding-left: 15px; 
+	zoom:1;
+}

@@ -1,0 +1,138 @@
+
+.m-header{clear:both;background:#fff;}
+.m-header .topbar{height:30px;line-height:30px;border-bottom:1px solid #dde0e5;font-size:12px;color:#6c6c6c;background:#f3f3f3;position: relative;z-index: 100;}
+.m-header .topbar .container{height:30px;margin:0 auto}
+.m-header .topbar .container a:hover{color:#c40000}
+.m-header .topbar .container .left{width:50%;float:left}
+.m-header .topbar .container .left  .username em{color:#15b884;padding:0 5px}
+.m-header .topbar .container .left a{padding-left:20px}
+.m-header .topbar .container .left a.login{color:#c71622}
+.m-header .topbar .container .right{width:50%;float:right;text-align:right}
+.m-header .topbar .container .right .menu{float:right;position:relative;margin-left:15px}
+.m-header .topbar .container .right .store-menu{width: 87px;height: 30px;position: relative;}
+.m-header .topbar .container .right .store-menu .favorite{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 80px;
+    height: 31px;
+    padding-right: 5px;
+    z-index: 101;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+.m-header .topbar .container .right .store-menu:hover .favorite{
+    background: #fff;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+.m-header .topbar .container .right .store-menu:hover .menu-bd{
+    display: block;
+}
+.m-header .topbar .container .right .store-menu .menu-bd{
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    width: 85px;
+    background: #fff;
+    z-index: 100;
+    border: 1px solid #ddd;
+}
+.m-header .topbar .container .right .store-menu .menu-bd a{
+    display: block;
+    width: 87px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.m-header .topbar .container .right .store-menu .menu-bd a:hover{
+    background: #f3f3f3;
+}
+.m-header .topbar .container .right .sc-menu{width: 102px;height:30px}
+.m-header .topbar .container .right .sc-menu .menu-bd{display:none;top:30px;right:0px;line-height:20px;background:#fff;border:1px solid #ccc}
+.m-header .topbar .container .right .sc-menu:hover .menu-bd{display:block;}
+.m-header .topbar .container .right .sc-menu:hover a.shopcarts{border-color:#ccc;background:#fff}
+.m-header .topbar .container .right a.shopcarts{width: 100px;display:inline-block;height:31px;z-index:101;border-left:1px solid #f3f3f3;border-right:1px solid #f3f3f3;border-bottom:none;padding-right:5px;position:absolute;top:0;right:0;text-align: center;}
+.m-header .topbar .container .right .menu .sc-menu-bd{width:330px;background:#fff;position:absolute;top:30px;right:0;z-index:100}
+.m-header .topbar .container .right .menu .sc-menu-bd .content .hasgoods{max-height:163px;overflow:auto}
+.m-header .topbar .container .right .menu .sc-menu-bd .content  .nogoods{height:100px;line-height:100px;text-align:center;overflow:auto;color:#aaa;font-size:14px}
+.m-header .topbar .container .right .menu .sc-menu-bd .content ul{margin-top:-1px}
+.m-header .topbar .container .right .menu .sc-menu-bd .content ul li{clear:both;overflow:hidden;border-top:1px dotted #ccc;padding:10px 0}
+.m-header .topbar .container .right .menu .sc-menu-bd .content ul li .item{display:inline-block;float:left}
+.m-header .topbar .container .right .menu .sc-menu-bd .content ul li .item1{margin-left:10px;border:2px solid #ddd}
+.p-detail, .p-name {
+    word-break: break-all;
+    word-wrap: break-word;
+        overflow: hidden;
+}
+.m-header .topbar .container .right .menu .sc-menu-bd .hasgoods {
+padding:10px;
+}
+#mcart-sigle .p-img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+    padding: 0;
+    margin-right: 10px;
+    font-size: 0;
+}
+    #mcart-sigle .p-img img {
+        width:50px;height:50px;
+        
+    }
+#mcart-sigle .p-name {
+    float: left;
+    width: 180px;
+    height: 48px;
+    text-align: left;
+    line-height: 16px;
+}
+#mcart-sigle .p-detail {
+    float: right;
+    text-align: right;
+}
+.m-header .topbar .container .right .menu .sc-menu-bd .content ul li .item1 img{width:50px;height:50px}
+.m-header .topbar .container .right .menu .sc-menu-bd .content ul li .item2{margin-left:10px;width:160px;text-align:left;line-height:17px}
+.m-header .topbar .container .right .menu .sc-menu-bd .content ul li .item2 .goodsnm{color:#222;display:inline-block;width:100%;line-height:18px;clear:both;overflow:hidden;text-overflow:ellipsis}
+.m-header .topbar .container .right .menu .sc-menu-bd .content ul li .item2 .desc{color:#aaa;display:inline-block;width:100%;clear:both;overflow:hidden}
+.m-header .topbar .container .right .menu .sc-menu-bd .content ul li .item3{float:right;margin-right:10px;width:72px}
+.m-header .topbar .container .right .menu .sc-menu-bd .content ul li .item3 .unitcost{display:inline-block;width:100%;color:#c40000;font-size:14px;margin-top:12px;line-height:16px;clear:both;overflow:hidden}
+.m-header .topbar .container .right .menu .sc-menu-bd .content ul li .item3 .amount{display:inline-block;width:100%;color:#999;line-height:14px;clear:both;overflow:hidden}
+.m-header .topbar .container .right .menu .sc-menu-bd footer{height:46px;line-height:46px;border-top:1px solid #ccc;clear:both;overflow:hidden;background: #F5F5F5;}
+.m-header .topbar .container .right .menu .sc-menu-bd footer a.account{display:inline-block;margin-top:8px;margin-right:10px;line-height:30px;color:#fff;background:#c40000;padding:0 15px;float:right;border-radius:4px;text-decoration:none}
+.m-header .topbar .container .right .menu .sc-menu-bd footer a.account:hover{background:#b30000}
+.m-header .topbar .container .right .menu .sc-menu-bd footer .subtotal{padding-left:16px;color:#222;float:left}
+.m-header .topbar .container .right .menu .sc-menu-bd footer .subtotal .coins{color:#c40000;font-size:14px}
+.m-header .topbar .container .right .menu .menu-bd a.rLink{white-space:nowrap;float:left}
+.m-header .topbar .container .right a.rLink{line-height:30px}
+.m-header .topbar .container .right a i{margin-right:2px;display:inline-block;width:7px;height:4px;background:url(../../img/public/down.png) no-repeat;vertical-align:2px;*vertical-align:6px;transition:all 0.5s}
+.m-header .topbar .container .right a:hover i{transform:rotate(180deg)}
+.m-header .topbar .container .right a.shopcarts em{margin:0 2px;color:#c71622;display: inline;}
+.m-header .topbar .container .right a.shopcarts b{margin:0 2px;display:inline-block;width:16px;height:12px;margin-top:-3px;background:url(../../img/public/shopcarts.png) no-repeat;vertical-align:middle}
+.m-header .topmain{height:110px}
+.m-header .topmain .container{height:110px;margin:0 auto}
+.m-header .topmain .container .logo{float:left;width: 190px;height:100%;vertical-align:middle;position:relative}
+.m-header .topmain .container .logo img{position:absolute;display:inline-block;top:50%;margin-top:-30px}
+.m-header .topmain .container .good{position:relative;float:left;width:154px;height:100%;margin-left:10px;background: url(../../img/public/i-1065.png) no-repeat center center;}
+.m-header .topmain .container .good a{width:100%;height:100%;display:inline-block}
+.m-header .topmain .container .good .hot{position:absolute;display:inline-block;top:50%;margin-top:-30px;left:15px}
+.m-header .topmain .container .ideas{width:66%;float:right;background:#fff;height:100px}
+.m-header .topmain .container .ideas  li{float:left;width:25%;height:100px;text-align:center}
+.m-header .topmain .container .ideas  li a{height:100px;text-align:center;overflow:hidden;clear:both;cursor: default;display:inline-block}
+.m-header .topmain .container .ideas  li .left{display:inline-block;line-height:100px;height:100px;float:left}
+.m-header .topmain .container .ideas  li .left img{display: block; margin-top: 28px;}
+.m-header .topmain .container .ideas  li .right{display:inline-block;margin-left:15px;width:110px;height:100px;float:left;text-align:left}
+.m-header .topmain .container .ideas  li .right b{display:inline-block;height:20px;line-height:20px;font-size:14px;color:#222;margin-top:30px}
+.m-header .topmain .container .ideas  li .right em{display:inline-block;height:20px;font-size:12px;color:#999;line-height:20px}
+.m-header .topmain .container .searchbar{float:left;margin-left:150px}
+.m-header .topmain .container .searchbar .keywords{height:30px;line-height:30px;font-size:12px;color:#6c6c6c;overflow: hidden;}
+.m-header .topmain .container .searchbar .keywords em{padding:0 10px;border-left:1px solid #ccc;margin-left: -1px;}
+.m-header .topmain .container .searchbar .keywords .select{margin-left:-8px}
+.m-header .topmain .container .searchbar .keywords .select a{color:#c71622}
+.m-header .topmain .container .searchbar .keywords  a:hover{color:#c40000;text-decoration:underline}
+.m-header .topmain .container .searchbar .searchinput{margin-top:25px;overflow:hidden;background:#c71622;padding:3px}
+.m-header .topmain .container .searchbar .searchinput .ui-input{border:none;width:420px;padding: 11px 10px;color:#6c6c6c;box-shadow:none;outline:none;background:#fff;float: left;}
+.m-header .topmain .container .searchbar .searchinput .submit{color:#fff;background:#c71622;width:90px;height: 36px;border:none;font-size:16px;font-family:microsoft yahei;font-weight:bold;vertical-align:middle;*vertical-align:5px;cursor:pointer;float: left;display: inline-block;}

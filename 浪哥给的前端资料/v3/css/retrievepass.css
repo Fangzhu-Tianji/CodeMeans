@@ -1,0 +1,215 @@
+@import url(public/base.css);		/*»ù´¡ÑùÊ½*/
+@import url(public/m-header.css);	/*Í·²¿¹«¹²ÑùÊ½*/
+@import url(public/m-footer.css);	/*µ×²¿*/
+
+html,body{
+	background: #fff;
+	min-height: 700px;
+}
+label{
+	cursor: pointer;
+}
+.ui-input{
+	font-family: "microsoft yahei";
+	width: 244px;
+	padding: 12px 5px ;
+	border: 1px solid #ddd;
+	color: #666;
+	transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    outline: none;
+    border-radius: 4px;
+}
+.ui-input:focus{
+	border-color: #03a9f4 ;
+	box-shadow: 0 0 5px #03a9f4;
+    -webkit-box-shadow: 0 0 5px #03a9f4;
+    -moz-box-shadow: 0 0 5px #03a9f4;
+    -o-box-shadow: 0 0 5px #03a9f4;
+}
+.ui-checkbox input{
+	vertical-align: -1px;
+}
+.ui-checkbox span{
+	vertical-align: top;
+	*vertical-align: 2px;
+	color: #999;
+	font-size: 12px;
+	margin-left: 5px;
+}
+.m-header .topmain .container{
+	border-bottom: 1px solid #eee;
+}
+.main{
+	width: 100%;
+}
+.main .loginbox{
+	width: 1030px;
+	height: 360px;
+	margin: 50px auto 0 auto;
+	box-shadow:  0 0 10px #ccc;
+	padding: 25px;
+	border: 1px solid #ccc;
+}
+.main .loginbox form{
+	height: 340px;	
+	margin-left: 50px;
+}
+.main .loginbox form  h2{
+	color: #333;
+	font-size: 24px;
+	margin: 20px 0 40px 0; 
+	zoom:0;
+}
+.main .loginbox form ul{
+	margin-left: 220px;
+}
+.main .loginbox form li{
+	margin-bottom: 30px;
+	width: 100%;
+	line-height: 40px;
+}
+.main .loginbox form li .userno{
+	display: inline-block;
+	width: 245px;
+	border: 1px solid #ccc;
+	padding: 12px 5px;
+	background: #f5f5f5;
+	color: #ccc;
+	line-height: 20px;
+	border-radius: 4px;
+}
+.main .loginbox form li .td-cnt{
+	position: relative;
+	float: left;
+}
+.main .loginbox form li .td-cnt .tips{
+	color: #ccc;
+	font-size: 12px;
+}
+.main .loginbox form li .td-nm{
+	display: inline-block;
+	float: left;
+	width: 120px;
+	text-align: right;
+	line-height: 20px;
+	padding-top: 10px;
+	*padding-top: 13px;
+	padding-top: 13px\9;
+	font-size: 14px;
+	color: #666;
+}
+.main .loginbox form li .td-tips{
+	*padding-top: 2px;
+	padding-top: 2px\9;
+	float: left;
+	margin-left: 10px;
+	color:#999;
+	font-size: 12px;
+}
+/*验证错误*/
+.main .loginbox form li .td-tips label.error { 
+	display: none;
+	color: #c71622; 
+	height: 20px;
+	line-height: 20px;
+	display: inline-block;
+	margin-top: 10px;
+	background: url("../img/public/i-1011.png") no-repeat 0px 3px; 
+	padding-left: 15px; 
+	zoom:1;
+}
+.main .loginbox form li .sure{
+	display: inline-block;
+	background: #15b884;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 10px;
+	width: 255px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+}
+.main .loginbox form li .sure:hover{
+	background: #04a773;
+}
+.main .loginbox form li .code{
+	*vertical-align: top;
+	display: inline-block;
+	background: #00b4fe;
+	color: #fff;
+	width: 112px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	padding: 10px 0;
+	margin-left: 10px;
+}
+.main .loginbox form li .change{
+	line-height: 40px;
+	color: #00b4fe;
+	font-size: 12px;
+	margin-left: 5px;
+}
+.main .loginbox form .successStatus{
+	margin-top: 120px;
+	margin-left: 300px;
+	width: 200px;
+	height: 40px;
+	padding: 10px 50px;
+	background: url(../img/public/i-1043.png) no-repeat center left;
+}
+.main .loginbox form .successStatus .title{
+	color: #333;
+	font-size: 18px;
+	line-height: 20px;
+	height: 20px;
+}
+.main .loginbox form .successStatus .subtitle{
+	color: #999;
+	font-size: 12px;
+	margin-top: 5px;
+}
+.main .loginbox form .successStatus .subtitle a{
+	color: #00b4fe;
+}
+
+.main .loginbox form .receiverpass{
+	margin-top: 80px;
+	margin-left: 200px;
+}
+.main .loginbox form .receiverpass .title{
+	color: #333;
+	font-size: 18px;
+}
+.main .loginbox form .receiverpass .title em{color: #15b884;}
+.main .loginbox form .receiverpass .goemail{
+	margin-top: 30px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 4px;
+	width: 250px;
+	height: 50px;
+	line-height: 50px;
+	background: #15b884;
+	color: #fff;
+	font-size: 16px;
+}
+.main .loginbox form .receiverpass .goemail:hover{
+	background: #26c995;
+}
+.m-footer{
+	margin-top: 10px;
+	width: 100%;
+	height: 120px;
+	border-top: none;
+}
+
+
+

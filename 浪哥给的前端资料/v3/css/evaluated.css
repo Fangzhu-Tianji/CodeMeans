@@ -1,0 +1,172 @@
+@import url(public/base.css);       /*基础样式*/
+@import url(public/m-header.css);   /*头部*/
+@import url(public/m-nav.css);      /*导航*/
+@import url(plugins/p-pop.css);     /*弹窗样式*/
+@import url(public/m-crumbs.css);   /*面包屑*/
+@import url(public/m-cartlist.css); /*右侧工具栏*/
+@import url(public/m-footer.css);   /*页面底部*/
+@import url(public/m-home-slider.css);  /*个人中心左侧导航*/
+
+html,body{
+    background: #f4f4f4;
+}
+.main{
+    margin: 30px auto;
+}
+.main.container{
+    width: 1000px;
+}
+.main .contents{
+    width: 858px;
+    margin-left: 10px;
+}
+
+.main .contents .subcontent{
+    /* margin-left: 210px; */
+    background: #fff;
+    min-height: 738px;
+    border: 1px solid #ddd;
+    padding: 0 20px;
+}
+
+.evalItem {
+    padding-bottom: 10px;
+}
+
+.evalItem .evalItemTitle {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+    background: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+.evalItem .evalItemTitle span {
+    text-align: center;
+    float: left;
+    display: block;
+}
+
+.evalItem table {
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    margin: 30px auto;
+}
+
+.evalItem table td {
+    vertical-align: middle;
+    font-size: 12px;
+    padding: 30px;
+    border: 1px solid #ddd;
+}
+
+.evalItem table .product-info {
+    width: 100px;
+    margin: 0px auto;
+}
+
+.evalItem table .product-info img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #f4f4f4;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.evalItem table .product-info a {
+    color: #666;
+}
+
+.evalItem table .product-info a:hover {
+    color: #c71622;
+}
+
+.evalItem table .photos {
+    width: 100%;
+    overflow: hidden;
+    margin: 10px auto 0px auto;
+}
+
+.evalItem table .photos .smaList {
+    width: 100%;
+    height: 52px;
+}
+
+.evalItem table .photos .bigShow img {
+    border: 2px solid #ddd;
+    padding: 2px;
+    display: none;
+}
+
+.evalItem table .photos .smaList li{
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    border: 2px solid #ddd;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+}
+
+.evalItem table .photos .smaList li img{
+    width: 40px;
+    height: 40px;
+}
+
+.evalItem table .photos .smaList li.selected {
+    width: 40px;
+    height: 40px;
+    padding: 4px 4px 8px 4px;
+    background: url('../img/public/i-0013.png') no-repeat 0px 0px;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+    border: none;
+}
+
+.evalItem table td .serviceReply {
+    color: #15b884;
+    margin-top: 15px;
+}
+
+.evalItem table td .starLevel {
+    width: 70px;
+    height: 14px;
+    display: inline-block;
+    zoom: 1;
+    background: url(../img/public/i-0009.png) repeat-x 0px -14px;
+}
+
+.evalItem table td .starLevel i {
+    height: 14px;
+    display: inline-block;
+    zoom: 1;
+    background: url(../img/public/i-0009.png) repeat-x 0px 0px;
+    float: left;
+}
+
+.evalItem table td .starLevel i.level-1 {
+    width: 14px;
+}
+
+.evalItem table td .starLevel i.level-2 {
+    width: 28px;
+}
+
+.evalItem table td .starLevel i.level-3 {
+    width: 42px;
+}
+
+.evalItem table td .starLevel i.level-4 {
+    width: 56px;
+}
+
+.evalItem table td .starLevel i.level-5 {
+    width: 70px;
+}
+
+.evalItem table td h6.time {
+    font-size: 12px;
+    line-height: 30px;
+    color: #999;
+}
