@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+  <title>设置tree</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./js/layui/css/layui.css">
+  <script src="./js/public/html5shiv.js"></script>
+  <script src="./js/public/jquery-1.11.1.js"></script>
+  <script src="./js/plugins/jquery.tmpl.js"></script>
+  <script src="./js/plugins/laydate.js"></script>
+  <script src="./js/plugins/jquery.common.js"></script>
+  <script src="./js/public/tools.js"></script>
+  <script src="./js/public/public.js"></script>
+  <script src="./js/layui/layui.js" charset="utf-8"></script>
+</head>
+<body>
+
+<h1>基本树</h1>
+ 
+<div style="padding: 10px; border: 1px solid rgb(221, 221, 221); border-image: none; width: 500px; height: 210px; overflow: auto; display: inline-block;">
+  <ul id="demo1"></ul>
+</div>
+<br/><br/>
+<p>点击每一级菜单，都会执行一个回调，返回该节点的一些信息</p>
+           
+          
+<script>
+var jsonTree = [ 
+  {
+    "name": "常用工具（可以单击左侧箭头，也可以双击标题）",
+    "id": 1,
+    "children": [
+      {
+        "name": "跳转页面（设置跳转）",
+        "id": 11,
+        "href": "http://www.cst58.com/"
+      },
+      {
+        "name": "置顶邮件",
+        "id": 12
+      },
+      {
+        "name": "标签邮件",
+        "id": 13
+      }
+    ]
+  },
+  {
+    "name": "收藏夹",
+    "id": 3,
+    "spread": true,
+    "children": [
+      {
+        "name": "爱情动作片",
+        "id": 31
+      },
+      {
+        "name": "技术栈",
+        "id": 12,
+        "children": [
+          {
+            "name": "前端",
+            "id": 121
+          },
+          {
+            "name": "全端",
+            "id": 122
+          }
+        ]
+      }
+    ]
+  }
+
+];
+//Demo
+layui.use(['tree', 'layer'], function(){
+  var layer = layui.layer,
+  $ = layui.jquery; 
+  
+  layui.tree({
+    elem: '#demo1', //指定元素
+    target: '_blank', //是否新选项卡打开（比如节点返回href才有效）
+    nodes: jsonTree,
+    click: function(item){ //点击节点回调
+      // layer.msg('当前节名称：'+ item.name + '<br>全部参数：'+ JSON.stringify(item));
+      console.log(item);
+    }
+  });
+  
+});
+</script>
+
+</body>
+</html>

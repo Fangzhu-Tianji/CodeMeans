@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+	<title>表单验证</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="./css/common.css">
+	<script src="./js/public/html5shiv.js"></script>
+	<script src="./js/public/jquery-1.11.1.js"></script>
+	<script src="./js/plugins/jquery.tmpl.js"></script>
+	<script src="./js/plugins/jquery.common.js"></script>
+	<script src="./js/plugins/laydate.js"></script>
+	<script src="./js/plugins/jquery.cookie.js"></script>
+	<script src="./js/public/tools.js"></script>
+	<script src="./js/public/public.js"></script>
+</head>
+<body>
+	<!-- .wrapBox : iframe 子页面样式根节点 -->
+	<div class="wrapBox table1">
+		<!-- 位置提示区 -->
+		<div class="locationBox">
+			<!-- 面包屑 -->
+			<div class="m-crumbs">
+	            <span>财视通</span>
+	            <b>&gt;</b>
+	            <span>系统中心</span>
+	            <b>&gt;</b>
+	            <span>用户权限</span>
+	            <b>&gt;</b>
+	            <em>表单验证</em>
+	        </div>
+	        <!-- 操作项按钮 -->
+			<div class="topOpts">
+            	<span>这里可以放一些文字提示</span>
+            </div>
+		</div>
+		<form action="#" method="post" id="myform">
+	        <div class="m-formBox box">
+		        <!-- 表单赋值填充 -->
+				<table cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+						<td width="120">邮箱：</td>
+						<td>
+							<div>
+								<input type="text" name="email" class="ui-text" value="" test="required email">
+							</div>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td width="120">日期：</td>
+						<td>
+							<div>
+								<input type="text" name="start-time" class="ui-text" value="" test="required" onclick="laydate({format:'YYYY-MM-DD hh:mm:ss',isclear: true,min:'2015-9-15 00:00:00',max:'2020-9-30 23:59:59'})">
+								<span class="f1" style="width:30px; text-align: center;"> ~ </span>
+								<input type="text" name="end-time" class="ui-text" value="" test="required" onclick="laydate({format:'YYYY-MM-DD hh:mm:ss',isclear: true,min:'2015-9-15 00:00:00',max:'2020-9-30 23:59:59'})">
+							</div>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>姓名：</td>
+						<td>
+							<input type="text" name="name" class="ui-text" value="" test="required">
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>帐号：</td>
+						<td>
+							<input type="text" name="user" class="ui-text" value="" test="required">
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>性别：</td>
+						<td>
+							<label class="ui-label">
+								<input type="radio" name="sex" value="0" test="required">
+								<em>男朋友</em>
+							</label>
+							<label class="ui-label">
+								<input type="radio" name="sex" value="1" test="required">
+								<em>女朋友</em>
+							</label>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>爱好：</td>
+						<td>
+							<label class="ui-label">
+								<input type="checkbox" name="like" value="电影" test="required"><em>电影</em>
+							</label>
+							<label class="ui-label">
+								<input type="checkbox" name="like" value="洗脚" test="required"><em>洗脚</em>
+							</label>
+							<label class="ui-label">
+								<input type="checkbox" name="like" value="泡妞" test="required"><em>泡妞</em>
+							</label>
+							<label class="ui-label">
+								<input type="checkbox" name="like" value="按摩" test="required"><em>按摩</em>
+							</label>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>个人说明：</td>
+						<td>
+							<textarea name="message" class="ui-textarea" test="required"></textarea>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>个人财富情况：</td>
+						<td>
+							<select name="money" id="" class='ui-select' test="required">
+								<option value="">请选择</option>
+								<option value="0">钻石王老五</option>
+								<option value="1">宅男穷屌丝</option>
+							</select>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>个人资料：</td>
+						<td><span class='ui-upload'>上传文件<input type="file"></span></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>按钮样式：</td>
+						<td>
+							<a href="javascript:;" class='ui-btn disabled'>link 禁用</a>
+							<input type="button" class="ui-btn disabled" disabled="disabled" value="input 禁用">
+							<a href="javascript:;" class='ui-btn'>link</a>
+							<input type="button" class="ui-btn" value="input">
+							<a href="javascript:;" class='ui-btn blue'>blue link</a>
+							<input type="button" class="ui-btn green" disabled="disabled" value="green input">
+							<a href="javascript:;" class='ui-btn yello'>yello link</a>
+							<input type="button" class="ui-btn red" value="red input">
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>验证方式：</td>
+						<td>
+							<input type="submit" class="ui-btn red" value="Submit Form">
+							&nbsp;
+							<a href="javascript:;" class='ui-btn green' id="fn1">get form to json object</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+
+			if(T.cookie("tan")){
+				alert("tan");
+			}else{
+				//T.cookie("tan","ziliang");
+			}
+			
+
+			// 表单验证注册 有指定验证属性的全部 input textarea select（text="validFlag1 validFlag2"）
+			T.registerFileds();
+
+			// 获取指定父容器下面的所有表单数据JSON
+			$("#fn1").on("click",function(){
+				var a = T.formToJSON("#myform",function(data){
+					data["list"] = 12;
+					return data;
+				});
+				console.log(a);
+			});
+
+			// T.POST({
+			// 	action:"http://apiout.ccdfs.cc/test/postTest",
+			// 	//action:"http://apiibo.ccdfs.cc/api/test/postTest2",
+			// 	params:{data:{"UserCode": "hailang", "UserPwd": "123456"}},
+			// 	success:function(data){
+					
+			// 	},
+			// 	error:function(o){
+			// 		console.log("T.error");
+			// 	}
+			// });
+
+
+		});
+	</script>
+</body>
+</html>

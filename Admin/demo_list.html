@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+	<title>数据列表</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="./css/common.css">
+	<script src="./js/public/html5shiv.js"></script>
+	<script src="./js/public/jquery-1.11.1.js"></script>
+	<script src="./js/plugins/jquery.tmpl.js"></script>
+	<script src="./js/plugins/jquery.common.js"></script>
+	<script src="./js/public/tools.js"></script>
+	<script src="./js/public/public.js"></script>
+</head>
+<body>
+	<div class="wrapBox">
+		<!-- 位置提示区 -->
+		<div class="locationBox">
+			<!-- 面包屑 -->
+			<div class="m-crumbs">
+	            <span>财视通</span>
+	            <b>&gt;</b>
+	            <span>系统中心</span>
+	            <b>&gt;</b>
+	            <span>用户权限</span>
+	            <b>&gt;</b>
+	            <em>表单验证</em>
+	        </div>
+	        <!-- 操作项按钮 -->
+			<div class="topOpts">
+            	<a href="javascript:;" class='ui-btn'>退回上一页</a>
+            	<input type="button" class="ui-btn disabled" disabled="disabled" value="input 禁用">
+            </div>
+		</div>
+        <!-- 搜索表单 -->
+		<form action="#" method="post" id="myform">
+			<div class="m-searchForm box">
+				<table cellpadding="0" cellspacing="0" width="100%">
+			        <tr>
+			        	<td width="5%" class="fw7">邮箱：</td>
+			        	<td width="20%"><input type="text" name="email__tan" class="ui-text" value="123456@qq.com" test="required email"></td>
+			        	<td width="5%" class="fw7">姓名：</td>
+			        	<td width="20%"><input type="text" name="email__jiang" class="ui-text" value="放逐天际" test="required"></td>
+						<td width="5%" class="fw7">帐号：</td>
+						<td width="20%"><input type="text" name="val" class="ui-text" value="ad" test="required"></td>
+						<td width="5%" class="fw7">财富情况：</td>
+						<td width="20%">
+							<select name="xiala" id="" class='ui-select' test="required">
+								<option value="">请选择</option>
+								<option value="钻石王老五">钻石王老五</option>
+								<option value="宅男穷屌丝">宅男穷屌丝</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="fw7">性别：</td>
+						<td>
+							<label class="ui-label">
+								<input type="radio" name="sex" value="男" test="required" checked="checked">
+								<em>男朋友</em>
+							</label>
+							<label class="ui-label">
+								<input type="radio" name="sex" value="女" test="required">
+								<em>女朋友</em>
+							</label>
+						</td>
+						<td class="fw7">爱好：</td>
+						<td colspan="5">
+							<label class="ui-label">
+								<input type="checkbox" name="like" value="电影" test="required"><em>电影</em>
+							</label>
+							<label class="ui-label">
+								<input type="checkbox" name="like" value="洗脚" test="required"><em>洗脚</em>
+							</label>
+							<label class="ui-label">
+								<input type="checkbox" name="like" value="泡妞" test="required" checked="checked"><em>泡妞</em>
+							</label>
+							<label class="ui-label">
+								<input type="checkbox" name="like" value="按摩" test="required"><em>按摩</em>
+							</label>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+		<!-- 操作按钮区 -->
+		<div class="optsBtn box">
+			<!-- 左侧操作项 -->
+			<div class="f1" id="">
+				<select name="xiala" id="" class='ui-select' test="required">
+					<option value="">批量操作</option>
+					<option value="批量删除">批量删除</option>
+					<option value="批量提交">批量提交</option>
+				</select>
+				<a href="javascript:;" class='ui-btn green' id="batchAction">确定</a>
+			</div>
+			<!-- 右侧操作项 -->
+			<div class="f2">
+				<a href="javascript:;" class='ui-btn blue' id="fn6">自定义弹层</a>
+				<a href="javascript:;" class='ui-btn yello' id="fn2">alert提示效果</a>
+				<a href="javascript:;" class='ui-btn yello' id="fn3">confirm提示效果</a>
+				<a href="javascript:;" class='ui-btn yello' id="fn4">prompt输入效果</a>
+				<a href="javascript:;" class='ui-btn yello' id="fn5">openIframe嵌入新页面</a>
+				<a href="javascript:;" class='ui-btn red' id="fn1">查询列表</a>
+			</div>
+		</div>
+        <!-- 数据列表 -->
+        <div class="m-list mt10 box">
+			<table cellpadding="0" cellspacing="0" width="100%">
+				<thead>
+				    <tr>
+				        <th class="chk" width="20"><input id="g_tmsSelAll" type="checkbox"></th>
+				        <th width="80">会员ID</th>
+				        <th width="150">会员名</th>
+				        <th width="150">昵称</th>
+				        <th width="100">会员类型</th>
+				        <th width="60">VIP等级</th>
+				        <th width="150">手机</th>
+				        <th width="150">Email</th>
+				        <th>CPS联盟名称</th>
+				        <th width="140">注册时间</th>
+				        <th width="60">状态</th>
+				        <th width="75">操作</th>
+				    </tr>
+				</thead>
+				<script id="datatmpl" type="text/x-jquery-tmpl">
+				    <tr>
+				        <td class="chk"><input type="checkbox" name="checkName" value="${userid}" /></td>
+				        <td>${userid}</td>
+				        <td>${username}</td>
+				        <td>${nick}</td>
+				        <td>${usertype}</td>
+				        <td>${viplevel}</td>
+				        <td>${phone}</td>
+				        <td>${email}</td>
+				        <td>${cpsid}</td>
+				        <td>${registertime}</td>
+				        <td>${status}</td>
+				        <td>
+				            <a href="javascript:pager.userLock(${userid},${status});">${status==2? "解锁" : "锁定"}</a>&nbsp;
+				            <a href="javascript:pager.AlertEdit(${userid});">编辑</a>
+				        </td>
+				    </tr>
+				</script>
+				<tbody id="tbResult">
+					<tr>
+				        <td class="chk"><input type="checkbox" name="checkName" value="1" /></td>
+				        <td>1</td>
+				        <td>放逐天际</td>
+				        <td>我是昵称</td>
+				        <td>白银</td>
+				        <td>超级VIP</td>
+				        <td>12345678901</td>
+				        <td>12345678@qq.com</td>
+				        <td>超级美少女战士</td>
+				        <td>2017-01-01</td>
+				        <td>2</td>
+				        <td>
+				            <a href="javascript:pager.userLock(1,2);">锁定</a>&nbsp;
+				            <a href="javascript:pager.AlertEdit(1);">编辑</a>
+				        </td>
+				    </tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- 数据分页条 -->
+		<div id="tfpagebar" class="box">
+			<!-- <div class="m-pageBar box">
+				<span class="count">共<i>1111</i>条记录，分<i>25</i>页显示</span>
+				<a href="javascript:;" class="disabled">上一页</a>
+				<a href="javascript:;" data-pn="3">12</a>
+				<a href="javascript:;" class="selected">22</a>
+			</div> -->
+		</div>
+		<div id="popDemo" style="display: none;">
+			<div class="popDemo">
+				<div style="width:100%; text-align: center; height:500px; line-height: 500px; font-size: 24px; background: #fff;">内容全部自定义</div>
+				<a href="javascript:;" class="close">×</a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+
+			// 表单验证注册 有指定验证属性的全部 input textarea select（text="validFlag1 validFlag2"）
+			T.registerFileds();
+
+			// 获取指定父容器下面的所有表单数据JSON
+			$("#fn1").on("click",function(){
+				var a = T.formToJSON("#myform",function(data){
+					data["list"] = 12;
+					return data;
+				});
+				if(a){
+					console.log(JSON.stringify(a));
+					alert("验证通过，可以做其它事了！");
+				}
+			});
+
+			// 显示列表数据请求参数配置
+            var param = {
+                //url: "http://192.168.0.108:88/test/list.php",		// 数据请求 get 地址
+                url: "json/demo_list.json",
+                tmpl: '#datatmpl',									// 预设模板 script tpl ID
+                target: '#tbResult',								// 煊览容器 node ID
+                pageBar:"#tfpagebar",								// 分页位置 node ID
+                onRequest: function(formIdJson){					// 传参修改 请求需要传递的参数对象
+                	formIdJson["CouponType"] = 1;
+	                return formIdJson;
+                }
+                /*
+                正常情况下，下面参数全面可略
+                pageBarShow: true,									// 是否分页
+                page: {
+		            PageIndex: 0,                       			// 当前第几页
+		            PageSize: 15                       				// 每页多少条数据
+		        },
+                formId:null,										// 传参表单 表单JSON 如：#searchForm
+                onRequest: function(formIdJson){					// 传参修改 请求需要传递的参数对象
+                	formIdJson["CouponType"] = 1;
+	                return formIdJson;
+                },
+                onResponse: function(data){							// 接受到的数据 预处理
+                	var data = data.data;
+                	return data;
+                },
+                onComplete: function() {							// 成功之后
+                    alert("加载完成");
+                },
+                onError: function(){								// 出错之后
+                	alert("出错！"); 
+                }
+                */
+            }
+            // 发送请求并显示数据列表
+            T.getRequestAfter(param);
+
+            // 全选集
+            var checkAlls=[];
+
+            // 注册全选
+            T.checkAll("#g_tmsSelAll",{
+	            type: 'all',                    // 全选-all; 反选-invert
+	            name: 'checkName',              // 默认name
+	            callback: function(inputs){
+	            	// inputs 为 name=checkName 并被选中的数组集合 or 空数组 []
+	            	// 回调函数 
+	            	console.log(inputs);
+	            	checkAlls = inputs;
+	            }          
+	        });
+
+	        // 批处理示例
+	        $("#batchAction").off("click").on("click",function(){
+
+	        	// 如果不是全选，则自行获得选中input
+	        	checkAlls = T.getCheckedArr("checkName","value");
+
+	        	// 如是有值，说明全选了，则执行
+	        	if(checkAlls.length>0){
+	        		console.log(checkAlls);
+		        	// 二次确认
+		        	T.confirm('确定删除吗？',function(boolean){
+		        		if(boolean){
+		        			console.log("开始批处理");
+		        		}else{
+		        			console.log("取消批处理");
+		        		}
+		        	});
+	        	}else{
+	        		T.alert("请你先勾选需要处理的选项！");
+	        	}
+	        });
+
+	        $("#fn2").on("click",function(){
+	        	// 普通提示
+	        	T.alert('智能ABC点标签右边的小键盘符号智能ABC点标签右边的小键盘符号……',3000);
+	        });
+
+	        $("#fn3").on("click",function(){
+	        	// 二次确认
+	        	T.confirm('确定删除吗？',function(boolean){
+	        		if(boolean){
+	        			console.log(boolean);
+	        		}else{
+	        			console.log(boolean);
+	        		}
+	        	});
+	        });
+
+	        $("#fn4").on("click",function(){
+	        	// 输入内容
+				T.prompt("请输入你的姓名","三小二",function(inputText){
+					console.log(inputText);
+				});
+	        });
+
+	        $("#fn5").on("click",function(){
+	        	// 新开窗口打开一个页面
+	        	T.openIframe({
+	        		id:"arttanzl",
+	        		width:1050,
+	        		height:700,
+	        		title:"探索生命的奥秘",
+	        		url:"http://16seek.com"
+	        	});
+	        });
+
+	        $("#fn6").on("click",function(){
+	        	// 新开窗口打开一个页面
+	        	T.popup({
+	        		width:800,
+	        		height:500,
+	        		htmlID:"#popDemo",
+	        		htmlCssFlag:"popDemoFlag",
+	        		htmlCssLink:"./css/popDemo.css"
+	        	});
+	        });
+
+		});
+	</script>
+</body>
+</html>

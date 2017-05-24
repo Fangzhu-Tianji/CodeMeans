@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+	<title>cookie设置</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="./css/common.css">
+	<script src="./js/public/html5shiv.js"></script>
+	<script src="./js/public/jquery-1.11.1.js"></script>
+    <script src="./js/plugins/jquery.cookie.js"></script>  
+	<script src="./js/plugins/jquery.tmpl.js"></script>
+	<script src="./js/plugins/jquery.common.js"></script>
+	<script src="./js/public/tools.js"></script>
+	<script src="./js/public/public.js"></script>
+</head>
+<body>
+	<div class="wrapBox">
+		<!-- 位置提示区 -->
+		<div class="locationBox">
+			<!-- 面包屑 -->
+			<div class="m-crumbs">
+	            <span>财视通</span>
+	            <b>&gt;</b>
+	            <span>产品中心</span>
+	            <b>&gt;</b>
+	            <span>数据维护</span>
+	            <b>&gt;</b>
+	            <em>cookie设置</em>
+	        </div>
+		</div>
+		<!-- 操作按钮区 -->
+		<div class="optsBtn box">
+			<!-- 右侧操作项 -->
+			<div class="f2">
+				<a href="javascript:;" class='ui-btn blue' id="cookie1">设置cookie</a>
+				<a href="javascript:;" class='ui-btn red' id="cookie2">设置cookie并加时间</a>
+				<a href="javascript:;" class='ui-btn yello' id="cookie3">清除cookie</a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+
+	        $("#cookie1").on("click",function(){
+	        	console.log("设置cookie");
+	        	T.cookie("__sid", "12345678901");
+                T.cookie("__uname", "左春华");
+	        });
+
+	        $("#cookie2").on("click",function(){
+	        	console.log("设置cookie并加时间");
+	        	T.cookie("__nickname", "放逐天际", 7);
+	        });
+
+	        $("#cookie3").on("click",function(){
+	        	console.log("清除cookie");
+	        	T.uncookie();
+	        });
+
+		});
+	</script>
+</body>
+</html>

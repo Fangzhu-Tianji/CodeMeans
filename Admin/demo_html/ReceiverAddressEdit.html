@@ -1,0 +1,141 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <title>中国保税网--会员管理</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="http://base.ccdfs.cc/manager/css/common.css">
+    <script src="http://base.ccdfs.cc/manager/js/public/html5shiv.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/jquery-1.11.1.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/plugins/jquery.tmpl.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/plugins/jquery.common.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/tools.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/public.js"></script>
+</head>
+<body style="min-width:auto;" popup="1">
+    <div class="wrapBox">
+        <div class="m-formBox box">
+            <form id="targetForm">
+                <table>
+                    <tr>
+                        <td><span class="g_star">*</span>收货人：</td>
+                        <td>
+                            <input type="text" id="txtConsignee" name="Receiver" class="ui-text" test="required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="g_star">*</span>手机：</td>
+                        <td>
+                            <input type="text" id="txtphone" name="Mobile" class="ui-text" test="required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="g_star">*</span>身份证号码：</td>
+                        <td>
+                            <input type="text" id="txtidcard" name="IdCard" class="ui-text" test="required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="g_star">*</span>收货地区：</td>
+                        <td>
+                            <input type="text" id="txtareaname" name="AreaName" class="ui-text" test="required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="g_star">*</span>详细地址：</td>
+                        <td>
+                            <input type="text" id="txtaddress" name="Address" class="ui-text" test="required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            默认地址：
+                        </td>
+                        <td><input type="checkbox" id="chkIsDefault" name="IsDefault" /></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input class="ui-btn" type="submit" id="btnSubmit" value="确定" />
+                            <input class="ui-btn" type="button" id="btnGoList" value="关 闭" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var pager = {
+            init: function () {
+                this.bindData();
+                this.bindEvent();
+            },
+            bindData: function () {
+                T.GET({//获取用户信息
+                    action: "api_admin/user/getReceiverAddressByID?addressID=" + T.getUrlParam("Rid"),
+                    success: function (res) {
+                        if (res.errno == 0) {
+                            if (res.data) {
+                                T.fillForm("#targetForm", res.data, function (data) {
+                                    if (res.data["IsDefault"]) {
+                                        document.getElementById("chkIsDefault").checked = res.data["IsDefault"];
+                                        $("#chkIsDefault").attr("disabled", "disabled");
+                                    }
+                                });
+                            }
+                        } else {
+                            T.alert(res.errmsg);
+                        }
+                    }
+                });
+            },
+            bindEvent: function () {
+                // 表单验证注册 ----------------------------------------
+                T.registerFileds();
+
+                // 获取表单数据JSON
+                $("#targetForm").submit(function () {
+                    var entity = T.formToJSON("#targetForm", function (data) {
+                        data["AddressID"] = T.getUrlParam("Rid");
+                        data["MemUserID"] = T.getUrlParam("UserID");
+                        data["IsDefault"] = document.getElementById("chkIsDefault").checked;
+                        return data;
+                    });
+                    //var entity = { "Accesstoken": "26B6ADC6FA99EA7FFA8257EC1D170391", "Products": [{ "ProductID": 15538, "ProductCount": 2 }, { "ProductID": 15580, "ProductCount": 10 }] };
+                    if (entity) {
+                        T.POST({
+                            action: "api_admin/user/editReceiverAddress",
+                            params: entity,
+                            success: function (res) {
+                                //console.log(res);
+                                if (res.errno == 0) {
+                                    if (res.data) {
+                                        T.alert("数据编辑成功!", null, function () {
+                                            console.log(window.parent.location);
+                                            //window.parent.location.reload();
+                                            //window.top.$(".popup-overlay").remove();
+                                            //window.top.$("#editReceiver").remove();
+                                        });
+                                        //parent.location.reload();
+                                       // console.log(window.top.$("#editReceiver").find(".close"));
+
+                                    }
+                                }
+                                else {
+                                    T.alert(res.errmsg);
+                                }
+                            }
+                        })
+                    }
+                    return false;
+                });
+            }
+        };
+        $(function () { pager.init();})
+    </script>
+</body>
+</html>

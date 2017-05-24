@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+	<title>产品添加/编辑</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="./css/common.css">
+	<script src="./js/public/html5shiv.js"></script>
+	<script src="./js/public/jquery-1.11.1.js"></script>
+	<script src="./js/plugins/jquery.tmpl.js"></script>
+	<script src="./js/plugins/jquery.common.js"></script>
+	<script src="./js/plugins/laydate.js"></script>
+	<script src="./js/plugins/jquery.cookie.js"></script>
+	<script src="./js/art_editor/kindeditor-min.js"></script>
+	<script src="./js/public/tools.js"></script>
+	<script src="./js/public/public.js"></script>
+</head>
+<body>
+	<!-- .wrapBox : iframe 子页面样式根节点 -->
+	<div class="wrapBox table1">
+		<!-- 位置提示区 -->
+		<div class="locationBox">
+			<!-- 面包屑 -->
+			<div class="m-crumbs">
+	            <span>财视通</span>
+	            <b>&gt;</b>
+	            <span>产品中心</span>
+	            <b>&gt;</b>
+	            <span>数据维护</span>
+	            <b>&gt;</b>
+	            <em>产品添加/编辑</em>
+	        </div>
+	        <!-- 操作项按钮 -->
+			<!-- 操作项按钮 -->
+			<div class="topOpts">
+            	<a href="javascript:;" class='ui-btn' onclick="T.GoBack();">退回上一页</a>
+            </div>
+		</div>
+		<form action="#" method="post" id="myform">
+	        <div class="m-searchForm box">
+		        <!-- 表单赋值填充 -->
+				<table cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+			        	<td width="12%" class="fw7">产品分类：</td>
+						<td>
+							<select name="xiala" id="" class='ui-select' test="required">
+								<option value="">请选择</option>
+								<option value="明星">明星</option>
+								<option value="资管">资管</option>
+								<option value="信托">信托</option>
+								<option value="保险">保险</option>
+								<option value="机构">机构</option>
+								<option value="海外">海外</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+			        	<td class="fw7">产品名称：</td>
+			        	<td><input type="text" name="ProductName" class="ui-text" value="" test="required"></td>
+					</tr>
+					<tr>
+			        	<td class="fw7">起投金额（万）：</td>
+			        	<td><input type="text" name="StartAmount" class="ui-text" value="" test="required"></td>
+						<td class="fw7">募集规模（万）：</td>
+						<td><input type="text" name="OfferingSize" class="ui-text" value="" test="required"></td>
+						<td class="fw7">募集状态：</td>
+						<td>
+							<select name="RaiseFlag" id="" class='ui-select' test="required">
+								<option value="">请选择</option>
+								<option value="在售">在售</option>
+								<option value="售罄">售罄</option>
+								<option value="下架">下架</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+			        	<td class="fw7">存续期限（月/年）：</td>
+			        	<td><input type="text" name="SaveTerm" class="ui-text" value="" test="required"></td>
+			        	<td class="fw7">管理机构名称：</td>
+			        	<td><input type="text" name="OrganizationName" class="ui-text" value="" test="required"></td>
+						<td class="fw7">组织形式：</td>
+						<td>
+							<select name="TissueFormFlag" id="" class='ui-select' test="required">
+								<option value="">请选择</option>
+								<option value="契约型">契约型</option>
+								<option value="债券型">债券型</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="fw7">投资方向：</td>
+						<td><input type="text" name="InvestDirection" class="ui-text" value=""></td>
+			        	<td class="fw7">管理费率：</td>
+			        	<td><input type="text" name="ManagementFee" class="ui-text" value=""></td>
+			        	<td class="fw7">收益分成：</td>
+			        	<td><input type="text" name="RevenueSharing" class="ui-text" value=""></td>
+					</tr>
+					<tr>
+						<td class="fw7">排序值：</td>
+						<td><input type="text" name="RevenueSharing" class="ui-text" value=""></td>
+						<td class="fw7">是否推荐：</td>
+						<td>
+							<label class="ui-label">
+								<input type="checkbox" name="RecommendFlag" value="推荐">
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="fw7">产品图片：</td>
+						<td><span class='ui-upload'>选择文件<input type="file"></span></td>
+						<td class="fw7">基金公司Logo：</td>
+						<td><span class='ui-upload'>选择文件<input type="file"></span></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="5">
+							<div class="tabBox">
+								<div class="tabTitle">
+									<ul>
+										<li>募集账户</li>
+										<li>产品亮点</li>
+										<li>还款来源</li>
+										<li>风控措施</li>
+									</ul>
+								</div>
+								<div class="tabConter">
+									<div class="reTabBox">
+										<textarea id="account" name="account"></textarea>
+									</div>
+									<div class="reTabBox">
+										<textarea id="bright" name="bright"></textarea>
+									</div>
+									<div class="reTabBox">
+										<textarea id="source" name="source"></textarea>
+									</div>
+									<div class="reTabBox">
+										<textarea id="risk" name="risk"></textarea>
+									</div>
+								</div>
+							</div>
+							
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<a style="float:right;" href="javascript:;" class='ui-btn green' id="fn1">提交</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			//创建编辑器
+		    P.LoadSimpleEditor('#account','300px');
+		    P.LoadSimpleEditor('#bright','500px');
+		    P.LoadSimpleEditor('#source','800px');
+		    P.LoadSimpleEditor('#risk','500px');
+		    //表单验证
+			T.registerFileds();
+
+			// 获取指定父容器下面的所有表单数据JSON
+			$("#fn1").on("click",function(){
+				var a = T.formToJSON("#myform",function(data){
+					// data["list"] = 12;
+					return data;
+				});
+				console.log(a);
+			});
+
+
+		});
+	</script>
+</body>
+</html>

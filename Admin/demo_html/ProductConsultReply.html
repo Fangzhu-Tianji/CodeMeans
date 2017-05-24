@@ -1,0 +1,228 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <title>中国保税网--会员管理</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="http://base.ccdfs.cc/manager/css/common.css">
+    <script src="http://base.ccdfs.cc/manager/js/public/jquery-1.11.1.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/plugins/jquery.common.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/tools.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/public.js"></script>    
+    <script src="http://base.ccdfs.cc/manager/js/enumClass.js"></script>
+    <style>
+        .t_replycon {
+            background: #fff;
+             padding: 10px;
+            border: 1px #E4E4E4 solid;
+            height: 300px;
+            overflow-y: scroll;
+        }
+
+        .t_replyinfo {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+            .t_replyinfo td {
+                border: 1px #E4E4E4 solid;
+                padding: 5px;
+                background: #fff;
+            }
+
+            .t_replyinfo .t_bg, .e_table .t_bg {
+                background: #DFF8FF;
+            }
+       
+            .t_replycon .g_table_label {
+                width: 100px;
+                text-align: right;
+            }
+
+            .t_replycon td {
+                padding: 5px;
+                vertical-align: top;
+            }
+
+        .tb_outbox02 {
+            border: 1px #ccc solid;
+            background: #F2F2F2;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body style="min-width:auto;" popup="1">
+    <div class="wrapBox">
+        <!-- 位置提示区 -->
+        <div class="locationBox">
+            <!-- 面包屑 -->
+            <div class="m-crumbs">
+                <span>会员中心</span>
+                <b>&gt;</b>
+                <span>会员管理</span>
+                <b>&gt;</b>
+                <em>商品咨询回复</em>
+            </div>
+            <!-- 操作项按钮 -->
+            <div class="topOpts">
+                
+            </div>
+        </div>
+        <div class="m-formBox box">
+            <!-- 表单赋值填充 -->
+            <form id="targetForm">
+                <table class="t_replyinfo" width="100%">
+                    <tbody>
+                        <tr>
+                            <td class="t_bg">
+                                &nbsp;会员名：<span name="UserName"></span>
+                            </td>
+                            <td class="t_bg">
+                                &nbsp;商品ID：<span name="ProductID" id="ProductID"></span>
+                            </td>
+                            <td class="t_bg">
+                                &nbsp;咨询时间：<span name="CounselTime"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;是否处理：<span name="ReplayFlag" id="ReplayFlag"></span>
+
+                            </td>
+
+                            <td colspan="2">&nbsp;咨询商品名：<span name="ProductName" id="ProductName"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="t_replycon">
+                    <table id="mainTable" width="100%">
+                        <tr>
+                            <td class="g_table_label">
+                                咨询类型：
+                            </td>
+                            <td>
+                                <span name="CounselType" id="CounselType"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="g_table_label">
+                                内容：
+                            </td>
+                            <td>
+                                <span name="CounselContent" style="display:block;word-break:break-all;"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding: 0;">
+                                <table width="100%" style="background: none;">
+                                    <tbody class="ReplyCon"></tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="g_table_label">
+                                回复：
+                            </td>
+                            <td>
+                                <textarea id='txtreplycontent' clientidmode="Static" cols="100" rows="8" style="width: 100%; height: 100px;"
+                                          name="replycontent" class="g_txt "></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                前台显示：
+                            </td>
+                            <td>
+                                <input type="radio" name="IsShow" id="rdoShowFlagTrue" value="1" />显示
+                                <input type="radio" name="IsShow" id="rdoShowFlagFalse" value="0" />不显示
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input class="ui-btn" type="submit" id="btnAdd" value="提交" />
+                                <input class="ui-btn" type="button" id="btnGoList" value="关 闭" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var pager = {
+        init: function () {
+            this.bindData();
+            this.bindEvent();
+        },
+        bindEvent: function () {
+            // 表单验证注册 ----------------------------------------
+            T.registerFileds();
+
+            $("#targetForm").submit(function () {
+                var entity = T.formToJSON("#targetForm", function (data) {
+                    data["consultid"] = T.getUrlParam("ConsultID");
+                    data["answer"] = $("#txtreplycontent").val();
+                    return data;
+                });
+
+                if (entity) {
+                    T.POST({
+                        action: "api_admin/user/getConsultReply",
+                        params: entity,
+                        success: function (res) {
+                            //console.log(res);
+                            if (res.errno == 0) {
+                                if (res.data) {
+                                    T.alert("数据编辑成功!");
+                                }
+                            }
+                            else {
+                                T.alert(res.errmsg);
+                            }
+                        }
+                    })
+                }
+                return false;
+            });
+        },
+        bindData: function () {
+            T.GET({//获取用户信息
+                action: "api_admin/user/getConsultByID?consultID=" + T.getUrlParam("ConsultID"),
+                success: function (res) {
+                    if (res.errno == 0) {
+                        if (res.data) {
+                            var tbodyData = [];
+                            if (res.data.Answer != "") {
+                                tbodyData.push('<tr><td class="g_table_label" align="right"><span name="OperationUserName"id="OperationUserName">' + res.data.OperationUserName + '</span>：</td><td><span name="AnswerContent"id="AnswerContent"  style="display:block;word-break:break-all;"  >' + res.data.AnswerContent + '</span></td><td style="color:#666;">回复于:<span>' + parseDateString(res.data.AnswerTime, 'ymd hm') + '</span></td></tr>')
+                                $("#mainTable tr .ReplyCon").html(tbodyData.join(""));
+                            }
+                            T.fillForm("#targetForm", res.data, function (data) {
+                                $.each(enumClass.EnumMemQuestionType, function (k, val) {
+                                    if (val["n"] == res.data.CounselType) {
+                                        $("#CounselType").html(val["v"]);
+                                    }
+                                });
+
+                                var i = res.data.IsShow == true ? 0 : 1;                                
+                                $("input:radio[name='IsShow']").get(i).checked = true;                                
+                                $("#ReplayFlag").html(res.data.Status == 1 ? "已处理" : "待处理");
+                            });
+                        }
+                    } else {
+                        T.alert(res.errmsg);
+                    }
+                }
+            });
+        }
+    };
+    $(function () {
+        pager.init();
+    });
+    </script>
+</body>
+</html>

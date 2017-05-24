@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+	<title>分类属性</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="./css/common.css">
+	<script src="./js/public/html5shiv.js"></script>
+	<script src="./js/public/jquery-1.11.1.js"></script>
+	<script src="./js/plugins/jquery.tmpl.js"></script>
+	<script src="./js/plugins/jquery.common.js"></script>
+	<script src="./js/public/tools.js"></script>
+	<script src="./js/public/public.js"></script>
+	<script src="./js/art_editor/kindeditor-min.js"></script>
+</head>
+<body>
+	<!-- .wrapBox : iframe 子页面样式根节点 -->
+	<div class="wrapBox">
+
+		<!-- 位置提示区 -->
+		<div class="locationBox">
+			<!-- 面包屑 -->
+			<div class="m-crumbs">
+	            <span>财视通</span>
+	            <b>&gt;</b>
+	            <span>系统中心</span>
+	            <b>&gt;</b>
+	            <span>用户权限</span>
+	            <b>&gt;</b>
+	            <em>分类属性</em>
+	        </div>
+	        <!-- 操作项按钮 -->
+			<div class="topOpts">
+				<span>这里可以放一些文字提示</span>
+            </div>
+		</div>
+
+		<!-- TAB切换结构 -->
+		<div class="tabBox">
+			<div class="tabTitle">
+				<ul>
+					<li>选项一</li>
+					<li>选项二</li>
+					<li>选项三</li>
+				</ul>
+			</div>
+			<div class="tabConter">
+				<div class="reTabBox">
+					<form action="#" method="post" id="myform">
+						<div class="m-formBox-noborder box">
+					        <!-- 表单赋值填充 -->
+							<table cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<td width="120">邮箱：</td>
+									<td>
+										<div>
+											<input type="text" name="email" class="ui-text" value="" test="required email">
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>姓名：</td>
+									<td>
+										<input type="text" name="name" class="ui-text" value="" test="required">
+									</td>
+								</tr>
+								<tr>
+									<td>帐号：</td>
+									<td>
+										<input type="text" name="user" class="ui-text" value="" test="required">
+									</td>
+								</tr>
+								<tr>
+									<td>个人说明：</td>
+									<td>
+										<textarea name="message" class="ui-textarea" test="required"></textarea>
+									</td>
+								</tr>
+								<tr>
+									<td>个人资料：</td>
+									<td><span class='ui-upload'>上传文件<input type="file"></span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>
+										<div class="tabBox">
+											<div class="tabTitle">
+												<ul>
+													<li>个人详细情况</li>
+													<li>公司详细情况</li>
+												</ul>
+											</div>
+											<div class="tabConter">
+												<div class="reTabBox">
+													<textarea id="descriptions" name="descriptions" test="required"></textarea>
+												</div>
+												<div class="reTabBox">
+													<textarea id="content" name="content" test="required"></textarea>
+												</div>
+											</div>
+										</div>
+										
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>
+										<input type="submit" class="ui-btn red" value="Submit Form">
+										&nbsp;
+										<a href="javascript:;" class='ui-btn green' id="fn1">get form to json object</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</form>
+				</div>
+				<div class="reTabBox"></div>
+				<div class="reTabBox"></div>
+			</div>
+		</div>
+			
+	</div>
+
+	<script type="text/javascript">
+
+		// 加载完成后执行
+		$(function(){
+			T.registerFileds();
+			// 获取指定父容器下面的所有表单数据JSON
+			$("#fn1").on("click",function(){
+				var a = T.formToJSON("#myform",function(data){
+					// data["cateValue"] = 12;
+					return data;
+				});
+				console.log(a);
+			});
+
+	        //创建编辑器
+		    P.LoadSimpleEditor('#descriptions','300px');
+		    //创建编辑器
+		    P.LoadSimpleEditor('#content','800px');
+
+		});
+
+	</script>
+</body>
+</html>

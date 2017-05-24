@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+	<title>弹框演示</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="./css/common.css">
+	<script src="./js/public/html5shiv.js"></script>
+	<script src="./js/public/jquery-1.11.1.js"></script>
+	<script src="./js/plugins/jquery.tmpl.js"></script>
+	<script src="./js/plugins/jquery.common.js"></script>
+	<script src="./js/public/tools.js"></script>
+	<script src="./js/public/public.js"></script>
+</head>
+<body>
+	<div class="wrapBox">
+		<!-- 位置提示区 -->
+		<div class="locationBox">
+			<!-- 面包屑 -->
+			<div class="m-crumbs">
+	            <span>财视通</span>
+	            <b>&gt;</b>
+	            <span>产品中心</span>
+	            <b>&gt;</b>
+	            <span>数据维护</span>
+	            <b>&gt;</b>
+	            <em>弹框演示</em>
+	        </div>
+	        <!-- 操作项按钮 -->
+			<div class="topOpts">
+            	<a href="javascript:;" class='ui-btn' onclick="T.GoBack();">退回上一页</a>
+            	<input type="button" class="ui-btn disabled" disabled="disabled" value="input 禁用">
+            </div>
+		</div>
+		<!-- 操作按钮区 -->
+		<div class="optsBtn box">
+			<!-- 右侧操作项 -->
+			<div class="f2">
+				<a href="javascript:;" class='ui-btn blue' id="fn6">自定义弹层</a>
+				<a href="javascript:;" class='ui-btn yello' id="fn2">alert提示效果</a>
+				<a href="javascript:;" class='ui-btn yello' id="fn3">confirm提示效果</a>
+				<a href="javascript:;" class='ui-btn yello' id="fn4">prompt输入效果</a>
+				<a href="javascript:;" class='ui-btn yello' id="fn5">openIframe嵌入新页面</a>
+			</div>
+		</div>
+		<div id="popDemo" style="display: none;">
+			<div class="popDemo">
+				<div style="width:100%; text-align: center; height:500px; line-height: 500px; font-size: 24px; background: #fff;">内容全部自定义</div>
+				<a href="javascript:;" class="close">×</a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+
+	        $("#fn2").on("click",function(){
+	        	// 普通提示
+	        	T.alert('智能ABC点标签右边的小键盘符号智能ABC点标签右边的小键盘符号……',3000);
+	        });
+
+	        $("#fn3").on("click",function(){
+	        	// 二次确认
+	        	T.confirm('确定删除吗？',function(boolean){
+	        		if(boolean){
+	        			console.log(boolean);
+	        		}else{
+	        			console.log(boolean);
+	        		}
+	        	});
+	        });
+
+	        $("#fn4").on("click",function(){
+	        	// 输入内容
+				T.prompt("请输入你的姓名","放逐天际",function(inputText){
+					console.log(inputText);
+				});
+	        });
+
+	        $("#fn5").on("click",function(){
+	        	// 新开窗口打开一个页面
+	        	T.openIframe({
+	        		id:"tanchu",
+	        		width:1050,
+	        		height:700,
+	        		title:"狗东购物精选",
+	        		url:"http://jd.com"
+	        	});
+	        });
+
+	        $("#fn6").on("click",function(){
+	        	// 新开窗口打开一个页面
+	        	T.popup({
+	        		width:800,
+	        		height:500,
+	        		htmlID:"#popDemo",
+	        		htmlCssFlag:"popDemoFlag",
+	        		htmlCssLink:"./css/popDemo.css"
+	        	});
+	        });
+
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <title>中国保税网--会员管理</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="http://base.ccdfs.cc/manager/css/common.css">
+    <script src="http://base.ccdfs.cc/manager/js/public/html5shiv.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/jquery-1.11.1.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/plugins/jquery.tmpl.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/plugins/jquery.common.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/tools.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/public.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/plugins/laydate.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/enumClass.js"></script>
+</head>
+<body>
+    <div class="wrapBox">
+        <!-- 位置提示区 -->
+        <div class="locationBox">
+            <!-- 面包屑 -->
+            <div class="m-crumbs">
+                <span>会员中心</span>
+                <b>&gt;</b>
+                <span>会员管理</span>
+                <b>&gt;</b>
+                <em>商品咨询列表</em>
+            </div>
+        </div>
+        <!-- 搜索表单 -->
+        <form id="targetForm">
+            <div class="m-searchForm box">
+                <table cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td class="fw7">会员名：</td>
+                        <td><input class="ui-text" name="MemUserName" id="txtUserName" type="text" /></td>
+                        <td class="fw7">咨询类型：</td>
+                        <td>
+                            <select id="ddlquestiontype" class="select-one" name="questiontype"></select>
+                        </td>
+                        </td>
+                        <td class="fw7">咨询内容：</td>
+                        <td><input class="ui-text" name="question" id="txtquestion" type="text" /></td>
+                        <td class="fw7">咨询时间：</td>
+                        <td>
+                            <input class="ui-text" name="CreateTimeMin" style="width:85px;" id="txtCreateTime1" type="text" onclick="laydate({format:'YYYY-MM-DD',isclear: true})" readonly="readonly" /><div style="float:left"> &nbsp;- &nbsp;</div>
+                            <input class="ui-text" name="CreateTimeMax" style="width:85px;" id="txtCreateTime2" type="text" onclick="laydate({format:'YYYY-MM-DD',isclear: true})" readonly="readonly" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw7">商品名：</td>
+                        <td><input class="ui-text" name="productname" id="txtproductname" type="text" /></td>
+                        <td class="fw7">商品ID：</td>
+                        <td><input class="ui-text" name="productid" id="txtproductid" type="text" /></td>
+                        <td class="fw7">分类筛选：</td>
+                        <td>
+                            <select id="ddlConsultTypePro" class="ui-select" name="ConsultTypePro">
+                                <option value="" selected="selected">-请选择-</option>
+                                <option value="1">待处理</option>
+                                <option value="2">已处理</option>
+                                <option value="3">前台不显示</option>
+                                <option value="4">前台显示</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 操作按钮区 -->
+            <div class="optsBtn box">
+                <!-- 左侧操作项 -->
+                <div class="f1" id="">
+                    <select id="ddlbatchjobs" class="ui-select" name="batchjobs">
+                        <option value="" selected="selected">-批量操作-</option>
+                        @*<option value="0">删除</option>*@
+                        <option value="1">显示</option>
+                        <option value="2">不显示</option>
+                    </select>
+                    <a href="javascript:;" class='ui-btn green' id="batchAction">确定</a>
+                </div>
+                <!-- 右侧操作项 -->
+                <div class="f2">
+                    <input type="submit" class="ui-btn red" value="搜索">
+                </div>
+            </div>
+        </form>
+        <!-- 数据列表 -->
+        <div class="m-list mt10 box">
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th class="chk" width="20">
+                            <input id="g_tmsSelAll" type="checkbox">
+                        </th>
+                        <th width="150">会员名</th>
+                        <th width="70">商品ID</th>
+                        <th width="240">商品名</th>
+                        <th width="70">咨询类型</th>
+                        <th>咨询内容</th>
+                        <th width="140">咨询时间</th>
+                        <th width="60">是否处理</th>
+                        <th width="70">回复人</th>
+                        <th width="90">前台是否显示</th>
+                        <th width="60">操作</th>
+                    </tr>
+                </thead>
+                <script id="datatmpl" type="text/x-jquery-tmpl">
+                    <tr>
+                        <td class="chk">
+                            <input type="checkbox" name="checkName" value="${CounselID}" />
+                        </td>
+                        <td>
+                            ${UserName}
+                        </td>
+                        <td>
+                            ${ProductID}
+                        </td>
+                        <td>
+                            ${ProductName}
+                        </td>
+                        <td>
+                            ${CounselType}
+                        </td>
+                        <td>
+                            ${CounselContent}
+                        </td>
+                        <td>
+                            ${parseDateString(CounselTime,'ymd hm')}
+                        </td>
+                        <td>
+                            ${Status==1?"已处理":"待处理"}
+                        </td>
+                        <td>
+                            ${OperationUserName}
+                        </td>
+                        <td>
+                            ${IsShow==true?"是":"否"}
+                        </td>
+                        <td>                          
+                            <a href="javascript:pager.ConsultReply(${CounselID},${CounselType});">回复</a>
+                        </td>
+                    </tr>
+                </script>
+                <tbody id="tbResult"></tbody>
+            </table>
+            <div id="tfpagebar" class="box"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var pager = {
+            init: function () {
+                this.bindData();
+                this.bindEvent();
+
+                $("#ddlquestiontype").bindSelect(true, enumClass.EnumMemQuestionType);
+
+                // 全选集
+                var checkAlls = [];
+
+                // 注册全选
+                T.checkAll("#g_tmsSelAll", {
+                    type: 'all',                    // 全选-all; 反选-invert
+                    name: 'checkName',              // 默认name
+                });
+
+                // 批处理示例
+                $("#batchAction").off("click").on("click", function () {
+                    // 如果不是全选，则自行获得选中input
+                    checkAlls = T.getCheckedArr("checkName", "value");
+
+                    // 如是有值，说明选择了，则执行
+                    if (checkAlls.length > 0) {
+                        var batchID = $("#ddlbatchjobs").val();  
+                        var entity = {};
+                        entity["consultIds"] = checkAlls;
+                        entity["showType"] = batchID;
+
+                        T.POST({
+                            action: "api_admin/user/editConsultShow",
+                            params: entity,
+                            success: function (res) {
+                                if (res.errno == 0) {
+                                    T.alert("数据更新成功!");
+                                    pager.bindData();
+                                }
+                                else {
+                                    T.alert(res.errmsg);
+                                }
+                            }
+                        });
+                    }
+                });
+            },
+            bindData: function () {
+                var param = {
+                    url: "api_admin/user/getConsultList",		// 数据请求 get 地址
+                    tmpl: '#datatmpl',									// 预设模板 script tpl ID
+                    target: '#tbResult',								// 煊览容器 node ID
+                    pageBar: "#tfpagebar",							// 分页位置 node ID
+                    formId: null,										// 传参表单 表单JSON 如：#searchForm
+                    onRequest: function (formIdJson) {					// 传参修改 请求需要传递的参数对象
+                        var formIdJson = T.formToJSON("#targetForm", function (entity) {
+                            return entity;
+                        });
+                        return formIdJson;
+                    }
+                }
+                T.getRequest(param);
+            },
+            bindEvent: function () {
+                $("#targetForm").submit(function () {
+                    pager.bindData();
+                    return false;
+                });
+            },
+            ConsultReply: function (ConsultID, ConsultType) {
+                T.openIframe({
+                    width: 800,
+                    height: 500,
+                    title: "商品咨询/回复",
+                    id: "consultReply",
+                    url: "/Member/ProductConsultReply?ConsultID=" + ConsultID + "&ConsultType=" + ConsultType,
+                });
+            }
+        }
+        $(function () {
+            pager.init();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+	<title>GET请求</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="./css/common.css">
+	<script src="./js/public/html5shiv.js"></script>
+	<script src="./js/public/jquery-1.11.1.js"></script>
+    <script src="./js/plugins/jquery.cookie.js"></script>  
+	<script src="./js/plugins/jquery.tmpl.js"></script>
+	<script src="./js/plugins/jquery.common.js"></script>
+	<script src="./js/public/tools.js"></script>
+	<script src="./js/public/public.js"></script>
+</head>
+<body>
+	<div class="wrapBox">
+		<!-- 位置提示区 -->
+		<div class="locationBox">
+			<!-- 面包屑 -->
+			<div class="m-crumbs">
+	            <span>财视通</span>
+	            <b>&gt;</b>
+	            <span>产品中心</span>
+	            <b>&gt;</b>
+	            <span>数据维护</span>
+	            <b>&gt;</b>
+	            <em>GET请求</em>
+	        </div>
+		</div>
+		<!-- 操作按钮区 -->
+		<div class="optsBtn box">
+			<!-- 右侧操作项 -->
+			<div class="f2">
+				<a href="javascript:;" class='ui-btn red' id="request">GET查询</a>
+			</div>
+		</div>
+		<!-- 数据列表 -->
+        <div class="m-list mt10 box">
+			<table cellpadding="0" cellspacing="0" width="100%">
+				<thead>
+				    <tr>
+				        <th class="chk" width="20"><input id="g_tmsSelAll" type="checkbox"></th>
+				        <th width="80">会员ID</th>
+				        <th width="150">会员名</th>
+				        <th width="150">昵称</th>
+				        <th width="100">会员类型</th>
+				        <th width="60">VIP等级</th>
+				        <th width="150">手机</th>
+				        <th width="150">Email</th>
+				        <th>CPS联盟名称</th>
+				        <th width="140">注册时间</th>
+				        <th width="60">状态</th>
+				        <th width="75">操作</th>
+				    </tr>
+				</thead>
+				<script id="datatmpl" type="text/x-jquery-tmpl">
+				    <tr>
+				        <td class="chk"><input type="checkbox" name="checkName" value="${userid}" /></td>
+				        <td>${userid}</td>
+				        <td>${username}</td>
+				        <td>${nick}</td>
+				        <td>${usertype}</td>
+				        <td>${viplevel}</td>
+				        <td>${phone}</td>
+				        <td>${email}</td>
+				        <td>${cpsid}</td>
+				        <td>${registertime}</td>
+				        <td>${status}</td>
+				        <td>
+				            <a href="javascript:pager.userLock(${userid},${status});">${status==2? "解锁" : "锁定"}</a>&nbsp;
+				            <a href="javascript:pager.AlertEdit(${userid});">编辑</a>
+				        </td>
+				    </tr>
+				</script>
+				<tbody id="tbResult">
+					<tr>
+				        <td class="chk"><input type="checkbox" name="checkName" value="111" /></td>
+				        <td>111</td>
+				        <td>放逐天际</td>
+				        <td>我是昵称</td>
+				        <td>白银</td>
+				        <td>超级VIP</td>
+				        <td>12345678901</td>
+				        <td>12345678@qq.com</td>
+				        <td>超级美少女战士</td>
+				        <td>2017-01-01</td>
+				        <td>2</td>
+				        <td>
+				            <a href="javascript:pager.userLock(1,2);">锁定</a>&nbsp;
+				            <a href="javascript:pager.AlertEdit(1);">编辑</a>
+				        </td>
+				    </tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- 数据分页条 -->
+		<div id="tfpagebar" class="box">
+			<!-- <div class="m-pageBar box">
+				<span class="count">共<i>1111</i>条记录，分<i>25</i>页显示</span>
+				<a href="javascript:;" class="disabled">上一页</a>
+				<a href="javascript:;" data-pn="3">12</a>
+				<a href="javascript:;" class="selected">22</a>
+			</div> -->
+		</div>
+	</div>
+	<script type="text/javascript">
+		// 退出系统
+        $("#request").on("click", function () {
+        	console.log("GET请求数据");
+            T.GET({
+                action: "admin_cst_4.0/json/demo_list.json",
+                success: function (json) {
+                    console.log("good");
+                },
+                failure: function (res) {
+                    if (res && res.errmsg) {
+                        alert(res.errmsg);
+                    } else {
+                        alert("系统逻辑错误");
+                    }
+                },
+                error: function (e) {
+                    alert(111);
+                }
+            });
+        });
+	</script>
+</body>
+</html>

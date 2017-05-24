@@ -1,0 +1,239 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <title>中国保税网--会员管理</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="http://base.ccdfs.cc/manager/css/common.css">
+    <script src="http://base.ccdfs.cc/manager/js/public/html5shiv.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/jquery-1.11.1.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/plugins/jquery.tmpl.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/plugins/jquery.common.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/tools.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/public.js"></script>
+</head>
+<body>
+    <div class="wrapBox">
+        <!-- 位置提示区 -->
+        <div class="locationBox">
+            <!-- 面包屑 -->
+            <div class="m-crumbs">
+                <span>会员中心</span>
+                <b>&gt;</b>
+                <span>会员管理</span>
+                <b>&gt;</b>
+                <em>会员收货地址信息</em>
+            </div>
+        </div>
+        <!-- 搜索表单 -->
+        <form id="targetForm">
+            <div class="m-searchForm box">
+                <table cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td class="fw7">会员名/ID：</td>
+                        <td><input class="ui-text" name="MemUserName" id="txtUserName" type="text" /></td>
+                        <td class="fw7">收货人：</td>
+                        <td><input class="ui-text" name="Receiver" id="txtReceiver" type="text" /></td>
+                        <td class="fw7">手机：</td>
+                        <td><input class="ui-text" name="Mobile" id="txtMobile" type="text" /></td>
+                        <td class="fw7">身份证号码：</td>
+                        <td><input class="ui-text" name="IdCard" id="txtIdCard" type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td class="fw7">收货地区：</td>
+                        <td><input class="ui-text" name="AreaName" id="txtAreaName" type="text" /></td>
+                        <td class="fw7">收货地址：</td>
+                        <td><input class="ui-text" name="Address" id="txtAddress" type="text" /></td>
+                        <td class="fw7">是否默认：</td>
+                        <td>
+                            <select id="ddlIsDefault" class="select-one" name="IsDefault">
+                                <option value="" selected="selected">-请选择-</option>
+                                <option value="1">默认</option>
+                                <option value="2">不是默认</option>
+                            </select>
+                        </td>
+                        <td class="fw7">排序方式：</td>
+                        <td>
+                            <select id="ddlSort" class="select-one" name="OrderMode">
+                                <option value="1" selected="selected">创建时间↓</option>
+                                <option value="2">会员ID↑</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 操作按钮区 -->
+            <div class="optsBtn box">
+                <!-- 左侧操作项 -->
+                <div class="f1" id="">
+                </div>
+                <!-- 右侧操作项 -->
+                <div class="f2">
+                    <input type="submit" class="ui-btn red" value="搜索">
+                </div>
+            </div>
+        </form>
+        <!-- 数据列表 -->
+        <div class="m-list mt10 box">
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th width="60">
+                            会员ID
+                        </th>
+                        <th width="120">
+                            会员名
+                        </th>
+                        <th width="80">
+                            收货人
+                        </th>
+                        <th width="80">
+                            手机
+                        </th>
+                        <th width="140">
+                            身份证号码
+                        </th>
+                        <th width="150">
+                            收货地区
+                        </th>
+                        <th>
+                            收货详细地址
+                        </th>
+
+                        <th width="60">
+                            是否默认
+                        </th>
+                        <th width="180">
+                            创建时间
+                        </th>
+                        <th width="40">
+                            操作
+                        </th>
+                    </tr>
+                </thead>
+                <script id="datatmpl" type="text/x-jquery-tmpl">
+                    <tr>
+                        <td>
+                            ${UserID}
+                        </td>
+                        <td>
+                            ${UserName}
+                        </td>
+                        <td>
+                            ${Receiver}
+                        </td>
+                        <td>
+                            ${Mobile}
+                        </td>
+                        <td>
+                            ${IdCard}
+                        </td>
+                        <td>
+                            <span id="newAreaName">${AreaName}</span><br />
+                        </td>
+                        <td>
+                            ${Address}
+                        </td>
+                        <td>
+                            ${IsDefault==true?"是":"否"}
+                        </td>
+                        <td>
+                            ${parseDateString(CreateTime,'ymd hm')}
+                        </td>
+                        <td>
+                            <a href="javascript:pager.editData(${AddressID},${UserID});">编辑</a>
+                        </td>
+                    </tr>
+                </script>
+                <tbody id="tbResult"></tbody>
+            </table>
+            <div id="tfpagebar" class="box"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //var xx = function () {
+        //    var n = $(".m-pageBar").find(".selected").html();
+        //    var param = {
+        //        url: "api_admin/user/getReceiverAddress",		// 数据请求 get 地址
+        //        tmpl: '#datatmpl',									// 预设模板 script tpl ID
+        //        target: '#tbResult',								// 煊览容器 node ID
+        //        pageBar: "#tfpagebar",							// 分页位置 node ID
+        //        page: {
+        //            PageIndex: n,                       			// 当前第几页
+        //            PageSize: 3                       				// 每页多少条数据
+        //        },
+        //        onRequest: function (formIdJson) {					// 传参修改 请求需要传递的参数对象
+        //            formIdJson = T.formToJSON("#targetForm", function (data) {
+        //                return data;
+        //            });
+        //            return formIdJson;
+        //        },
+        //        onResponse: function (data) {							// 接受到的数据 预处理
+        //            var data = data.data;
+        //            for (var i = 0; i < data.ResultList.length; i++) {
+        //                data.ResultList[i].CreateTime = "2015-12-12";
+        //            }
+        //            //console.log(data);
+        //            return data;
+        //        }
+        //    }
+        //    T.getRequest(param);
+        //}
+       
+        var pager = {
+            init: function () {
+                this.bindData();
+                this.bindEvent();
+                var temp = $(".m-pageBar").find(".selected").html();
+            },
+            bindEvent:function(){
+                $("#targetForm").submit(function () {
+                    pager.bindData();
+                    return false;
+                });
+            },
+            bindData: function () {
+                var param = {
+                    url: "api_admin/user/getReceiverAddress",		// 数据请求 get 地址
+                    tmpl: '#datatmpl',									// 预设模板 script tpl ID
+                    target: '#tbResult',								// 煊览容器 node ID
+                    pageBar: "#tfpagebar",							// 分页位置 node ID
+                    //page: {
+                    //    PageIndex: 2,                       			// 当前第几页
+                    //    PageSize: 3                       				// 每页多少条数据
+                    //},
+                    onRequest: function (formIdJson) {					// 传参修改 请求需要传递的参数对象
+                        formIdJson = T.formToJSON("#targetForm", function (data) {
+                            return data;
+                        });
+                        return formIdJson;
+                    },
+                    onResponse: function (data) {							// 接受到的数据 预处理
+                        var data = data.data;
+                        for (var i = 0; i < data.ResultList.length; i++) {
+                            data.ResultList[i].CreateTime = "2015-12-12";
+                        }
+                        //console.log(data);
+                        return data;
+                    }
+                }
+                T.getRequest(param);
+            },
+            editData: function (addressID,userID) {
+                T.openIframe({
+                    width: 600,
+                    height: 300,
+                    title: "收货地址编辑",
+                    id:"editReceiver",
+                    url: "/Member/ReceiverAddressEdit?Rid=" + addressID + "&Action=Edit" + "&UserID=" + userID,
+                });
+            }
+        };
+        $(function () { pager.init(); });
+    </script>
+</body>
+</html>

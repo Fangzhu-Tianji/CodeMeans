@@ -1,0 +1,148 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <title>中国保税网--会员管理</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="http://base.ccdfs.cc/manager/css/common.css">
+    <script src="http://base.ccdfs.cc/manager/js/public/html5shiv.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/jquery-1.11.1.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/plugins/jquery.tmpl.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/plugins/jquery.common.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/tools.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/public.js"></script>
+</head>
+<body>
+    <div class="wrapBox">
+        <!-- 位置提示区 -->
+        <div class="locationBox">
+            <!-- 面包屑 -->
+            <div class="m-crumbs">
+                <span>会员中心</span>
+                <b>&gt;</b>
+                <span>会员管理</span>
+                <b>&gt;</b>
+                <em>会员收藏信息</em>
+            </div>
+        </div>
+        <!-- 搜索表单 -->
+        <form id="targetForm">
+            <div class="m-searchForm box">
+                <table cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td class="fw7">会员名：</td>
+                        <td><input class="ui-text" name="MemUserName" id="txtUName" type="text" /></td>
+                        <td class="fw7">商品名/ID：</td>
+                        <td><input class="ui-text" name="ProductName" id="txtProductName" type="text" /></td>
+                        <td class="fw7">排序方式：</td>
+                        <td>
+                            <select id="ddlSort" class='ui-select' name="OrderMode">
+                                <option value="1" selected="selected">收藏时间↓</option>
+                                <option value="2">商品被收藏次数↓</option>
+                                <option value="3">用户收藏数↓</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 操作按钮区 -->
+            <div class="optsBtn box">
+                <!-- 左侧操作项 -->
+                <div class="f1" id="">
+                </div>
+                <!-- 右侧操作项 -->
+                <div class="f2">
+                    <input type="submit" class="ui-btn red" value="搜索">
+                </div>
+            </div>
+        </form>
+        <!-- 数据列表 -->
+        <div class="m-list mt10 box">
+            <table cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th width="180">
+                            会员名
+                        </th>
+                        <th width="50">
+                            收藏数
+                        </th>
+                        <th>
+                            收藏商品名
+                        </th>
+                        <th width="50">
+                            商品ID
+                        </th>
+                        <th width="100">
+                            被收藏(次)
+                        </th>
+                        <th width="150">
+                            收藏时间
+                        </th>
+                    </tr>
+                </thead>
+                <script id="datatmpl" type="text/x-jquery-tmpl">
+                    <tr>
+                        <td>
+                            ${UserName}
+                        </td>
+                        <td>
+                            ${usercount}
+                        </td>
+                        <td>
+                            ${ProductName}
+                        </td>
+                        <td>
+                            ${ProductID}
+                        </td>
+                        <td>
+                            ${productcount}
+                        </td>
+                        <td>
+                            ${parseDateString(CreateTime,'ymd hm')}
+                        </td>
+                    </tr>
+                </script>
+                <tbody id="tbResult"></tbody>
+            </table>
+            <div id="tfpagebar" class="box"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var pager = {
+        init: function () {
+            this.bindData();
+            this.bindEvent();
+        },
+        bindEvent: function () {
+            $("#targetForm").submit(function () {
+                pager.bindData();
+                return false;
+            });
+        },
+        bindData: function () {
+            var param = {
+                url: "api_admin/user/getUserFavorite",		// 数据请求 get 地址
+                tmpl: '#datatmpl',									// 预设模板 script tpl ID
+                target: '#tbResult',								// 煊览容器 node ID
+                pageBar: "#tfpagebar",							// 分页位置 node ID
+                onRequest: function (formIdJson) {					// 传参修改 请求需要传递的参数对象
+                    formIdJson = T.formToJSON("#targetForm", function (data) {
+                        return data;
+                    });
+                    return formIdJson;
+                }
+            }
+            T.getRequest(param);
+        }
+    };
+    $(function () { pager.init(); });
+    </script>
+
+</body>
+</html>

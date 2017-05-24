@@ -1,0 +1,243 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <title>中国保税网--后台用户管理</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="http://base.ccdfs.cc/manager/css/common.css">
+    <script src="http://base.ccdfs.cc/manager/js/public/html5shiv.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/jquery-1.11.1.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/plugins/jquery.tmpl.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/plugins/jquery.common.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/tools.js"></script>
+    <script src="http://base.ccdfs.cc/manager/js/public/public.js"></script>  
+    <script src="http://base.ccdfs.cc/manager/js/plugins/laydate.js"></script>  
+    <script src="http://base.ccdfs.cc/manager/js/enumClass.js"></script>
+</head>
+<body>
+    <div class="wrapBox">
+        <!-- 位置提示区 -->
+        <div class="locationBox">
+            <!-- 面包屑 -->
+            <div class="m-crumbs">
+                <span>系统中心</span>
+                <b>&gt;</b>
+                <span>用户权限</span>
+                <b>&gt;</b>
+                <em>后台用户管理</em>
+            </div>
+        </div>
+        <!-- 搜索表单 -->
+        <form id="targetForm">
+            <div class="m-searchForm box">
+                <table cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td class="fw7">会员名/ID：</td>
+                        <td><input class="ui-text" name="MemUserName" id="txtUName" type="text" /></td>
+                        <td class="fw7">手机/邮件：</td>
+                        <td><input class="ui-text" name="Mobile" id="txtMobile" type="text" /></td>
+                        <td class="fw7">昵称：</td>
+                        <td>
+                            <input class="ui-text" name="Nick" id="txtNick" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw7">会员类型：</td>
+                        <td><select id="ddlUserType" class="ui-select" name="UserType"></select></td>
+                        <td class="fw7">状态：</td>
+                        <td><select id="ddlStatus" class="ui-select" name="status"></select></td>
+                        <td class="fw7">注册时间：</td>
+                        <td>
+                            <input class="ui-text" name="CreateTime1" style="width:85px;" id="txtCreateTime1" type="text" onclick="laydate({format:'YYYY-MM-DD',isclear: true})" readonly="readonly" /><div style="float:left"> &nbsp;- &nbsp;</div>
+                            <input class="ui-text" name="CreateTime2" style="width:85px;" id="txtCreateTime2" type="text" onclick="laydate({ format: 'YYYY-MM-DD', isclear: true})" readonly="readonly" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 操作按钮区 -->
+            <div class="optsBtn box">
+                <!-- 左侧操作项 -->
+                <div class="f1" id="">                   
+                </div>
+                <!-- 右侧操作项 -->
+                <div class="f2">
+                    <input type="submit" class="ui-btn red" value="搜索">
+                </div>
+            </div>
+        </form>
+        <!-- 数据列表 -->
+        <div class="m-list mt10 box">
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th class="chk" width="20">
+                            <input id="g_tmsSelAll" type="checkbox">
+                        </th>
+                        <th width="60">
+                            会员ID
+                        </th>
+                        <th width="150">
+                            会员名
+                        </th>
+                        <th width="150">
+                            昵称
+                        </th>
+                        <th width="100">
+                            会员类型
+                        </th>
+                        <th width="150">
+                            手机
+                        </th>
+                        <th width="150">
+                            Email
+                        </th>
+                        <th width="140">
+                            注册时间
+                        </th>
+                        <th width="60">
+                            状态
+                        </th>
+                        <th width="100">
+                            操作
+                        </th>
+                    </tr>
+                </thead>
+                <script id="datatmpl" type="text/x-jquery-tmpl">
+                    <tr>
+                        <td class="chk">
+                            <input type="checkbox" name="checkName" value="${userid}" />
+                        </td>
+                        <td>
+                            ${UserID}
+                        </td>
+                        <td>
+                            ${UserName}
+                        </td>
+                        <td>
+                            ${NickName}
+                        </td>
+                        <td>
+                            ${getEnumValue(UserType,enumClass.EnumMemUserType)}
+                        </td>                      
+                        <td>
+                            ${Mobile}
+                        </td>  
+                        <td>
+                            ${Email}
+                        </td>                      
+                        <td>
+                            ${parseDateString(CreateTime,'ymd hm')}
+                        </td>
+                        <td>
+                            ${Status==1?"已锁定":"正常"}
+                        </td>
+                        <td>
+                            <a href="javascript:pager.setUserStatus(${UserID},${Status});">${Status==1? "解锁" : "锁定"}</a>&nbsp;
+                            <a href="javascript:pager.AlertEdit(${UserID});">编辑</a>
+                        </td>
+                    </tr>
+                </script>
+                <tbody id="tbResult"></tbody>
+            </table>
+            <div id="tfpagebar" class="box"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var pager = {
+        init: function () {
+            this.bindData();
+            this.bindEvent();
+            $("#ddlUserType").bindSelect(true, enumClass.EnumMemUserType);
+            $("#ddlStatus").bindSelect(true, enumClass.EnumMemStatus);
+            // 全选集
+            var checkAlls = [];
+
+            // 注册全选
+            T.checkAll("#g_tmsSelAll", {
+                type: 'all',                    // 全选-all; 反选-invert
+                name: 'checkName',              // 默认name
+            });
+        },
+        bindData: function () {
+            var entity = T.formToJSON("#targetForm", function (data) {
+                return data;
+            });
+            var param = {
+                url: "api_admin/user/getMemberList",		// 数据请求 get 地址
+                tmpl: '#datatmpl',									// 预设模板 script tpl ID
+                target: '#tbResult',								// 煊览容器 node ID
+                pageBar: "#tfpagebar",							// 分页位置 node ID
+                onRequest: function (formIdJson) {					// 传参修改 请求需要传递的参数对象
+                    formIdJson = T.formToJSON("#targetForm", function (data) {
+                        return data;
+                    });
+                    return formIdJson;
+                },
+                onResponse: function (data) {							// 接受到的数据 预处理
+                    var data = data.data;
+                    data["Status"] = "正常";
+                    return data;
+                }
+            }
+            T.getRequest(param);
+        },
+        bindEvent: function () {
+            $("#targetForm").submit(function () {
+                pager.bindData();
+                return false;
+            });
+        },
+        setUserStatus: function (userID, status) {
+            var message = "是否确定" + (status == 0 ? "锁定" : "解锁") + "用户";
+            T.confirm(message, function (boolean) {
+                if (boolean) {
+                    T.POST({
+                        action: "api_admin/user/getMemberLock",
+                        params: { userID: userID, status: status },
+                        success: function (res) {
+                            T.alert(status == 0 ? "锁定成功!" : "解锁成功");
+                            pager.init();
+                        },
+                        failure: function (res) {
+                            T.alert(res.errmsg);
+                        },
+                        error: function () {
+                            T.alert(res.errmsg);
+                        }
+                    });
+
+
+                    //var aj = $.ajax({
+                    //    url: "http://api_admin.ccdfs.cc/api_admin/user/getMemberLock",
+                    //    data: {
+                    //        userID1: userID, status: status
+                    //    },
+                    //    xhrFields: {
+                    //        withCredentials: true
+                    //    },
+                    //    type: "post",
+                    //    cache: false,
+                    //    dataType: "json",
+                    //    success: function (data) {
+                    //        alert("成功");
+                    //    },
+                    //    error: function () {
+                    //        // view("异常！");
+                    //        alert("异常！");
+                    //    }
+                    //});
+                }
+            });
+        }
+    }
+    $(function () {
+        pager.init();
+    });
+    </script>
+
+</body>
+</html>
